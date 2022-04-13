@@ -1,0 +1,166 @@
+{
+    "name": "PlayerController",
+    "maps": [
+        {
+            "name": "Normal",
+            "id": "bb706c30-07de-4f74-a2ac-441dbd0ee3f3",
+            "actions": [
+                {
+                    "name": "WStart",
+                    "type": "Button",
+                    "id": "1394fc6a-7c4e-41e9-99ca-f465e481bcdc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "WEnd",
+                    "type": "Button",
+                    "id": "f7879b4c-cba0-4fe0-9900-298affa85d81",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SStart",
+                    "type": "Button",
+                    "id": "5e983d0d-3ada-49b1-b17e-1ca04a43e232",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SEnd",
+                    "type": "Button",
+                    "id": "5ccfc09c-0c0c-4cb5-b194-7a57eac0d462",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AStart",
+                    "type": "Button",
+                    "id": "d0c0d595-856d-4450-8ea9-30d9576e3a7f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AEnd",
+                    "type": "Button",
+                    "id": "710827cc-b3e5-4663-bb72-22f3a954f2f1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DStart",
+                    "type": "Button",
+                    "id": "6764ebf4-f717-4a3f-9e55-c06e26c5aa8f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DEnd",
+                    "type": "Button",
+                    "id": "e7a38d54-2d32-40b5-8d48-3a3b3aba37ab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "89a66a4e-9818-46a0-ad04-51d15f92ee66",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0ce3e08-4320-429c-9dac-eecae2d80380",
+                    "path": "<Keyboard>/d",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d84d768c-fcea-4fcb-8faf-0a1fdc344a58",
+                    "path": "<Keyboard>/d",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67ff5389-51a1-4751-8b43-b117ac662d4d",
+                    "path": "<Keyboard>/a",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "570bf27b-6d4d-4630-9d25-3ca0ee38a8b7",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94f5c362-f878-4f54-b0b0-a9af274d06c3",
+                    "path": "<Keyboard>/s",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2b957f5-60c9-4f5f-b138-33a631d0acca",
+                    "path": "<Keyboard>/s",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "167f09c0-517b-4df6-9238-eccd2a54b8ad",
+                    "path": "<Keyboard>/a",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
