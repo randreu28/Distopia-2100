@@ -68,6 +68,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SpaceStart",
+                    "type": "Button",
+                    "id": "7ce6e398-d927-4a28-a7d1-3c580fe0f383",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SpaceEnd",
+                    "type": "Button",
+                    "id": "13486eee-82bf-48ba-bf0c-4869f4f63f14",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -156,6 +172,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "AEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb6ff413-8642-45e1-899d-2ff5943d886a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpaceStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5d5b246-9eef-4fa9-962c-a67a254e9943",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpaceEnd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
