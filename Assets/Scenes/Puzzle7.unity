@@ -208,6 +208,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 1
+  _inElevator: 0
 --- !u!114 &43139664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,7 +711,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1702535698}
   endPoint: {fileID: 179804908}
+  Lever: {fileID: 0}
   travelTime: 5
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
 --- !u!1001 &523883618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1183,7 +1187,7 @@ GameObject:
   - component: {fileID: 1798952485}
   m_Layer: 7
   m_Name: Elevator
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1231,7 +1235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1824564371}
   endPoint: {fileID: 160191099}
-  travelTime: 5
+  Lever: {fileID: 2424764778930096132}
+  travelTime: 10
+  MovingAudioClip: {fileID: 8300000, guid: d71e9c4927680433e854761d41ab840b, type: 3}
+  MovingAudioVolume: 1
 --- !u!65 &1798952487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1965,7 +1972,7 @@ GameObject:
   - component: {fileID: 6794350286189149155}
   - component: {fileID: 8675846163053745771}
   m_Layer: 0
-  m_Name: palanca
+  m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
