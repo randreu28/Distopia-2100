@@ -81,9 +81,9 @@ public class PlatformController : MonoBehaviour
             float x = Mathf.Clamp01(t / duration);
             float f = 3 * Mathf.Pow(x, 2) - 2 * Mathf.Pow(x, 3);
             Lever.transform.rotation = Quaternion.Lerp(startPosition, endPosition, f);
-            _player.actionEnd();
             yield return null;
         }
+        _player.actionEnd();
     }
 
 }
