@@ -60,12 +60,12 @@ public class PlatformController : MonoBehaviour
             if (isStartPoint)
             {  
                 _currentTime = Time.time;
-                StartCoroutine(MoveLever(20f, 0.5f));
+                StartCoroutine(MoveLever(-30f, 0.5f));
             }
             else
             {
                 _currentTime = Time.time - (travelTime / 2);
-                StartCoroutine(MoveLever(-20f, 0.5f));
+                StartCoroutine(MoveLever(-90f, 0.5f));
             }
             
         }
