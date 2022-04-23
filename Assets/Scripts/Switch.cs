@@ -14,13 +14,13 @@ public class Switch : MonoBehaviour
     // Para tener de referencia para el puzle 6
     void Start()
     {
-        _switchAnimator = GetComponent<Animator>();
+        _switchAnimator = GetComponentInChildren<Animator>();
     }
-    void OnE(){
+    void OnAction(){
         if (isClose)
            _switchAnimator.SetBool("Switch", !_switchAnimator.GetBool("Switch"));
 
-        Debug.Log("E");
+        Debug.Log("Action");
     }
      private void OnTriggerEnter(Collider _is)
     {
