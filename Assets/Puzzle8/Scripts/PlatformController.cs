@@ -32,8 +32,6 @@ public class PlatformController : MonoBehaviour
         if (_moving) {
             float cycleStep = Time.time - _currentTime;
 
-            Debug.Log("cycleStep: " + cycleStep + " | isStartPoint:" + isStartPoint);
-
             currentPos = Vector3.Lerp(startPoint.position, endPoint.position,
             Mathf.Cos(cycleStep / travelTime * Mathf.PI * 2) * -.5f + .5f);
             transform.position = currentPos;
