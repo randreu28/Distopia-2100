@@ -12,6 +12,7 @@ public class PlatformController : MonoBehaviour
     private bool _moving = false;
     private float _currentTime;
     private bool isStartPoint = true;
+    public bool _alwaysMoving = false;
     public AudioClip MovingAudioClip;
     [Range(0, 1)] public float MovingAudioVolume = 0.5f;
     private PlayerController _player;
@@ -29,7 +30,7 @@ public class PlatformController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_moving) {
+        if (_moving || _alwaysMoving) {
             float cycleStep = Time.time - _currentTime;
 
             currentPos = Vector3.Lerp(startPoint.position, endPoint.position,
