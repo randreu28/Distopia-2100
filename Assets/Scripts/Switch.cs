@@ -7,20 +7,31 @@ using UnityEngine.InputSystem;
 public class Switch : MonoBehaviour
 {
 
-    Animator _switchAnimator;
+    private Animator _switchAnimator;
+    private Animator _playerAnimator;
+    private Animator _platformAnimator;
     private bool isClose = false;
     public GameObject player;
+    public GameObject platform;
 
     // Para tener de referencia para el puzle 6
     void Start()
     {
         _switchAnimator = GetComponentInChildren<Animator>();
+        _playerAnimator = player.GetComponent<Animator>();
+        _platformAnimator = platform.GetComponent<Animator>();
     }
     void OnAction(){
-        if (isClose)
+        if (isClose){
            _switchAnimator.SetBool("Switch", !_switchAnimator.GetBool("Switch"));
-
-        Debug.Log("Action");
+            _platformAnimator.SetBool("isOn", !_platformAnimator.GetBool("isOn"));
+            _playerAnimator.SetBool("PressButton", true);
+           StartCoroutine(ActionAnimation());
+        }
+    }
+    IEnumerator ActionAnimation(){
+        yield return new WaitForSeconds(1);
+        _playerAnimator.SetBool("PressButton", false);
     }
      private void OnTriggerEnter(Collider _is)
     {
