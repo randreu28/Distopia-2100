@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour
     public bool _inElevator;
 
     private PlatformController _platformController;
+    private Switch _switchController;
 
     private bool IsCurrentDeviceMouse
     {
@@ -390,6 +391,9 @@ public class PlayerController : MonoBehaviour
         if (_platformController != null) {
             _platformController.action(this);
         }
+        if(_switchController != null){
+            _switchController.action();
+        }
     }
 
     public void actionStart()
@@ -417,6 +421,10 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Platform") {
             _platformController = other.GetComponent<PlatformController>();
             transform.parent = other.GetComponent<Collider>().transform;
+        }
+
+        if (other.tag == "Switch") {
+            _switchController = other.GetComponent<Switch>();
         }
     }
 

@@ -21,7 +21,7 @@ public class Switch : MonoBehaviour
         _playerAnimator = player.GetComponent<Animator>();
         _platformAnimator = platform.GetComponent<Animator>();
     }
-    void OnAction(){
+    public void action(){
         if (isClose){
            _switchAnimator.SetBool("Switch", !_switchAnimator.GetBool("Switch"));
             _platformAnimator.SetBool("isOn", !_platformAnimator.GetBool("isOn"));
