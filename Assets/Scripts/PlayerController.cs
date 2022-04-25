@@ -107,6 +107,8 @@ public class PlayerController : MonoBehaviour
     private PlatformController _platformController;
     private Switch _switchController;
 
+    public float _worldLimitZ = -19.5f; 
+
     private bool IsCurrentDeviceMouse
     {
         get
@@ -268,6 +270,10 @@ public class PlayerController : MonoBehaviour
         // move the player
         _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                             new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+
+        if (transform.position.z < _worldLimitZ) {
+            transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
+        }
 
         // update animator if using character
         if (_hasAnimator)

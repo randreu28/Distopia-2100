@@ -7853,11 +7853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -832716614635268579, guid: 42557adfe1bd8164db73d8db1f8f7f32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.819
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: -832716614635268579, guid: 42557adfe1bd8164db73d8db1f8f7f32, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 76.22
+      value: 80.76
       objectReference: {fileID: 0}
     - target: {fileID: -775069670341356040, guid: 42557adfe1bd8164db73d8db1f8f7f32, type: 3}
       propertyPath: m_RootOrder
@@ -10454,6 +10454,7 @@ MonoBehaviour:
   CameraAngleOverride: 0
   LockCameraPosition: 1
   _inElevator: 0
+  _worldLimitZ: -19.5
 --- !u!114 &2000109145
 MonoBehaviour:
   m_ObjectHideFlags: 0
