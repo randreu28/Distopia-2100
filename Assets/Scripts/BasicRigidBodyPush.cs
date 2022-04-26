@@ -6,7 +6,7 @@ public class BasicRigidBodyPush : MonoBehaviour
 	public bool canPush;
 	private Animator _animator;
 	private bool _hasAnimator;
-	[Range(0.5f, 5f)] public float strength = 1.1f;
+	[Range(5f, 50f)] public float strength = 11f;
 
     private void Start()
     {
@@ -36,7 +36,7 @@ public class BasicRigidBodyPush : MonoBehaviour
 		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
 
 		// Apply the push and take strength into account
-		body.AddForce(pushDir * strength, ForceMode.Impulse);
+		body.AddForce(pushDir * strength * Time.deltaTime, ForceMode.Impulse);
 
 		if (_hasAnimator && pushDir != Vector3.zero)
 		{
