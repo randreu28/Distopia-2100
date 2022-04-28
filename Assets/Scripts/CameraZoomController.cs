@@ -11,13 +11,14 @@ public class CameraZoomController : MonoBehaviour
     private float _defaultVerticalArmLength;
     public float _transitionSeconds = 2;
     public CinemachineVirtualCamera _vcam;
-    private Cinemachine3rdPersonFollow _3rdPersonFollow;
+    //private Cinemachine3rdPersonFollow _3rdPersonFollow;
+    private CinemachineFramingTransposer _framingTransposer;
     // Start is called before the first frame update
     void Start()
     {
-        _3rdPersonFollow = _vcam.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
-        _defaultAreaCameraDistance = _3rdPersonFollow.CameraDistance;
-        _defaultVerticalArmLength = _3rdPersonFollow.VerticalArmLength;
+        _framingTransposer = _vcam.GetCinemachineComponent<CinemachineFramingTransposer>();
+        _defaultAreaCameraDistance = _framingTransposer.m_CameraDistance;
+        _defaultVerticalArmLength = _framingTransposer.m_ScreenY;
     }
 
     // Update is called once per frame
@@ -28,17 +29,17 @@ public class CameraZoomController : MonoBehaviour
 
     private IEnumerator SetCameraDistance(float distance, float verticalArmLength, float duration)
     {
-        float startDistance = _3rdPersonFollow.CameraDistance;
+        float startDistance = _framingTransposer.m_CameraDistance;
         float endDistance = distance;
-        float startVerticalArmLength = _3rdPersonFollow.VerticalArmLength;
+        float startVerticalArmLength = _framingTransposer.m_ScreenY;
         float endVerticalArmLength = verticalArmLength;
 
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {
             float x = Mathf.Clamp01(t / duration);
             float f = 3 * Mathf.Pow(x, 2) - 2 * Mathf.Pow(x, 3);
-            _3rdPersonFollow.CameraDistance = Mathf.Lerp(startDistance, endDistance, f);
-            _3rdPersonFollow.VerticalArmLength = Mathf.Lerp(startVerticalArmLength, endVerticalArmLength, f);  
+            _framingTransposer.m_CameraDistance = Mathf.Lerp(startDistance, endDistance, f);
+            _framingTransposer.m_ScreenY = Mathf.Lerp(startVerticalArmLength, endVerticalArmLength, f);  
             yield return null;
         }
     }
