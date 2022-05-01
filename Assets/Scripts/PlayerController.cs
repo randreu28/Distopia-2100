@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
 
     private PlatformController _platformController;
     private Switch _switchController;
+    private FieldOfView _fieldOfView;
 
     public float _worldLimitZ = -19.5f; 
 
@@ -138,6 +139,8 @@ public class PlayerController : MonoBehaviour
         _input = GetComponent<Inputs>();
 
         _playerInput = GetComponent<PlayerInput>();
+
+        _fieldOfView = GetComponent<FieldOfView>();
 
 
         AssignAnimationIDs();
@@ -395,7 +398,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnAction() {
         if (_platformController != null) {
-            _platformController.action(this);
+            if (_fieldOfView.objectInFOV == _platformController.Lever.parent)
+            {
+                _platformController.action(this);
+            }
         }
         if(_switchController != null){
             _switchController.action();
