@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    public Transform spawnPoint;
+    public GameObject Player;
 
     void OnTriggerEnter(Collider collider)
     {
-
-        if(collider.gameObject.layer == LayerMask.NameToLayer("player"))
+        if(collider.gameObject == Player)
         {
-            collider.gameObject.transform.position = spawnPoint.position;
+            var SpawnPointHolder = Player.GetComponent<SpawnPointHolder>();
+            collider.gameObject.transform.position = SpawnPointHolder.SpawnPoint.position;
             Physics.SyncTransforms();
         }
     }
