@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/General.unity
     guid: a16c4a21182b307429f3cebc0aa34792
+  - enabled: 1
+    path: Assets/Scenes/Pantano.unity
+    guid: afcaed8219d977e498ff4330d3e0b521
   m_configObjects: {}
