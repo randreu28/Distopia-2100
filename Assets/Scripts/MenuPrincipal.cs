@@ -9,6 +9,8 @@ public class MenuPrincipal : MonoBehaviour
     public string Scene;
 
     public void PlayButton() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         SceneManager.LoadScene(Scene);
     }
 

@@ -1,5 +1,5 @@
 {
-    "name": "StarterAssets",
+    "name": "Controls",
     "maps": [
         {
             "name": "Player",
@@ -41,6 +41,14 @@
                     "name": "Action",
                     "type": "Button",
                     "id": "06bd1119-b980-4cf3-9731-0d025a269b8e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "ec9aa684-5a98-4c58-a572-aa6778ad9580",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -231,6 +239,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45ca2cb9-1e65-4003-ae7d-e8e406390e30",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

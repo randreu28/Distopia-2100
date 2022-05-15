@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameOver : MonoBehaviour
+public class Menu : MonoBehaviour
 {
     public GameObject Player;
 
-    private RespawnInfo RespawnInfo;
+    private PlayerInfo PlayerInfo;
 
     void Awake(){
-        RespawnInfo = Player.GetComponent<RespawnInfo>();
+        PlayerInfo = Player.GetComponent<PlayerInfo>();
     }
 
     public void ContinueButton() {
-        RespawnInfo.GameOver.SetActive(false);
+        PlayerInfo.GameOver.SetActive(false);
+        PlayerInfo.PauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1;

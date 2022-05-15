@@ -10,11 +10,11 @@ public class KillPlayer : MonoBehaviour
     {
         if(collider.gameObject == Player)
         {
-            var RespawnInfo = Player.GetComponent<RespawnInfo>();
-            collider.gameObject.transform.position = RespawnInfo.SpawnPoint.position;
+            var PlayerInfo = Player.GetComponent<PlayerInfo>();
+            collider.gameObject.transform.position = PlayerInfo.SpawnPoint.position;
             Physics.SyncTransforms();
             Time.timeScale = 0;
-            RespawnInfo.GameOver.SetActive(true);
+            PlayerInfo.GameOver.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
