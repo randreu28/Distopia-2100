@@ -1,9 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     [Header("Player")]
     [Tooltip("Move speed of the character in m/s")]
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator _animator;
     private CharacterController _controller;
-    private Inputs _input;
+    private EnemyMove _input;
     private GameObject _mainCamera;
 
     private const float _threshold = 0.01f;
@@ -134,11 +134,11 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+        //_cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
+
         _hasAnimator = TryGetComponent(out _animator);
         _controller = GetComponent<CharacterController>();
-        _input = GetComponent<Inputs>();
+        _input = GetComponent<EnemyMove>();
 
         _playerInput = GetComponent<PlayerInput>();
 
@@ -156,14 +156,14 @@ public class PlayerController : MonoBehaviour
     {
         _hasAnimator = TryGetComponent(out _animator);
 
-        JumpAndGravity();
+        //JumpAndGravity();
         GroundedCheck();
         Move();
     }
 
     private void LateUpdate()
     {
-        CameraRotation();
+        //CameraRotation();
     }
 
     private void AssignAnimationIDs()
@@ -190,27 +190,6 @@ public class PlayerController : MonoBehaviour
         {
             _animator.SetBool(_animIDGrounded, Grounded);
         }
-    }
-
-    private void CameraRotation()
-    {
-        // if there is an input and camera position is not fixed
-        if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
-        {
-            //Don't multiply mouse input by Time.deltaTime;
-            float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
-
-            _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
-            _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
-        }
-
-        // clamp our rotations so our values are limited 360 degrees
-        _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
-        _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
-
-        // Cinemachine will follow this target
-        CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
-            _cinemachineTargetYaw, 0.0f);
     }
 
     private void Move()
@@ -265,7 +244,8 @@ public class PlayerController : MonoBehaviour
             // rotate to face input direction relative to camera position
             transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
-        else {
+        else
+        {
             _animator.SetBool(_animIDPush, false);
         }
 
@@ -276,7 +256,8 @@ public class PlayerController : MonoBehaviour
         _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                             new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
-        if (transform.position.z < _worldLimitZ) {
+        if (transform.position.z < _worldLimitZ)
+        {
             transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
         }
 
@@ -398,69 +379,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnAction() {
-        if (_platformController != null) {
-            if (_fieldOfView.objectInFOV == _platformController.Lever.parent)
-            {
-                _platformController.action(this);
-            }
-        }
-        if(_switchController != null){
-            _switchController.action();
-        }
-        if (_leverController != null) {
-            _leverController.action(this);
-        }
-    }
-
-    public void actionStart()
-    {
-        if (_platformController || _leverController != null) {
-            if (_hasAnimator)
-            {
-                _animator.SetBool(_animIDPressButton, true);
-            }
-        }
-    }
-
-    public void actionEnd() {
-        if (_hasAnimator)
-        {
-            _animator.SetBool(_animIDPressButton, false);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Platform") {
-            _platformController = other.GetComponent<PlatformController>();
-            transform.parent = other.GetComponent<Collider>().transform;
-        }
-
-        if (other.tag == "Switch") {
-            _switchController = other.GetComponent<Switch>();
-        }
-
-        if (other.tag == "Lever") {
-            _leverController = other.GetComponent<LeverController>();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Platform")
-        {
-            _platformController = null;
-            transform.parent = null;
-            actionEnd();
-        }
-
-        if (other.tag == "Lever")
-        {
-            _leverController = null;
-            actionEnd();
-        }
-
-    }
-
+    
 }

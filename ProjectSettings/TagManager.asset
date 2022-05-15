@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - Platform
   - Switch
+  - Lever
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Action
-  - 
+  - Player
   - 
   - 
   - 
