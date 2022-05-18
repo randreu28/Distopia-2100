@@ -58,11 +58,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_013ed73c28c246c88613df603f0cb880: 0.07
+    - Vector1_013ed73c28c246c88613df603f0cb880: 0.0266
     - Vector1_1d4dabd534e649c39bbd0a4f4c13ca50: 0.875
     - Vector1_2c40a01c0e904ad28c4fb09019e56ae7: 1
-    - Vector1_80ef88894e95488bb4f34dd7524c04ea: 0.02
-    - Vector1_811ccd97efa0421d859c2ad8fc697e41: 1.9
+    - Vector1_80ef88894e95488bb4f34dd7524c04ea: 0.0116
+    - Vector1_811ccd97efa0421d859c2ad8fc697e41: 2.25
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
