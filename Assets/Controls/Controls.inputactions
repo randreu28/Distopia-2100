@@ -43,12 +43,36 @@
                     "id": "06bd1119-b980-4cf3-9731-0d025a269b8e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
+                },
+                {
+                    "name": "ActionEnd",
+                    "type": "Button",
+                    "id": "13cb17c8-9a07-478b-8d4c-239b32ad4b7f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "Pause",
                     "type": "Button",
                     "id": "ec9aa684-5a98-4c58-a572-aa6778ad9580",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Crouch",
+                    "type": "Button",
+                    "id": "fa8c67d1-64e6-41f1-a075-d303861275bb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CrouchEnd",
+                    "type": "Button",
+                    "id": "f8cf8550-a373-48f2-a2ee-b998b76afd5d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -250,6 +274,39 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18bde6b9-49ca-4467-839e-b46d10ffb40c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActionEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a41633c8-30f3-4b77-a487-6cb3b32ba8d1",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91f5d886-9894-4a4d-a1e7-9d4f1bfc9bc3",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CrouchEnd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

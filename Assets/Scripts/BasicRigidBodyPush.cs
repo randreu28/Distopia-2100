@@ -3,9 +3,10 @@
 public class BasicRigidBodyPush : MonoBehaviour
 {
 	public LayerMask pushLayers;
-	public bool canPush;
+	public bool _canPush;
 	private Animator _animator;
 	private bool _hasAnimator;
+	private Inputs _input;
 	[Range(5f, 50f)] public float strength = 11f;
 
     private void Start()
@@ -15,7 +16,7 @@ public class BasicRigidBodyPush : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		if (canPush) PushRigidBodies(hit);
+		if (_canPush) PushRigidBodies(hit);
 	}
 
 	private void PushRigidBodies(ControllerColliderHit hit)
@@ -44,4 +45,22 @@ public class BasicRigidBodyPush : MonoBehaviour
 		}
 
 	}
+
+	public void OnAction()
+    {
+		Debug.Log("Action");
+		_canPush = true;
+    }
+
+	public void OnActionEnd()
+	{
+		Debug.Log("Action End");
+		_canPush = false;
+		if (_hasAnimator)
+		{
+			_animator.SetBool("Pushing", false);
+			_animator.SetBool("Pulling", false);
+		}
+	}
+
 }

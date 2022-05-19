@@ -89,7 +89,9 @@ public class PlayerController : MonoBehaviour
     private int _animIDFreeFall;
     private int _animIDMotionSpeed;
     private int _animIDPush;
+    private int _animIDPull;
     private int _animIDPressButton;
+    private int _animIDCrouch;
 
     private PlayerInput _playerInput;
 
@@ -104,10 +106,15 @@ public class PlayerController : MonoBehaviour
 
     public bool _inElevator;
 
+    private bool _crouched;
+
     private PlatformController _platformController;
     private Switch _switchController;
     private LeverController _leverController;
     private FieldOfView _fieldOfView;
+
+    private float _controllerHeight;
+    private Vector3 _controllerCenter;
 
     public float _worldLimitZ = -19.5f;
 
@@ -138,6 +145,10 @@ public class PlayerController : MonoBehaviour
             
         _hasAnimator = TryGetComponent(out _animator);
         _controller = GetComponent<CharacterController>();
+
+        _controllerCenter = _controller.center;
+        _controllerHeight = _controller.height;
+
         _input = GetComponent<Inputs>();
 
         _playerInput = GetComponent<PlayerInput>();
@@ -174,7 +185,9 @@ public class PlayerController : MonoBehaviour
         _animIDFreeFall = Animator.StringToHash("FreeFall");
         _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
         _animIDPush = Animator.StringToHash("Pushing");
+        _animIDPull = Animator.StringToHash("Pulling");
         _animIDPressButton = Animator.StringToHash("PressButton");
+        _animIDCrouch = Animator.StringToHash("Crouch");
     }
 
     private void GroundedCheck()
@@ -216,7 +229,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
-        float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+        float targetSpeed = _input.sprint && !_crouched  ? SprintSpeed : MoveSpeed;
 
         // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -410,6 +423,28 @@ public class PlayerController : MonoBehaviour
         }
         if (_leverController != null) {
             _leverController.action(this);
+        }
+    }
+
+    private void OnCrouch()
+    {
+        _crouched = true;
+        _controller.height = 1.5f;
+        _controller.center = new Vector3(_controller.center.x, 0.66f, _controller.center.z);
+        if (_hasAnimator)
+        {
+            _animator.SetBool(_animIDCrouch, true);
+        }
+    }
+
+    private void OnCrouchEnd()
+    {
+        _crouched = false;
+        _controller.height = _controllerHeight;
+        _controller.center = _controllerCenter;
+        if (_hasAnimator)
+        {
+            _animator.SetBool(_animIDCrouch, false);
         }
     }
 
