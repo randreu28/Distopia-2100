@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Sprint speed of the character in m/s")]
     public float SprintSpeed = 5.335f;
 
+    [Tooltip("Crouch speed of the character in m/s")]
+    public float CrouchSpeed = 1.0f;
+
     [Tooltip("How fast the character turns to face movement direction")]
     [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
@@ -107,6 +110,7 @@ public class PlayerController : MonoBehaviour
     public bool _inElevator;
 
     private bool _crouched;
+    private bool _crouch;
 
     private PlatformController _platformController;
     private Switch _switchController;
@@ -115,6 +119,8 @@ public class PlayerController : MonoBehaviour
 
     private float _controllerHeight;
     private Vector3 _controllerCenter;
+    [SerializeField]
+    private Transform _crouchPoint;
 
     public float _worldLimitZ = -19.5f;
 
@@ -170,6 +176,7 @@ public class PlayerController : MonoBehaviour
         JumpAndGravity();
         GroundedCheck();
         Move();
+        StillCrouched();
     }
 
     private void LateUpdate()
@@ -230,6 +237,9 @@ public class PlayerController : MonoBehaviour
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
         float targetSpeed = _input.sprint && !_crouched  ? SprintSpeed : MoveSpeed;
+        if (_crouched) {
+            targetSpeed = CrouchSpeed;
+        }
 
         // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -428,6 +438,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCrouch()
     {
+        _crouch = true;
         _crouched = true;
         _controller.height = 1.5f;
         _controller.center = new Vector3(_controller.center.x, 0.66f, _controller.center.z);
@@ -439,12 +450,33 @@ public class PlayerController : MonoBehaviour
 
     private void OnCrouchEnd()
     {
-        _crouched = false;
-        _controller.height = _controllerHeight;
-        _controller.center = _controllerCenter;
-        if (_hasAnimator)
+        _crouch = false;
+        RaycastHit hit;
+        if (!Physics.Raycast(_crouchPoint.position, _crouchPoint.TransformDirection(Vector3.up), out hit, 2)) {
+            _controller.height = _controllerHeight;
+            _controller.center = _controllerCenter;
+            _crouched = false;
+            if (_hasAnimator)
+            {
+                _animator.SetBool(_animIDCrouch, false);
+            }
+        }
+    }
+
+    private void StillCrouched() {
+        if (!_crouch && _controller.height != _controllerHeight)
         {
-            _animator.SetBool(_animIDCrouch, false);
+            RaycastHit hit;
+            if (!Physics.Raycast(_crouchPoint.position, _crouchPoint.TransformDirection(Vector3.up), out hit, 2))
+            {
+                _crouched = false;
+                _controller.height = _controllerHeight;
+                _controller.center = _controllerCenter;
+                if (_hasAnimator)
+                {
+                    _animator.SetBool(_animIDCrouch, false);
+                }
+            }
         }
     }
 
