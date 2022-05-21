@@ -9,6 +9,7 @@ TagManager:
   - Switch
   - Lever
   - Button
+  - Pushable
   layers:
   - Default
   - TransparentFX
