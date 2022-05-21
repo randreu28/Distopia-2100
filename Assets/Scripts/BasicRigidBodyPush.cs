@@ -8,20 +8,22 @@ public class BasicRigidBodyPush : MonoBehaviour
 	private bool _hasAnimator;
 	private Inputs _input;
 	[Range(5f, 50f)] public float strength = 11f;
+	private PullController _pullController;
 
-    private void Start()
+	private void Start()
     {
 		_hasAnimator = TryGetComponent(out _animator);
+		_pullController = GetComponent<PullController>();
 	}
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
+
 		if (_canPush) PushRigidBodies(hit);
 	}
 
 	private void PushRigidBodies(ControllerColliderHit hit)
 	{
-
 		// make sure we hit a non kinematic rigidbody
 		Rigidbody body = hit.collider.attachedRigidbody;
 		if (body == null || body.isKinematic) return;
@@ -36,6 +38,12 @@ public class BasicRigidBodyPush : MonoBehaviour
 		// Calculate push direction from move direction, horizontal motion only
 		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
 
+		
+		_pullController.Action = false;
+
+		Debug.Log("Pushing");
+		
+		
 		// Apply the push and take strength into account
 		body.AddForce(pushDir * strength * Time.deltaTime, ForceMode.Impulse);
 
@@ -48,13 +56,13 @@ public class BasicRigidBodyPush : MonoBehaviour
 
 	public void OnAction()
     {
-		Debug.Log("Action");
+		//Debug.Log("Action");
 		_canPush = true;
     }
 
 	public void OnActionEnd()
 	{
-		Debug.Log("Action End");
+		//Debug.Log("Action End");
 		_canPush = false;
 		if (_hasAnimator)
 		{

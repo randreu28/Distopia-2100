@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Crouch speed of the character in m/s")]
     public float CrouchSpeed = 1.0f;
 
+    [Tooltip("Pull speed of the character in m/s")]
+    public float PullSpeed = 1.0f;
+
     [Tooltip("How fast the character turns to face movement direction")]
     [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
@@ -112,9 +115,12 @@ public class PlayerController : MonoBehaviour
     private bool _crouched;
     private bool _crouch;
 
+    public bool Pulling;
+
     private PlatformController _platformController;
     private Switch _switchController;
     private LeverController _leverController;
+    private ButtonController _buttonController;
     private FieldOfView _fieldOfView;
 
     private float _controllerHeight;
@@ -237,8 +243,12 @@ public class PlayerController : MonoBehaviour
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
         float targetSpeed = _input.sprint && !_crouched  ? SprintSpeed : MoveSpeed;
-        if (_crouched) {
+        if (_crouched)
+        {
             targetSpeed = CrouchSpeed;
+        }
+        else if (Pulling) {
+            targetSpeed = PullSpeed;
         }
 
         // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
@@ -278,7 +288,7 @@ public class PlayerController : MonoBehaviour
 
         // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is a move input rotate player when the player is moving
-        if (_input.move != Vector2.zero)
+        if (_input.move != Vector2.zero && !Pulling)
         {
             _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
                                 _mainCamera.transform.eulerAngles.y;
@@ -294,6 +304,9 @@ public class PlayerController : MonoBehaviour
 
 
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+
+        //if (Pulling)
+            //_speed = -_speed;
 
         // move the player
         _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
@@ -434,13 +447,16 @@ public class PlayerController : MonoBehaviour
         if (_leverController != null) {
             _leverController.action(this);
         }
+        if (_buttonController != null) {
+            _buttonController.action(this);
+        }
     }
 
     private void OnCrouch()
     {
         _crouch = true;
         _crouched = true;
-        _controller.height = 1.5f;
+        _controller.height = 1.3f;
         _controller.center = new Vector3(_controller.center.x, 0.66f, _controller.center.z);
         if (_hasAnimator)
         {
@@ -482,7 +498,7 @@ public class PlayerController : MonoBehaviour
 
     public void actionStart()
     {
-        if (_platformController || _leverController != null) {
+        if (_platformController || _leverController != null || _buttonController != null) {
             if (_hasAnimator)
             {
                 _animator.SetBool(_animIDPressButton, true);
@@ -511,6 +527,10 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Lever") {
             _leverController = other.GetComponent<LeverController>();
         }
+
+        if (other.tag == "Button") {
+            _buttonController = other.GetComponent<ButtonController>();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -525,6 +545,12 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Lever")
         {
             _leverController = null;
+            actionEnd();
+        }
+
+        if (other.tag == "Button")
+        {
+            _buttonController = null;
             actionEnd();
         }
 

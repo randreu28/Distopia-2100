@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Switch
   - Lever
+  - Button
   layers:
   - Default
   - TransparentFX
