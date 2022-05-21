@@ -1516,6 +1516,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964292863296, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
+      propertyPath: GroundedOffset
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559044964292863296, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 9
       objectReference: {fileID: 0}

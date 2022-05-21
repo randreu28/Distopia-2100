@@ -14,6 +14,8 @@ public class EnemyMove : MonoBehaviour
     public bool sprint;
     public bool analogMovement;
 
+    private EnemyController _enemyController;
+
     private Transform _target;
 
     private FieldOfView _fieldOfView;
@@ -26,6 +28,7 @@ public class EnemyMove : MonoBehaviour
         _fieldOfView = GetComponent<FieldOfView>();
         transform.position = _startPoint.position;
         StartCoroutine(Move());
+        _enemyController = GetComponent<EnemyController>();
     }
 
     // Update is called once per frame
@@ -36,7 +39,7 @@ public class EnemyMove : MonoBehaviour
 
     private IEnumerator Move() {
 
-        if (!_fieldOfView.inFOV)
+        if (!_fieldOfView.inFOV || !_enemyController.Grounded)
         {
             sprint = false;
             if (!_isGoingToStartPoint)

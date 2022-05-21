@@ -156,7 +156,7 @@ public class EnemyController : MonoBehaviour
     {
         _hasAnimator = TryGetComponent(out _animator);
 
-        //JumpAndGravity();
+        JumpAndGravity();
         GroundedCheck();
         Move();
     }
