@@ -45,19 +45,22 @@ public class Inputs : MonoBehaviour
 	public void OnPause()
 	{
 		var PlayerInfo = GetComponent<PlayerInfo>();
-		if(PlayerInfo.PauseMenu.activeSelf)
-		{
-			PlayerInfo.PauseMenu.SetActive(false);
-			Cursor.lockState = CursorLockMode.Locked;
-        	Cursor.visible = false;
-			Time.timeScale = 1;
-		}else
-		{
-			PlayerInfo.PauseMenu.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-			Time.timeScale = 0;
+		if(!PlayerInfo.GameOver.activeSelf){
+			if(PlayerInfo.PauseMenu.activeSelf)
+			{
+				PlayerInfo.PauseMenu.SetActive(false);
+				Cursor.lockState = CursorLockMode.Locked;
+				Cursor.visible = false;
+				Time.timeScale = 1;
+			}else
+			{
+				PlayerInfo.PauseMenu.SetActive(true);
+				Cursor.lockState = CursorLockMode.None;
+				Cursor.visible = true;
+				Time.timeScale = 0;
+			}
 		}
+		
 	}
 
 	public void MoveInput(Vector2 newMoveDirection)
