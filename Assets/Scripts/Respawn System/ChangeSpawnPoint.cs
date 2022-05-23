@@ -16,7 +16,7 @@ public class ChangeSpawnPoint : MonoBehaviour
         {
             var PlayerInfo = Player.GetComponent<PlayerInfo>();
             PlayerInfo.SpawnPoint = SpawnPoint;
-            Flag.GetComponent<Renderer>().material.SetColor("_BaseColor", Color.green);
+            Flag.GetComponent<Renderer>().material.SetColor("_EmissiveColor", Color.red * 75f);
         }
     }
 }
