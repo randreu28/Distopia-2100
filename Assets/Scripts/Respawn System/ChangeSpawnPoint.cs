@@ -7,6 +7,8 @@ public class ChangeSpawnPoint : MonoBehaviour
     public GameObject Player;
     public Transform SpawnPoint;
     public GameObject Flag;
+    [Range(0, 200)]
+    public float LightIntensity = 75f;
 
     private bool isUsed = false;
 
@@ -16,7 +18,7 @@ public class ChangeSpawnPoint : MonoBehaviour
         {
             var PlayerInfo = Player.GetComponent<PlayerInfo>();
             PlayerInfo.SpawnPoint = SpawnPoint;
-            Flag.GetComponent<Renderer>().material.SetColor("_EmissiveColor", Color.red * 75f);
+            Flag.GetComponent<Renderer>().material.SetColor("_EmissiveColor", Color.red * LightIntensity);
         }
     }
 }
