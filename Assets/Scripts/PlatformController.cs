@@ -16,7 +16,12 @@ public class PlatformController : MonoBehaviour
     public AudioClip MovingAudioClip;
     [Range(0, 1)] public float MovingAudioVolume = 0.5f;
     private PlayerController _player;
-    // Start is called before the first frame update
+
+    [SerializeField]
+    private float _startLeverRotation = -90f;
+    [SerializeField]
+    private float _endLeverRotation = -30f;
+
     void Start()
     {
         
@@ -59,12 +64,12 @@ public class PlatformController : MonoBehaviour
             if (isStartPoint)
             {  
                 _currentTime = Time.time;
-                StartCoroutine(MoveLever(-30f, 0.5f));
+                StartCoroutine(MoveLever(_endLeverRotation, 0.5f));
             }
             else
             {
                 _currentTime = Time.time - (travelTime / 2);
-                StartCoroutine(MoveLever(-90f, 0.5f));
+                StartCoroutine(MoveLever(_startLeverRotation, 0.5f));
             }
             
         }
@@ -73,7 +78,7 @@ public class PlatformController : MonoBehaviour
     private IEnumerator MoveLever(float rotation, float duration)
     {
         Quaternion startPosition = Lever.transform.rotation;
-        Quaternion endPosition = Quaternion.Euler(startPosition.x + rotation, 180, 90);
+        Quaternion endPosition = Quaternion.Euler(rotation, 0, -90);
         _player.actionStart();
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {

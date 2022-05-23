@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
+    [SerializeField]
+    private Transform _pointOfView;
     public float radius;
     [Range(0, 360)]
     public float angle;
@@ -15,6 +17,8 @@ public class FieldOfView : MonoBehaviour
     public bool inFOV;
 
     public Transform objectInFOV;
+
+    
 
     private void Start()
     {
@@ -34,18 +38,18 @@ public class FieldOfView : MonoBehaviour
 
     private void FieldOfViewCheck()
     {
-        Collider[] collisionsInRadius = Physics.OverlapSphere(transform.position, radius, targetLayer);
+        Collider[] collisionsInRadius = Physics.OverlapSphere(_pointOfView.position, radius, targetLayer);
 
         if (collisionsInRadius.Length != 0)
         {
             Transform target = collisionsInRadius[0].transform;
-            Vector3 directionToCollider = (target.position - transform.position).normalized;
+            Vector3 directionToCollider = (target.position - _pointOfView.position).normalized;
 
-            if (Vector3.Angle(transform.forward, directionToCollider) < angle / 2)
+            if (Vector3.Angle(_pointOfView.forward, directionToCollider) < angle / 2)
             {
-                float distanceToCollider = Vector3.Distance(transform.position, target.position);
+                float distanceToCollider = Vector3.Distance(_pointOfView.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToCollider, distanceToCollider, obstaclesLayer))
+                if (!Physics.Raycast(_pointOfView.position, directionToCollider, distanceToCollider, obstaclesLayer))
                 {
                     inFOV = true;
                     objectInFOV = target;
