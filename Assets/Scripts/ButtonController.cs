@@ -8,9 +8,7 @@ public class ButtonController : MonoBehaviour
     private Vector3 _endPosition;
 
     [SerializeField]
-    private DoorController _door1;
-    [SerializeField]
-    private DoorController _door2;
+    private DoorController _door;
 
     [SerializeField]
     private float _duration;
@@ -40,12 +38,9 @@ public class ButtonController : MonoBehaviour
         {
             StartCoroutine(PressButton());
 
-            if (_door1 != null)
+            if (_door != null)
             {
-                _door1.Action(true);
-            }
-            if (_door2 != null) { 
-                _door2.Action(true);
+                _door.Action(true);
             }
 
             _pressed = true;
