@@ -120,6 +120,8 @@ public class PlayerController : MonoBehaviour
 
     public bool Pulling;
 
+    public bool _inBelt;
+
     private Rigidbody _rigidbody;
     private PlatformController _platformController;
     private Switch _switchController;
@@ -131,6 +133,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 _controllerCenter;
     [SerializeField]
     private Transform _crouchPoint;
+
+    [SerializeField]
+    private float _beltVelocity;
 
     public float _worldLimitZ = -19.5f;
 
@@ -188,6 +193,11 @@ public class PlayerController : MonoBehaviour
         GroundedCheck();
         Move();
         StillCrouched();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveBelt();
     }
 
     private void LateUpdate()
@@ -310,9 +320,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
-        //if (Pulling)
-        //_speed = -_speed;
-
+       
         // move the player
         if (_controller.enabled)
         {
@@ -320,9 +328,10 @@ public class PlayerController : MonoBehaviour
                                 new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
         }
         else {
-            Debug.Log("Force vector: " + new Vector3(0, 0, targetDirection.normalized.z));
             _rigidbody.AddForce(new Vector3(0, 0, targetDirection.normalized.z) * (SlideSpeed * Time.deltaTime), ForceMode.Force);
         }
+
+        
 
         if (transform.position.z < _worldLimitZ) {
             transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
@@ -402,6 +411,13 @@ public class PlayerController : MonoBehaviour
         if (_verticalVelocity < _terminalVelocity)
         {
             _verticalVelocity += Gravity * Time.deltaTime;
+        }
+    }
+
+    private void MoveBelt() {
+        if (_inBelt)
+        {
+            transform.position = new Vector3(transform.position.x + (_beltVelocity * Time.deltaTime), transform.position.y, transform.position.z);
         }
     }
 
@@ -543,6 +559,10 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Button") {
             _buttonController = other.GetComponent<ButtonController>();
         }
+
+        if (other.tag == "Belt") {
+            _inBelt = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -564,6 +584,11 @@ public class PlayerController : MonoBehaviour
         {
             _buttonController = null;
             actionEnd();
+        }
+
+        if (other.tag == "Belt")
+        {
+            _inBelt = false;
         }
 
     }
