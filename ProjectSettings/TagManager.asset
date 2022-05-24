@@ -10,6 +10,7 @@ TagManager:
   - Lever
   - Button
   - Pushable
+  - rbZone
   layers:
   - Default
   - TransparentFX

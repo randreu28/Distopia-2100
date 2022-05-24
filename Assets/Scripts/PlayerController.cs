@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Crouch speed of the character in m/s")]
     public float CrouchSpeed = 1.0f;
 
+    [Tooltip("Crouch speed of the character in m/s")]
+    public float SlideSpeed = 1.0f;
+
     [Tooltip("Pull speed of the character in m/s")]
     public float PullSpeed = 1.0f;
 
@@ -117,6 +120,7 @@ public class PlayerController : MonoBehaviour
 
     public bool Pulling;
 
+    private Rigidbody _rigidbody;
     private PlatformController _platformController;
     private Switch _switchController;
     private LeverController _leverController;
@@ -157,6 +161,7 @@ public class PlayerController : MonoBehaviour
             
         _hasAnimator = TryGetComponent(out _animator);
         _controller = GetComponent<CharacterController>();
+        _rigidbody = GetComponent<Rigidbody>();
 
         _controllerCenter = _controller.center;
         _controllerHeight = _controller.height;
@@ -306,11 +311,18 @@ public class PlayerController : MonoBehaviour
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
         //if (Pulling)
-            //_speed = -_speed;
+        //_speed = -_speed;
 
         // move the player
-        _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
-                            new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        if (_controller.enabled)
+        {
+            _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
+                                new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        }
+        else {
+            Debug.Log("Force vector: " + new Vector3(0, 0, targetDirection.normalized.z));
+            _rigidbody.AddForce(new Vector3(0, 0, targetDirection.normalized.z) * (SlideSpeed * Time.deltaTime), ForceMode.Force);
+        }
 
         if (transform.position.z < _worldLimitZ) {
             transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
