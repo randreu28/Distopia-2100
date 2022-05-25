@@ -34,9 +34,13 @@ public class PlatformController : MonoBehaviour
     private float _autoReturnDelay = 5;
     private float _autoReturnTimer;
 
+    [SerializeField]
+    private Material _buttonOn;
+    private Material _buttonOff;
+
     void Start()
     {
-        
+        _buttonOff = ButtonUp.GetChild(0).GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -59,6 +63,10 @@ public class PlatformController : MonoBehaviour
                 isStartPoint = !isStartPoint;
                 if (_autoReturn && !isStartPoint) {
                     _autoReturnTimer = Time.time;
+                }
+                if (ButtonUp != null && ButtonDown != null) {
+                    ButtonUp.GetChild(0).GetComponent<Renderer>().material = _buttonOff;
+                    ButtonDown.GetChild(0).GetComponent<Renderer>().material = _buttonOff;
                 }
             }
         }
@@ -118,21 +126,27 @@ public class PlatformController : MonoBehaviour
             Lever.transform.rotation = Quaternion.Lerp(startPosition, endPosition, f);
             yield return null;
         }
-        _player.actionEnd();
+        //_player.actionEnd();
     }
 
     public void GoUp(PlayerController Player) {
         Debug.Log("go up");
         _player = Player;
-        if (isStartPoint)
+        _player.actionStart();
+        if (isStartPoint) {
+            ButtonUp.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
             MovePlatform();
+        }
     }
 
     public void GoDown(PlayerController Player)
     {
         _player = Player;
-        if (!isStartPoint)
+        _player.actionStart();
+        if (!isStartPoint) {
+            ButtonDown.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
             MovePlatform();
-    }
+        }
+    }  
 
 }

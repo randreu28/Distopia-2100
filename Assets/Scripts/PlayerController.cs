@@ -568,6 +568,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void PressButtonEnd()
+    {
+        if (_hasAnimator)
+        {
+            _animator.SetBool(_animIDPressButton, false);
+        }
+    }
+
     public void actionEnd() {
         if (_hasAnimator)
         {
