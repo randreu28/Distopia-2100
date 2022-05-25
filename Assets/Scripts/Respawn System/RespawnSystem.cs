@@ -19,4 +19,14 @@ public class RespawnSystem : MonoBehaviour
         Cursor.visible = true;
         GameObject.Find("DeathName").GetComponent<Text>().text = message;
     }
+
+    public void ChangeSpawn(Transform newSpawnPoint)
+    {
+        SpawnPoint = newSpawnPoint;
+    }
+
+    public void HandleFlag(GameObject Flag, float LightIntensity)
+    {
+        Flag.GetComponent<Renderer>().material.SetColor("_EmissiveColor", Color.red * LightIntensity);
+    }
 }

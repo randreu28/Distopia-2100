@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ChangeSpawnPoint : MonoBehaviour
 {
-    public GameObject Player;
     public Transform SpawnPoint;
     public GameObject Flag;
     [Range(0, 200)]
@@ -14,11 +13,12 @@ public class ChangeSpawnPoint : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject == Player && !isUsed) 
+        if(collider.gameObject.tag == "Player" && !isUsed) 
         {
-            var RespawnSystem = Player.GetComponent<RespawnSystem>();
-            RespawnSystem.SpawnPoint = SpawnPoint;
-            Flag.GetComponent<Renderer>().material.SetColor("_EmissiveColor", Color.red * LightIntensity);
+            RespawnSystem RS = collider.GetComponent<RespawnSystem>();
+            
+            RS.ChangeSpawn(SpawnPoint);
+            RS.HandleFlag(Flag, LightIntensity);
         }
     }
 }

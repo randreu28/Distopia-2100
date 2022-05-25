@@ -1476,7 +1476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c422b5db603ab498abdf6d0fed192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
   SpawnPoint: {fileID: 8098919}
   Flag: {fileID: 1012723022}
   LightIntensity: 75
@@ -1557,7 +1556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c422b5db603ab498abdf6d0fed192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
   SpawnPoint: {fileID: 533866558}
   Flag: {fileID: 910864376}
   LightIntensity: 75
@@ -7388,7 +7386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c422b5db603ab498abdf6d0fed192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
   SpawnPoint: {fileID: 1733136727}
   Flag: {fileID: 972453532}
   LightIntensity: 48
@@ -7649,7 +7646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c422b5db603ab498abdf6d0fed192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
   SpawnPoint: {fileID: 1850353948}
   Flag: {fileID: 1681807569}
   LightIntensity: 48
@@ -7846,7 +7842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c422b5db603ab498abdf6d0fed192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
   SpawnPoint: {fileID: 2053465460}
   Flag: {fileID: 1136300683}
   LightIntensity: 75
@@ -9176,7 +9171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c422b5db603ab498abdf6d0fed192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
   SpawnPoint: {fileID: 1654337658}
   Flag: {fileID: 1583211394}
   LightIntensity: 75
@@ -11705,7 +11699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c422b5db603ab498abdf6d0fed192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
   SpawnPoint: {fileID: 726548414}
   Flag: {fileID: 777976719}
   LightIntensity: 75
