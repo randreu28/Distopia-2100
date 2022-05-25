@@ -470,9 +470,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnAction() {
         if (_platformController != null) {
-            if (_fieldOfView.objectInFOV == _platformController.Lever.parent)
+            if (_platformController.ButtonUp != null && _platformController.ButtonDown != null)
             {
-                _platformController.action(this);
+                Debug.Log("FieldOfView: " + (_fieldOfView.objectInFOV == _platformController.ButtonUp));
+                if (_fieldOfView.objectInFOV == _platformController.ButtonUp)
+                {
+                    _platformController.GoUp(this);
+                }
+                if (_fieldOfView.objectInFOV == _platformController.ButtonDown)
+                {
+                    _platformController.GoDown(this);
+                }
+            }
+            if (_platformController.Lever.parent != null)
+            {
+                if (_fieldOfView.objectInFOV == _platformController.Lever.parent)
+                {
+                    _platformController.action(this);
+                }
             }
         }
         if(_switchController != null){

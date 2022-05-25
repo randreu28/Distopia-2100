@@ -22,6 +22,18 @@ public class PlatformController : MonoBehaviour
     [SerializeField]
     private float _endLeverRotation = -30f;
 
+    [SerializeField]
+    public Transform ButtonUp;
+    [SerializeField]
+    public Transform ButtonDown;
+
+    [Header("Auto Return")]
+    [SerializeField]
+    private bool _autoReturn;
+    [SerializeField]
+    private float _autoReturnDelay = 5;
+    private float _autoReturnTimer;
+
     void Start()
     {
         
@@ -45,6 +57,16 @@ public class PlatformController : MonoBehaviour
             {
                 _moving = false;
                 isStartPoint = !isStartPoint;
+                if (_autoReturn && !isStartPoint) {
+                    _autoReturnTimer = Time.time;
+                }
+            }
+        }
+        else if (_autoReturn && !isStartPoint)
+        {
+            if (Time.time - _autoReturnTimer >= _autoReturnDelay) {
+                _currentTime = Time.time - (travelTime / 2);
+                _moving = true;
             }
         }
     }
@@ -59,17 +81,26 @@ public class PlatformController : MonoBehaviour
         {
             _moving = true;
 
-            AudioSource.PlayClipAtPoint(MovingAudioClip, transform.position, MovingAudioVolume);
+            if (MovingAudioClip != null) { 
+                AudioSource.PlayClipAtPoint(MovingAudioClip, transform.position, MovingAudioVolume);
+            }
 
             if (isStartPoint)
-            {  
+            {
+                Debug.Log("isStartPoint");
                 _currentTime = Time.time;
-                StartCoroutine(MoveLever(_endLeverRotation, 0.5f));
+                if (Lever != null) { 
+                    StartCoroutine(MoveLever(_endLeverRotation, 0.5f));
+                }
             }
             else
             {
+                Debug.Log("isStartPoint NO");
                 _currentTime = Time.time - (travelTime / 2);
-                StartCoroutine(MoveLever(_startLeverRotation, 0.5f));
+                if (Lever != null)
+                {
+                    StartCoroutine(MoveLever(_startLeverRotation, 0.5f));
+                }
             }
             
         }
@@ -88,6 +119,20 @@ public class PlatformController : MonoBehaviour
             yield return null;
         }
         _player.actionEnd();
+    }
+
+    public void GoUp(PlayerController Player) {
+        Debug.Log("go up");
+        _player = Player;
+        if (isStartPoint)
+            MovePlatform();
+    }
+
+    public void GoDown(PlayerController Player)
+    {
+        _player = Player;
+        if (!isStartPoint)
+            MovePlatform();
     }
 
 }
