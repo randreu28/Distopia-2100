@@ -139,6 +139,8 @@ public class PlayerController : MonoBehaviour
 
     public float _worldLimitZ = -19.5f;
 
+    public bool boatTravel;
+
 
     private bool IsCurrentDeviceMouse
     {
@@ -191,8 +193,12 @@ public class PlayerController : MonoBehaviour
 
         JumpAndGravity();
         GroundedCheck();
-        Move();
+        if (!boatTravel)
+        {
+            Move();
+        }
         StillCrouched();
+        
     }
 
     private void FixedUpdate()

@@ -59,12 +59,14 @@ public class RigidBodyZone : MonoBehaviour
             _characterController.enabled = false;
             _rigidbody.isKinematic = false;
             _rigidbody.AddForce(new Vector3(1, -1, 0) * 4, ForceMode.Impulse);
+            //_rigidbody.detectCollisions = true;
             //_capsuleCollider.enabled = true;
         }
         else
         {
             _characterController.enabled = true;
             _rigidbody.isKinematic = true;
+            //_rigidbody.detectCollisions = false;
             //_capsuleCollider.enabled = false;
         }
         if (_hasAnimator)
