@@ -44,7 +44,7 @@ public class Inputs : MonoBehaviour
 
 	public void OnPause()
 	{
-		var PlayerInfo = GetComponent<PlayerInfo>();
+		var PlayerInfo = GetComponent<RespawnSystem>();
 		if(!PlayerInfo.GameOver.activeSelf){
 			if(PlayerInfo.PauseMenu.activeSelf)
 			{

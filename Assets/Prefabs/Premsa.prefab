@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  DeathName: Has muerto aplastado
 --- !u!1 &8095789217822058892
 GameObject:
   m_ObjectHideFlags: 0

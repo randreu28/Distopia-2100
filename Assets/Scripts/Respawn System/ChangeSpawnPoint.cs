@@ -16,8 +16,8 @@ public class ChangeSpawnPoint : MonoBehaviour
     {
         if(collider.gameObject == Player && !isUsed) 
         {
-            var PlayerInfo = Player.GetComponent<PlayerInfo>();
-            PlayerInfo.SpawnPoint = SpawnPoint;
+            var RespawnSystem = Player.GetComponent<RespawnSystem>();
+            RespawnSystem.SpawnPoint = SpawnPoint;
             Flag.GetComponent<Renderer>().material.SetColor("_EmissiveColor", Color.red * LightIntensity);
         }
     }

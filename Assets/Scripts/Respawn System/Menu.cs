@@ -7,15 +7,15 @@ public class Menu : MonoBehaviour
 {
     public GameObject Player;
 
-    private PlayerInfo PlayerInfo;
+    private RespawnSystem RespawnSystem;
 
     void Awake(){
-        PlayerInfo = Player.GetComponent<PlayerInfo>();
+        RespawnSystem = Player.GetComponent<RespawnSystem>();
     }
 
     public void ContinueButton() {
-        PlayerInfo.GameOver.SetActive(false);
-        PlayerInfo.PauseMenu.SetActive(false);
+        RespawnSystem.GameOver.SetActive(false);
+        RespawnSystem.PauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1;

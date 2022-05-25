@@ -144,15 +144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 294.31824
+      value: 250.26826
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 38.3812
+      value: 38.35648
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.54321
+      value: -28.52
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &177499184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto asfixiado
 --- !u!65 &246710091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &300594913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &352790018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1853,7 +1853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: 
 --- !u!136 &353837759
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4372,7 +4372,7 @@ GameObject:
   - component: {fileID: 468647648}
   - component: {fileID: 468647647}
   m_Layer: 5
-  m_Name: GAME OVER
+  m_Name: DeathName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4419,7 +4419,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5c0c1c65ab0a1c44990129793b4d7627, type: 3}
-    m_FontSize: 135
+    m_FontSize: 95
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 2
@@ -4430,7 +4430,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: GAME OVER
+  m_Text: NULL
 --- !u!222 &468647648
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4456,7 +4456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &485559385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4495,7 +4495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511d4aa0d14b34569a99c65de31dc2ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 294.35
+      value: 250.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511d4aa0d14b34569a99c65de31dc2ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5811,7 +5811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: 
 --- !u!65 &546813449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5969,7 +5969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &552192528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6778,7 +6778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &815414501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7565,7 +7565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Te han atrapado
 --- !u!136 &937291038
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8144,7 +8144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto
 --- !u!65 &1110760145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8686,8 +8686,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.501864
-  m_ScreenY: 0.4030175
-  m_CameraDistance: 12.02321
+  m_ScreenY: 0.4
+  m_CameraDistance: 12
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -8763,7 +8763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &1239566730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9324,7 +9324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &1397108751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9628,7 +9628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &1532016192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9976,7 +9976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &1611446561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10927,7 +10927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &1740699318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11597,15 +11597,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 294.31824
+      value: 250.26826
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 38.3812
+      value: 38.35648
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.54321
+      value: -28.52
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11918,7 +11918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1178961729}
+  DeathName: Has muerto clavado
 --- !u!65 &1946528268
 BoxCollider:
   m_ObjectHideFlags: 0
