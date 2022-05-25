@@ -141,6 +141,11 @@ public class PlayerController : MonoBehaviour
 
     public bool boatTravel;
 
+    public float _fallingDistance;
+    private float _lastGroundedPositionY;
+
+    [SerializeField]
+    private float _maxFallingDistance;
 
     private bool IsCurrentDeviceMouse
     {
@@ -389,9 +394,17 @@ public class PlayerController : MonoBehaviour
             {
                 _jumpTimeoutDelta -= Time.deltaTime;
             }
+            _lastGroundedPositionY = transform.position.y;
         }
         else
         {
+
+            _fallingDistance = _lastGroundedPositionY - transform.position.y;
+            Debug.Log("Falling distance: " + _fallingDistance);
+            if (_fallingDistance > _maxFallingDistance) {
+                GetComponent<RespawnSystem>().KillPlayer("Free Falling");
+            }
+
             // reset the jump timeout timer
             _jumpTimeoutDelta = JumpTimeout;
 
