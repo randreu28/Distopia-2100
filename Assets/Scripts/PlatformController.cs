@@ -73,8 +73,10 @@ public class PlatformController : MonoBehaviour
         else if (_autoReturn && !isStartPoint)
         {
             if (Time.time - _autoReturnTimer >= _autoReturnDelay) {
+                ButtonDown.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
                 _currentTime = Time.time - (travelTime / 2);
                 _moving = true;
+
             }
         }
     }
