@@ -66,7 +66,7 @@ public class RigidBodyZone : MonoBehaviour
         {
             _characterController.enabled = true;
             _rigidbody.isKinematic = true;
-            //_rigidbody.detectCollisions = false;
+            _rigidbody.detectCollisions = false;
             //_capsuleCollider.enabled = false;
         }
         if (_hasAnimator)
