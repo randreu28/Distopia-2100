@@ -17,11 +17,17 @@ public class ButtonController : MonoBehaviour
 
     private bool _isClose;
     private bool _pressed;
+
+    [SerializeField]
+    private Material _pressedMaterial;
+
+    private Renderer _renderer;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        _renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -60,7 +66,9 @@ public class ButtonController : MonoBehaviour
             transform.position = Vector3.Lerp(startPosition, endPosition, f);
             yield return null;
         }
+        _renderer.material = _pressedMaterial;
         _player.actionEnd();
+        yield return null;
     }
 
 }
