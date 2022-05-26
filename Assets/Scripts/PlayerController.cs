@@ -139,13 +139,15 @@ public class PlayerController : MonoBehaviour
 
     public float _worldLimitZ = -19.5f;
 
-    public bool boatTravel;
-
     public float _fallingDistance;
     private float _lastGroundedPositionY;
 
     [SerializeField]
     private float _maxFallingDistance;
+
+    private bool _canMove;
+
+    public bool boatTravel;
 
     private bool IsCurrentDeviceMouse
     {
@@ -169,6 +171,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        _canMove = true;
+
         _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
         _hasAnimator = TryGetComponent(out _animator);
@@ -198,12 +202,10 @@ public class PlayerController : MonoBehaviour
 
         JumpAndGravity();
         GroundedCheck();
-        if (!boatTravel)
-        {
+        if (_canMove) {
             Move();
         }
         StillCrouched();
-        
     }
 
     private void FixedUpdate()
@@ -377,7 +379,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // Jump
-            if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+            if (_canMove && _input.jump && _jumpTimeoutDelta <= 0.0f)
             {
                 // the square root of H * -2 * G = how much velocity needed to reach desired height
                 _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -633,6 +635,10 @@ public class PlayerController : MonoBehaviour
             _inBelt = false;
         }
 
+    }
+
+    public void SetCanMove(bool value) {
+        _canMove = value;
     }
 
 }

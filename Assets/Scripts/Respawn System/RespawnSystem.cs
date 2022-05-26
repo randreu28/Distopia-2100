@@ -39,6 +39,7 @@ public class RespawnSystem : MonoBehaviour
             _enemies[i].Reset();
         }
         _animator.SetBool(_animIDDie, false);
+        gameObject.GetComponent<PlayerController>().SetCanMove(true);
         gameObject.transform.position = SpawnPoint.position;
         Physics.SyncTransforms();
         Time.timeScale = 0;

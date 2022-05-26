@@ -3726,6 +3726,10 @@ PrefabInstance:
       value: -0.0006447136
       objectReference: {fileID: 0}
     - target: {fileID: 2859015717569339398, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2e5031eacabe8054c9b607c6aad62365, type: 2}
+    - target: {fileID: 2859015717569339398, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
@@ -8705,9 +8709,9 @@ MonoBehaviour:
   _crouchPoint: {fileID: 802828106}
   _beltVelocity: 4
   _worldLimitZ: -19.5
-  boatTravel: 0
   _fallingDistance: 0
   _maxFallingDistance: 7
+  boatTravel: 0
 --- !u!114 &1178961735
 MonoBehaviour:
   m_ObjectHideFlags: 0

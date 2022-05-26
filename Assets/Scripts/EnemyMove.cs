@@ -27,6 +27,11 @@ public class EnemyMove : MonoBehaviour
 
     private bool _canMove;
 
+    private Animator _animator;
+    private bool _hasAnimator;
+
+    private int _animIDPunch;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +43,9 @@ public class EnemyMove : MonoBehaviour
         }
         StartCoroutine(Move());
         _enemyController = GetComponent<EnemyController>();
+
+        _hasAnimator = TryGetComponent(out _animator);
+        AssignAnimationID();
     }
 
     // Update is called once per frame
@@ -150,6 +158,19 @@ public class EnemyMove : MonoBehaviour
         StartCoroutine(Move());
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            _canMove = false;
+            _animator.SetBool(_animIDPunch, true);
+        }
+    }
+
+    void PunchEnd() {
+        _animator.SetBool(_animIDPunch, false);
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (_EnemyZone != null) { 
@@ -163,6 +184,12 @@ public class EnemyMove : MonoBehaviour
     {
         transform.position = _startPoint.position;
         transform.rotation = _startPoint.rotation;
+        _animator.SetBool(_animIDPunch, false);
         _canMove = true;
+    }
+
+    private void AssignAnimationID()
+    {
+        _animIDPunch = Animator.StringToHash("Punch");
     }
 }

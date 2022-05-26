@@ -10,6 +10,7 @@ public class KillPlayer : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
+            collider.GetComponent<PlayerController>().SetCanMove(false);
             collider.GetComponent<RespawnSystem>().KillPlayer(DeathName);
         }
     }
