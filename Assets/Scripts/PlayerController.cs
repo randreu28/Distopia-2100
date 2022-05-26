@@ -144,6 +144,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float _maxFallingDistance;
+    [SerializeField]
+    private float _maxFallingDistanceInRampZone;
+    private float _activeMaxFallingDistance;
 
     private bool _canMove;
 
@@ -194,6 +197,8 @@ public class PlayerController : MonoBehaviour
         // reset our timeouts on start
         _jumpTimeoutDelta = JumpTimeout;
         _fallTimeoutDelta = FallTimeout;
+
+        _activeMaxFallingDistance = _maxFallingDistance;
     }
 
     private void Update()
@@ -403,7 +408,7 @@ public class PlayerController : MonoBehaviour
 
             _fallingDistance = _lastGroundedPositionY - transform.position.y;
             Debug.Log("Falling distance: " + _fallingDistance);
-            if (_fallingDistance > _maxFallingDistance) {
+            if (_fallingDistance > _activeMaxFallingDistance) {
                 GetComponent<RespawnSystem>().KillPlayer("Free Falling");
             }
 
@@ -607,6 +612,9 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Belt") {
             _inBelt = true;
         }
+        if (other.tag == "rbZone") {
+            _activeMaxFallingDistance = _maxFallingDistanceInRampZone;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -634,7 +642,10 @@ public class PlayerController : MonoBehaviour
         {
             _inBelt = false;
         }
-
+        if (other.tag == "RampZone")
+        {
+            _activeMaxFallingDistance = _maxFallingDistance;
+        }
     }
 
     public void SetCanMove(bool value) {

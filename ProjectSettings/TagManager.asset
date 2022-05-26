@@ -12,6 +12,7 @@ TagManager:
   - Pushable
   - rbZone
   - Belt
+  - RampZone
   layers:
   - Default
   - TransparentFX

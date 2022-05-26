@@ -55,7 +55,7 @@ public class EnemyMove : MonoBehaviour
     }
 
     private IEnumerator Move() {
-        Debug.Log("Can Move: " + _canMove);
+        //Debug.Log("Can Move: " + _canMove);
         if (_canMove)
         {
             if (_startPoint != null && _endPoint != null)
@@ -122,32 +122,11 @@ public class EnemyMove : MonoBehaviour
                 _target = _fieldOfView.objectInFOV;
                 sprint = true;
 
-                if (transform.position.x - _target.position.x > 0)
-                {
-                    move.x = -1;
-                }
-                else if (transform.position.x - _target.position.x < 0)
-                {
-                    move.x = 1;
-                }
-                else
-                {
-                    move.x = 0;
-                }
+                Vector3 direction = (_target.transform.position - transform.position).normalized;
 
-                if (transform.position.z - _target.position.z > 0)
-                {
-                    move.y = -1;
-                }
-                else if (transform.position.z - _target.position.z < 0)
-                {
-                    move.y = 1;
-                }
-                else
-                {
-                    move.y = 0;
-                }
-                //Debug.Log("transform.position: " + transform.position + " | _fieldOfView.objectInFOV.position: " + _target.position);
+                move.x = direction.x;
+                move.y = direction.z;
+                //move = Vector3.zero;
             }
         }
         else {

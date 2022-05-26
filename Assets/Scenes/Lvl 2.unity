@@ -144,11 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.08253
+      value: 258.68256
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79.65648
+      value: 36.45648
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2985,7 +2985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964292863296, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: SprintSpeed
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964292863296, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: GroundedOffset
@@ -3017,7 +3017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964292864700, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: obstaclesLayer.m_Bits
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964292864701, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: _endPoint
@@ -3037,7 +3037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964380202514, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 155.56
+      value: 153.65
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964380202514, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4297,6 +4297,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0017465055
       objectReference: {fileID: 0}
+    - target: {fileID: 8559044963876811834, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559044963876811834, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559044963876811834, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559044963876811834, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8559044964292863296, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: SprintSpeed
       value: 8
@@ -4308,6 +4324,10 @@ PrefabInstance:
     - target: {fileID: 8559044964292863296, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559044964292864700, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
+      propertyPath: angle
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 8559044964292864700, guid: 6d3426fac12d848d5b0396a28983ee3d, type: 3}
       propertyPath: radius
@@ -4636,11 +4656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511d4aa0d14b34569a99c65de31dc2ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.1
+      value: 258.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511d4aa0d14b34569a99c65de31dc2ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79
+      value: 35.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 511d4aa0d14b34569a99c65de31dc2ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6184,7 +6204,7 @@ GameObject:
   - component: {fileID: 557520276}
   m_Layer: 0
   m_Name: ActivateRbCollisions
-  m_TagString: Untagged
+  m_TagString: RampZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6924,7 +6944,7 @@ GameObject:
   - component: {fileID: 798986637}
   m_Layer: 0
   m_Name: RampZone
-  m_TagString: rbZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8711,6 +8731,7 @@ MonoBehaviour:
   _worldLimitZ: -19.5
   _fallingDistance: 0
   _maxFallingDistance: 7
+  _maxFallingDistanceInRampZone: 12
   boatTravel: 0
 --- !u!114 &1178961735
 MonoBehaviour:
@@ -10872,8 +10893,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 23.911758, y: 7.2265167, z: 8.19119}
-  m_Center: {x: 7.2464066, y: 2.1485825, z: 0.26309252}
+  m_Size: {x: 25.95868, y: 7.2265167, z: 8.19119}
+  m_Center: {x: 8.269867, y: 2.1485825, z: 0.26309252}
 --- !u!1 &1722345922
 GameObject:
   m_ObjectHideFlags: 0
@@ -11346,7 +11367,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801025450}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.062, y: 1.733, z: 0.37799835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11860,11 +11881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.08253
+      value: 258.68256
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79.65648
+      value: 36.45648
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
