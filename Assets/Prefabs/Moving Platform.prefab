@@ -118,6 +118,11 @@ MonoBehaviour:
   MovingAudioVolume: 0.5
   _startLeverRotation: -90
   _endLeverRotation: -30
+  ButtonUp: {fileID: 0}
+  ButtonDown: {fileID: 0}
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  _buttonOn: {fileID: 0}
 --- !u!114 &4592148404684460718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +147,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.319641, y: 0.7926216, z: 1}
-  m_Center: {x: 0, y: 0.20423698, z: 0}
+  m_Size: {x: 2.3545227, y: 0.7926216, z: 2.342616}
+  m_Center: {x: -0.000015258789, y: 0.20423698, z: -0.008718967}
 --- !u!1 &6984172192060895676
 GameObject:
   m_ObjectHideFlags: 0
