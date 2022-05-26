@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField]
-    private Transform _startPoint;
+    public Transform _startPoint;
     [SerializeField]
     private Transform _endPoint;
     [SerializeField]
@@ -47,6 +47,7 @@ public class EnemyMove : MonoBehaviour
     }
 
     private IEnumerator Move() {
+        Debug.Log("Can Move: " + _canMove);
         if (_canMove)
         {
             if (_startPoint != null && _endPoint != null)
@@ -156,5 +157,12 @@ public class EnemyMove : MonoBehaviour
                 _canMove = false;
             }
         }
+    }
+
+    public void Reset()
+    {
+        transform.position = _startPoint.position;
+        transform.rotation = _startPoint.rotation;
+        _canMove = true;
     }
 }

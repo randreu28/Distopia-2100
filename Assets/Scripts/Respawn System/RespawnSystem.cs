@@ -14,6 +14,9 @@ public class RespawnSystem : MonoBehaviour
     private int _animIDDie;
     private string _deadMessage;
 
+    [SerializeField]
+    EnemyMove[] _enemies;
+
 
     private void Start()
     {
@@ -31,6 +34,10 @@ public class RespawnSystem : MonoBehaviour
     }
 
     public void Dead() {
+
+        for (int i = 0; i < _enemies.Length; i++) {
+            _enemies[i].Reset();
+        }
         _animator.SetBool(_animIDDie, false);
         gameObject.transform.position = SpawnPoint.position;
         Physics.SyncTransforms();

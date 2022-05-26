@@ -40,7 +40,9 @@ public class PlatformController : MonoBehaviour
 
     void Start()
     {
-        _buttonOff = ButtonUp.GetChild(0).GetComponent<Renderer>().material;
+        if (ButtonUp != null) { 
+            _buttonOff = ButtonUp.GetChild(0).GetComponent<Renderer>().material;
+        }
     }
 
     // Update is called once per frame
