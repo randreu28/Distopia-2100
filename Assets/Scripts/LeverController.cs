@@ -40,7 +40,7 @@ public class LeverController : MonoBehaviour
         }
         else {
             Debug.Log("ToggleLever: -90");
-            StartCoroutine(ToggleLever(40, 1));
+            StartCoroutine(ToggleLever(-120, 1));
             BroadcastMessage("Action", _isStartPoint);
         }
 

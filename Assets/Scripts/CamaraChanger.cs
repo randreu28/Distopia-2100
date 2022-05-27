@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class CameraZoomController : MonoBehaviour
+public class CamaraChanger : MonoBehaviour
 {
     [SerializeField]
     private float _areaCameraDistance = 10;
@@ -74,23 +74,7 @@ public class CameraZoomController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player") {
-            Debug.Log("Player Enter Camera Zone");
-            StopAllCoroutines();
-            StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _transitionSeconds));
-        }
+    private void Action() {
+        StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _transitionSeconds));
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Debug.Log("Player Exit Camera Zone");
-            StopAllCoroutines();
-            StartCoroutine(SetCameraDistance(_defaultAreaCameraDistance, _defaultVerticalArmLength, _defaultAreaCameraRotation, _defaultAreaNoiseFrequencyGain, _defaultAreaAmplitudGain, _transitionSeconds));
-        }
-    }
-
 }
