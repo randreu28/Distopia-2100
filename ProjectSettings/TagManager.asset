@@ -13,6 +13,7 @@ TagManager:
   - rbZone
   - Belt
   - RampZone
+  - Wrecking Ball
   layers:
   - Default
   - TransparentFX
