@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
     public float _worldLimitZFar = -11f;
 
     public float _fallingDistance;
-    private float _lastGroundedPositionY;
+    public float _lastGroundedPositionY;
 
     [Tooltip("Free fall death sound")]
     public AudioClip FallDeathSound;
