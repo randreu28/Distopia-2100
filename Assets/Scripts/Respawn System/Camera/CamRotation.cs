@@ -13,11 +13,16 @@ public class CamRotation : MonoBehaviour
     [HideInInspector]
     public GameObject tracker;
 
+    private AudioSource SFX;
+
     void Awake()
     {
+        SFX = gameObject.GetComponent<AudioSource>();
+
         tracker = new GameObject("Tracker");
         tracker.transform.parent = this.transform.parent;
         tracker.transform.position = pointA.position;
+
         StartCoroutine(loop());
     }
 
@@ -36,6 +41,7 @@ public class CamRotation : MonoBehaviour
 
     IEnumerator lookAt(Vector3 startPosition, Vector3 targetPosition, float duration)
     {
+        SFX.Play();
         float time = 0;
         while (time < duration)
         {
@@ -44,6 +50,7 @@ public class CamRotation : MonoBehaviour
             yield return null;
         }
         tracker.transform.position = targetPosition;
+        
     }
 
     IEnumerator wait(float time)
