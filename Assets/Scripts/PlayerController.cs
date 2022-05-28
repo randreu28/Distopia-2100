@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
     private int _animIDPull;
     private int _animIDPressButton;
     private int _animIDCrouch;
+    private int _animIDSleeping;
 
     private PlayerInput _playerInput;
 
@@ -151,6 +152,8 @@ public class PlayerController : MonoBehaviour
     private bool _canMove;
 
     public bool boatTravel;
+
+    private bool _started;
 
     private bool IsCurrentDeviceMouse
     {
@@ -232,6 +235,7 @@ public class PlayerController : MonoBehaviour
         _animIDPull = Animator.StringToHash("Pulling");
         _animIDPressButton = Animator.StringToHash("PressButton");
         _animIDCrouch = Animator.StringToHash("Crouch");
+        _animIDSleeping = Animator.StringToHash("Sleeping");
     }
 
     private void GroundedCheck()
@@ -319,7 +323,7 @@ public class PlayerController : MonoBehaviour
 
         // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is a move input rotate player when the player is moving
-        if (_input.move != Vector2.zero && !Pulling)
+        if (_input.move != Vector2.zero && !Pulling && _canMove)
         {
             _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
                                 _mainCamera.transform.eulerAngles.y;
@@ -484,7 +488,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnLand(AnimationEvent animationEvent)
     {
-        if (animationEvent.animatorClipInfo.weight > 0.5f)
+        if (_started && animationEvent.animatorClipInfo.weight > 0.5f)
         {
             AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
         }
@@ -617,6 +621,13 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "rbZone") {
             _activeMaxFallingDistance = _maxFallingDistanceInRampZone;
         }
+        if (other.tag == "Start" && !_started) {
+            _canMove = false;
+            if (_hasAnimator)
+            {
+                _animator.SetBool(_animIDSleeping, true);
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -654,4 +665,12 @@ public class PlayerController : MonoBehaviour
         _canMove = value;
     }
 
+    public void Wakeup() {
+        if (_hasAnimator)
+        {
+            _animator.SetBool(_animIDSleeping, false);
+            _canMove = true;
+            _started = true;
+        }
+    }
 }

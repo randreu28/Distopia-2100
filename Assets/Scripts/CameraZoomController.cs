@@ -29,6 +29,10 @@ public class CameraZoomController : MonoBehaviour
     private CinemachineFramingTransposer _framingTransposer;
     private CinemachineBasicMultiChannelPerlin _multiChannelPerlin;
 
+    [SerializeField]
+    private bool _justOnce;
+    private bool _entered;
+
 
     void Start()
     {
@@ -76,10 +80,11 @@ public class CameraZoomController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") {
+        if (other.tag == "Player" && (!_justOnce || (_justOnce && !_entered))) {
             Debug.Log("Player Enter Camera Zone");
             StopAllCoroutines();
             StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _transitionSeconds));
+            _entered = true;
         }
     }
 
