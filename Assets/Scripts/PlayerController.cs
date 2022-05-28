@@ -330,7 +330,7 @@ public class PlayerController : MonoBehaviour
         {
             _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg;
 
-            Debug.Log("Main Camera euler angles: " + _mainCamera.transform.eulerAngles.y);
+            //Debug.Log("Main Camera euler angles: " + _mainCamera.transform.eulerAngles.y);
 
             if (_useCameraRotation) {
                 _targetRotation += _mainCamera.transform.eulerAngles.y;
