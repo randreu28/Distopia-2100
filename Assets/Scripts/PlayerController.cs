@@ -139,6 +139,7 @@ public class PlayerController : MonoBehaviour
     private float _beltVelocity;
 
     public float _worldLimitZ = -19.5f;
+    public float _worldLimitZFar = -11f;
 
     public float _fallingDistance;
     private float _lastGroundedPositionY;
@@ -154,6 +155,8 @@ public class PlayerController : MonoBehaviour
     public bool boatTravel;
 
     private bool _started;
+
+    public bool _useCameraRotation = true;
 
     private bool IsCurrentDeviceMouse
     {
@@ -325,8 +328,14 @@ public class PlayerController : MonoBehaviour
         // if there is a move input rotate player when the player is moving
         if (_input.move != Vector2.zero && !Pulling && _canMove)
         {
-            _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
-                                _mainCamera.transform.eulerAngles.y;
+            _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg;
+
+            Debug.Log("Main Camera euler angles: " + _mainCamera.transform.eulerAngles.y);
+
+            if (_useCameraRotation) {
+                _targetRotation += _mainCamera.transform.eulerAngles.y;
+            }
+
             float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
                 RotationSmoothTime);
 
@@ -359,6 +368,11 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.z < _worldLimitZ) {
             transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
+        }
+
+        if (transform.position.z > _worldLimitZFar)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZFar);
         }
 
         // update animator if using character
