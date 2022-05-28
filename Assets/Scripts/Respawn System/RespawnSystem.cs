@@ -41,8 +41,12 @@ public class RespawnSystem : MonoBehaviour
     }
 
     public void Dead() {
+        BroadcastMessage("FadeOut"); 
+    }
 
-        for (int i = 0; i < _enemies.Length; i++) {
+    public void FadeOutEnd() {
+        for (int i = 0; i < _enemies.Length; i++)
+        {
             _enemies[i].Reset();
         }
         _animator.SetBool(_animIDDie, false);
@@ -70,4 +74,6 @@ public class RespawnSystem : MonoBehaviour
     {
         _animIDDie = Animator.StringToHash("Die");
     }
+
+    
 }

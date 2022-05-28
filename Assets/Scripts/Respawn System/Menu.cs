@@ -9,11 +9,15 @@ public class Menu : MonoBehaviour
 
     private RespawnSystem RespawnSystem;
 
+    private Fader _fader;
+
     void Awake(){
         RespawnSystem = Player.GetComponent<RespawnSystem>();
+        _fader = Player.GetComponent<Fader>();
     }
 
     public void ContinueButton() {
+        _fader.FadeIn();
         RespawnSystem.GameOver.SetActive(false);
         RespawnSystem.PauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;

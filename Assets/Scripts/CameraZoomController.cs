@@ -24,7 +24,18 @@ public class CameraZoomController : MonoBehaviour
     private float _defaultAreaNoiseFrequencyGain = 0.3f;
     private float _defaultAreaAmplitudGain = 0.5f;
 
-    public float _transitionSeconds = 2;
+    [SerializeField]
+    private bool _enterTransition;
+
+    [SerializeField]
+    private float _enterTransitionSeconds = 2;
+
+    [SerializeField]
+    private bool _exitTransition;
+
+    [SerializeField]
+    private float _exitTransitionSeconds = 2;
+
     public CinemachineVirtualCamera _vcam;
     private CinemachineFramingTransposer _framingTransposer;
     private CinemachineBasicMultiChannelPerlin _multiChannelPerlin;
@@ -80,21 +91,26 @@ public class CameraZoomController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && (!_justOnce || (_justOnce && !_entered))) {
-            Debug.Log("Player Enter Camera Zone");
-            StopAllCoroutines();
-            StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _transitionSeconds));
-            _entered = true;
+        if (_enterTransition) { 
+            if (other.tag == "Player" && (!_justOnce || (_justOnce && !_entered))) {
+                Debug.Log("Player Enter Camera Zone");
+                StopAllCoroutines();
+                StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _enterTransitionSeconds));
+                _entered = true;
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (_exitTransition)
         {
-            Debug.Log("Player Exit Camera Zone");
-            StopAllCoroutines();
-            StartCoroutine(SetCameraDistance(_defaultAreaCameraDistance, _defaultVerticalArmLength, _defaultAreaCameraRotation, _defaultAreaNoiseFrequencyGain, _defaultAreaAmplitudGain, _transitionSeconds));
+            if (other.tag == "Player")
+            {
+                Debug.Log("Player Exit Camera Zone");
+                StopAllCoroutines();
+                StartCoroutine(SetCameraDistance(_defaultAreaCameraDistance, _defaultVerticalArmLength, _defaultAreaCameraRotation, _defaultAreaNoiseFrequencyGain, _defaultAreaAmplitudGain, _exitTransitionSeconds));
+            }
         }
     }
 
