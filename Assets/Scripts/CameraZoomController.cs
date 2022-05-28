@@ -44,6 +44,9 @@ public class CameraZoomController : MonoBehaviour
     private bool _justOnce;
     private bool _entered;
 
+    [SerializeField]
+    private bool _useCamaraRotation;
+
 
     void Start()
     {
@@ -91,8 +94,9 @@ public class CameraZoomController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_enterTransition) { 
+        if (_enterTransition) {
             if (other.tag == "Player" && (!_justOnce || (_justOnce && !_entered))) {
+                other.GetComponent<PlayerController>()._useCameraRotation = _useCamaraRotation;
                 Debug.Log("Player Enter Camera Zone");
                 StopAllCoroutines();
                 StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _enterTransitionSeconds));

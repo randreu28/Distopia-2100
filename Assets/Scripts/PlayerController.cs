@@ -431,8 +431,8 @@ public class PlayerController : MonoBehaviour
         {
 
             _fallingDistance = _lastGroundedPositionY - transform.position.y;
-            //Debug.Log("Falling distance: " + _fallingDistance);
             if (_fallingDistance > _activeMaxFallingDistance) {
+                Debug.Log("Falling distance: " + _fallingDistance);
                 GetComponent<RespawnSystem>().KillPlayer("Free Falling", FallDeathSound, FallDeathVolume);
             }
 
