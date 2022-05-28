@@ -24,8 +24,15 @@ public class RespawnSystem : MonoBehaviour
         AssignAnimationID();
     }
 
-    public void KillPlayer(string message)
+    public void KillPlayer(string message, AudioClip audioClip, float volume)
     {
+        if(audioClip)
+        {
+            AudioSource SFX = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+            SFX.clip = audioClip;
+            SFX.volume = volume;
+            SFX.Play();
+        }
         _deadMessage = message;
         if (_hasAnimator)
         {
