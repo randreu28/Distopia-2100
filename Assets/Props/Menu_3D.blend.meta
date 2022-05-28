@@ -3,7 +3,187 @@ guid: e10530a48e5ceb742b4480a66fd73913
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: e6d95a7cccf0eb548b1d833a5d07eefa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: fead2e5ef096c8446ad5ef2142ecb65c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: ae44a0d5b2738b4418c01bf1cae05f02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: acera
+    second: {fileID: 2100000, guid: 15643146be6812f4faa659b87a2dd7f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ascensor
+    second: {fileID: 2100000, guid: e812cff4862c7c44da86b7b998b0dfff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ascensor barras
+    second: {fileID: 2100000, guid: 772c8f197d73e0a4c8c35065ba20561e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ascensor.001
+    second: {fileID: 2100000, guid: bcb80fc692e949640876b840b25cae62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ascensor.002
+    second: {fileID: 2100000, guid: b8ec7d76139b2b8428b6007d50ac1eb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: asfalto
+    second: {fileID: 2100000, guid: 34436b4353500b241b1568c7464b42f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: barriles
+    second: {fileID: 2100000, guid: 7a43a1b6332a26542b893a6b7ba18387, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_ascensor
+    second: {fileID: 2100000, guid: 48aaceb410297c34aa78cb5a6cbb97c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blanco
+    second: {fileID: 2100000, guid: 105604796a2524d49818dda6462249c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bloques
+    second: {fileID: 2100000, guid: 7cecce91e8db7cd4ca185c95743d8065, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bolsa
+    second: {fileID: 2100000, guid: b7ca2357088dc594e89b39c5ddcb7c3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cinta
+    second: {fileID: 2100000, guid: 6d3734c415b0c0047852ad3fdbf96710, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: contenedor
+    second: {fileID: 2100000, guid: 9b1e24265c2741144b5c1d77968029ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: contenedor.001
+    second: {fileID: 2100000, guid: 709b3c9fbc185234c84b2e37d434ebb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: contenedor.002
+    second: {fileID: 2100000, guid: 4d8d2067fdd322543a32f861eb601c14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edificio 2
+    second: {fileID: 2100000, guid: 955e7603489cfdc4582ac748acff1809, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edificios
+    second: {fileID: 2100000, guid: 0d8f9781835e31147a79510a4ec78b4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luz_checkpoint
+    second: {fileID: 2100000, guid: cd845ba88e067fd46a7caed7e3625012, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejilla
+    second: {fileID: 2100000, guid: 5d6728f0693aa944bba27afa1440be12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejilla.002
+    second: {fileID: 2100000, guid: c2ff287509bace04e814f69fa2798180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejilla.003
+    second: {fileID: 2100000, guid: c672a85b774622840bf387ac59d6c0fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ruedas
+    second: {fileID: 2100000, guid: c5fdcb7b3bdb84143b811e8462f88212, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ruedas.001
+    second: {fileID: 2100000, guid: 02bdd2167b2ba2e429979db015db6c36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ruedas.002
+    second: {fileID: 2100000, guid: f5652ce4034d53745aa71b530e4e200f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sofa
+    second: {fileID: 2100000, guid: dba2685773cf0b748b6ff975b7c84a8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: suelo
+    second: {fileID: 2100000, guid: 8b7069143cf137a469943731862698b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tapa
+    second: {fileID: 2100000, guid: f6138b4ef2e24e24ea97c4955bcd3f58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tapa.001
+    second: {fileID: 2100000, guid: 4ade491849796bb43be8355dae25d32c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tapa.002
+    second: {fileID: 2100000, guid: 5cdc1f30b8513db4a8c06930b5faf753, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tele
+    second: {fileID: 2100000, guid: 9889fca55de4239439d4381155f19740, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tele2
+    second: {fileID: 2100000, guid: 0aabd94fc9b2b384eb32bcd36b5e5547, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tele3
+    second: {fileID: 2100000, guid: 86c65d67eccffeb4a80219de8d08c3ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tuberia1
+    second: {fileID: 2100000, guid: b7c269253edc9094aa41c080e5b54423, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
