@@ -10,9 +10,10 @@ public class CamRotation : MonoBehaviour
     public float moveTime = 3f;
     public float restTime = 1f;
 
-    private GameObject tracker;
+    [HideInInspector]
+    public GameObject tracker;
 
-    void Start()
+    void Awake()
     {
         tracker = new GameObject("Tracker");
         tracker.transform.parent = this.transform.parent;

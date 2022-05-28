@@ -21,8 +21,8 @@ public class CamaraChanger : MonoBehaviour
     private float _defaultAreaCameraDistance = 8;
     private float _defaultVerticalArmLength = 0.66f;
     private Vector3 _defaultAreaCameraRotation = Vector3.zero;
-    private float _defaultAreaNoiseFrequencyGain = 0.3f;
-    private float _defaultAreaAmplitudGain = 0.5f;
+    //private float _defaultAreaNoiseFrequencyGain = 0.3f;
+    //private float _defaultAreaAmplitudGain = 0.5f;
 
     public float _transitionSeconds = 2;
     public CinemachineVirtualCamera _vcam;
