@@ -53,6 +53,7 @@ public class FieldOfView : MonoBehaviour
                 {
                     inFOV = true;
                     objectInFOV = target;
+                    BroadcastMessage("Detected", objectInFOV);
                 }
                 else
                 {

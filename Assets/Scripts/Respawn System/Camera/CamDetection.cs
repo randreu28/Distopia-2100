@@ -5,32 +5,22 @@ using UnityEngine;
 public class CamDetection : MonoBehaviour
 {
     public Color searchColor, spotColor;
+    public LayerMask _layerMask;
+    public LayerMask _layerObstacle;
+
+    public string deathName = "Te han visto";
+    [Range(0,1)] public float volume = 1f;
+    public AudioClip SFX;
 
     private Light myLight;
     private Material lens;
-    private Transform tracker;
+    private bool inFOV;
 
     void Start()
     {
         myLight = transform.GetChild(0).GetChild(0).GetComponent<Light>();
         lens = transform.GetChild(0).GetComponent<Renderer>().materials[1];
-        tracker = GetComponent<CamRotation>().tracker.transform;
-    }
-
-    void FixedUpdate()
-    {
-        var ray = new Ray(transform.position, tracker.position);
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, tracker.position, out hit, 1000) && hit.collider.gameObject.tag == "Player")
-        {
-            //Debug.Log(hit.collider.name);
-            Spotting();
-        }
-        else
-        {
-            //Debug.Log(hit.collider.name);
-            Searching();
-        }
+        inFOV = GetComponent<FieldOfView>().inFOV;
     }
 
     void Spotting()
@@ -43,5 +33,18 @@ public class CamDetection : MonoBehaviour
     {
         lens.SetColor("_EmissiveColor", searchColor * 20f);
         myLight.color = searchColor;
+    }
+
+    void Detected(Transform detectedObject)
+    {
+        if (detectedObject != null)
+        {
+            Spotting();
+            detectedObject.GetComponent<PlayerController>().SetCanMove(false);
+            detectedObject.GetComponent<RespawnSystem>().KillPlayer(deathName, SFX, volume);
+        }else
+        {
+            Searching();
+        }
     }
 }
