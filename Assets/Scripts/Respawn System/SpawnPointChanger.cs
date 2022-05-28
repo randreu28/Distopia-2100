@@ -27,7 +27,7 @@ public class SpawnPointChanger : MonoBehaviour
     }
 
     public void OnChangeSpawnPoint() {
-        if (_current < _spawnPoints.Length)
+        if (_current < _spawnPoints.Length-1)
         {
             _current++;
         }
