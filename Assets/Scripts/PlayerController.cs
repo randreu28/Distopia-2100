@@ -150,9 +150,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float _maxFallingDistance;
-    [SerializeField]
-    private float _maxFallingDistanceInRampZone;
-    private float _activeMaxFallingDistance;
+    public float _activeMaxFallingDistance;
 
     private bool _canMove;
 
@@ -636,9 +634,6 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Belt") {
             _inBelt = true;
         }
-        if (other.tag == "rbZone") {
-            _activeMaxFallingDistance = _maxFallingDistanceInRampZone;
-        }
         if (other.tag == "Start" && !_started) {
             _canMove = false;
             if (_hasAnimator)
@@ -673,10 +668,6 @@ public class PlayerController : MonoBehaviour
         {
             _inBelt = false;
         }
-        if (other.tag == "RampZone")
-        {
-            _activeMaxFallingDistance = _maxFallingDistance;
-        }
     }
 
     public void SetCanMove(bool value) {
@@ -691,4 +682,15 @@ public class PlayerController : MonoBehaviour
             _started = true;
         }
     }
+
+    public void SetDefaultMaxFallingDistance()
+    {
+        _activeMaxFallingDistance = _maxFallingDistance;
+    }
+
+    public void SetMaxFallingDistance(float value)
+    {
+        _activeMaxFallingDistance = value;
+    }
+
 }

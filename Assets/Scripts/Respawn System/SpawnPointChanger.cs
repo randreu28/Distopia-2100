@@ -23,17 +23,22 @@ public class SpawnPointChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void OnChangeSpawnPoint() {
-        if (_current < _spawnPoints.Length-1)
-        {
-            _current++;
-        }
-        else {
-            _current = 0;
-        }
+    public void OnGoToNextSpawnPoint()
+    {
+        _current = (_current < _spawnPoints.Length - 1) ? _current + 1 : 0;
+        SetNewSpawnPoint();
+    }
+
+    public void OnGoToPreviousSpawnPoint()
+    {
+        _current = (_current > 0) ? _current - 1 : _spawnPoints.Length - 1;
+        SetNewSpawnPoint();
+    }
+
+    private void SetNewSpawnPoint() {
         _characterController.enabled = false;
         transform.position = _spawnPoints[_current].transform.position;
         _playerController._lastGroundedPositionY = transform.position.y;

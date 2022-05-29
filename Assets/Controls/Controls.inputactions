@@ -78,9 +78,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "ChangeSpawnPoint",
+                    "name": "GoToNextSpawnPoint",
                     "type": "Button",
                     "id": "60fb3f3f-42cf-4fa5-8aa7-0e467e435cfb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "GoToPreviousSpawnPoint",
+                    "type": "Button",
+                    "id": "f7c203c8-1cc2-427a-8b4b-4c8768778a31",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -321,11 +329,22 @@
                 {
                     "name": "",
                     "id": "5723c972-e679-4c1e-be9f-4cac0382fb76",
-                    "path": "<Keyboard>/0",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ChangeSpawnPoint",
+                    "action": "GoToPreviousSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d052c3b5-e251-477f-8090-4a93f1957da8",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToNextSpawnPoint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -97,7 +97,7 @@ public class CameraZoomController : MonoBehaviour
         if (_enterTransition) {
             if (other.tag == "Player" && (!_justOnce || (_justOnce && !_entered))) {
                 other.GetComponent<PlayerController>()._useCameraRotation = _useCamaraRotation;
-                Debug.Log("Player Enter Camera Zone");
+                //Debug.Log("Player Enter Camera Zone");
                 StopAllCoroutines();
                 StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _enterTransitionSeconds));
                 _entered = true;
@@ -111,7 +111,7 @@ public class CameraZoomController : MonoBehaviour
         {
             if (other.tag == "Player")
             {
-                Debug.Log("Player Exit Camera Zone");
+                //Debug.Log("Player Exit Camera Zone");
                 StopAllCoroutines();
                 StartCoroutine(SetCameraDistance(_defaultAreaCameraDistance, _defaultVerticalArmLength, _defaultAreaCameraRotation, _defaultAreaNoiseFrequencyGain, _defaultAreaAmplitudGain, _exitTransitionSeconds));
             }
