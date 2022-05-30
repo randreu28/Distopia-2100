@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4162bfe607afc478ab28a8446c3eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathName: 
+  deathName: Te has muerto
   SFX: {fileID: 0}
   volume: 1
 --- !u!1 &8095789217822058892

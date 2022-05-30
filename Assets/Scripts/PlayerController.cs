@@ -146,6 +146,7 @@ public class PlayerController : MonoBehaviour
 
     [Tooltip("Free fall death sound")]
     public AudioClip FallDeathSound;
+    public string FallDeathName;
     [Range(0, 1)] public float FallDeathVolume = 1f;
 
     [SerializeField]
@@ -431,7 +432,7 @@ public class PlayerController : MonoBehaviour
             _fallingDistance = _lastGroundedPositionY - transform.position.y;
             if (_fallingDistance > _activeMaxFallingDistance) {
                 Debug.Log("Falling distance: " + _fallingDistance);
-                GetComponent<RespawnSystem>().KillPlayer("Free Falling", FallDeathSound, FallDeathVolume);
+                GetComponent<RespawnSystem>().KillPlayer(FallDeathName, FallDeathSound, FallDeathVolume);
             }
 
             // reset the jump timeout timer
