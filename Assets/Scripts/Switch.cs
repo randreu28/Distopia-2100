@@ -2,48 +2,101 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Switch : MonoBehaviour
 {
-
-    private Animator _switchAnimator;
-    private Animator _playerAnimator;
-    private Animator _platformAnimator;
-    private bool isClose = false;
-    public GameObject player;
+    [Header("Movimiento")]
+    public Transform startPoint;
+    public Transform endPoint;
+    public float leverDuration = 0.33f;
+    public float platformDuration = 6f;
+    
+    [Header("Plataforma")]
     public GameObject platform;
+    public AudioClip AudioClip;
+    [Range(0, 1)]
+    public float volume = 1f;
 
-    // Para tener de referencia para el puzle 6
-    void Start()
-    {
-        _switchAnimator = GetComponentInChildren<Animator>();
-        _playerAnimator = player.GetComponent<Animator>();
-        _platformAnimator = platform.GetComponent<Animator>();
+    private bool isClose = false;
+    private bool isMoving = false;
+    private bool hasMoved = false;
+    private AudioSource SFX;
+
+    void Awake(){
+        SFX = platform.AddComponent(typeof(AudioSource)) as AudioSource;
+        SFX.clip = AudioClip;
+        SFX.volume = volume;
     }
+
     public void action(){
-        if (isClose){
-           _switchAnimator.SetBool("Switch", !_switchAnimator.GetBool("Switch"));
-            _platformAnimator.SetBool("isOn", !_platformAnimator.GetBool("isOn"));
-            _playerAnimator.SetBool("PressButton", true);
-           StartCoroutine(ActionAnimation());
+        if(!isMoving && isClose)
+        {
+            StartCoroutine(handleAnimations());
         }
     }
-    IEnumerator ActionAnimation(){
-        yield return new WaitForSeconds(1);
-        _playerAnimator.SetBool("PressButton", false);
-    }
-     private void OnTriggerEnter(Collider _is)
+
+    private IEnumerator handleAnimations()
     {
-        if(_is.gameObject == player)
-         isClose = true;
+        Vector3 targetRotation = hasMoved ? new Vector3(this.transform.eulerAngles.x + 45, this.transform.eulerAngles.y, this.transform.eulerAngles.z) : new Vector3(this.transform.eulerAngles.x - 45, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
+        yield return LerpRotation(this.gameObject, this.transform.eulerAngles, targetRotation, leverDuration);
+        SFX.Play();
+        isMoving = true;
+        if (hasMoved)
+        {
+            yield return LerpPosition(platform, endPoint.position, startPoint.position, platformDuration);
+            hasMoved = !hasMoved;
+        }
+        else
+        {
+            yield return LerpPosition(platform, startPoint.position, endPoint.position, platformDuration);
+            hasMoved = !hasMoved;
+        }
+        isMoving = false;
+    }
+
+    public IEnumerator LerpPosition(GameObject myObject, Vector3 startPosition, Vector3 targetPosition, float duration)
+    {
+        float time = 0;
+        myObject.transform.position = startPosition;
+        while (time < duration)
+        {
+            float t = time / duration;
+            t = t * t * (3f - 2f * t);
+            myObject.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        myObject.transform.position = targetPosition;
+    }
+
+    public IEnumerator LerpRotation(GameObject myObject, Vector3 startRotation, Vector3 targetRotation, float duration)
+    {
+        float time = 0;
+        myObject.transform.eulerAngles = startRotation;
+        while (time < duration)
+        {
+            float t = time / duration;
+            t = t * t * (3f - 2f * t);
+            myObject.transform.eulerAngles = Vector3.Lerp(startRotation, targetRotation, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        myObject.transform.eulerAngles = targetRotation;
+    }
+
+    private void OnTriggerEnter(Collider _is)
+    {
+        if(_is.gameObject.tag == "Player")
+        {
+            isClose = true;
+        }
     }
 
     private void OnTriggerExit(Collider _is)
     {
-        if(_is.gameObject == player)
-         isClose = false;
+        if(_is.gameObject.tag == "Player")
+        {
+            isClose = false;
+        }
     }
-
 }
-
