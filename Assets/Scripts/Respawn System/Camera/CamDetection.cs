@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class CamDetection : MonoBehaviour
 {
-    public Color searchColor, spotColor;
-    public LayerMask _layerMask;
-    public LayerMask _layerObstacle;
+    [Header("Light and material settings")]
+    public Color searchColor;
+    public Color spotColor;
+    public float spotIntensity = 40f;
+    public float searchIntensity = 60f;
 
+    [Header("Death parameters")]
     public string deathName = "Te han visto";
     [Range(0,1)] public float volume = 1f;
     public AudioClip SFX;
@@ -25,13 +28,13 @@ public class CamDetection : MonoBehaviour
 
     void Spotting()
     {
-        lens.SetColor("_EmissiveColor", spotColor * 40f);
+        lens.SetColor("_EmissiveColor", spotColor * spotIntensity);
         myLight.color = spotColor;
     }
     
     void Searching()
     {
-        lens.SetColor("_EmissiveColor", searchColor * 20f);
+        lens.SetColor("_EmissiveColor", searchColor * searchIntensity);
         myLight.color = searchColor;
     }
 

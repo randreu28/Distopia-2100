@@ -527,14 +527,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   searchColor: {r: 0.3764706, g: 0.3764706, b: 0.3764706, a: 1}
   spotColor: {r: 1, g: 0, b: 0, a: 0}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  _layerObstacle:
-    serializedVersion: 2
-    m_Bits: 0
+  spotIntensity: 40
+  searchIntensity: 60
   deathName: Te han pillado
-  volume: 0.196
+  volume: 0.112
   SFX: {fileID: 8300000, guid: a4573206645d62e4aa0138a1201d15a1, type: 3}
 --- !u!82 &8164688489874418957
 AudioSource:
