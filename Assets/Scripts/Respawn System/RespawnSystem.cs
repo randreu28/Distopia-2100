@@ -13,6 +13,7 @@ public class RespawnSystem : MonoBehaviour
     private bool _hasAnimator;
     private int _animIDDie;
     private string _deadMessage;
+    private bool cooldown = false;
 
     [SerializeField]
     EnemyMove[] _enemies;
@@ -31,13 +32,23 @@ public class RespawnSystem : MonoBehaviour
             AudioSource SFX = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
             SFX.clip = audioClip;
             SFX.volume = volume;
-            SFX.Play();
+            if (!cooldown) 
+            {
+                SFX.Play();
+                cooldown = true;
+                StartCoroutine(waitForCooldown(cooldown, 4));
+            }
         }
         _deadMessage = message;
         if (_hasAnimator)
         {
             _animator.SetBool(_animIDDie, true);
         }
+    }
+    IEnumerator waitForCooldown(bool cooldown, float time)
+    {
+        yield return new WaitForSeconds(time);
+        yield return cooldown = false;
     }
 
     public void Dead() {
