@@ -307,7 +307,7 @@
                 {
                     "name": "",
                     "id": "a41633c8-30f3-4b77-a487-6cb3b32ba8d1",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
@@ -318,7 +318,7 @@
                 {
                     "name": "",
                     "id": "91f5d886-9894-4a4d-a1e7-9d4f1bfc9bc3",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
