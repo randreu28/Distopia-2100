@@ -407,7 +407,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // Jump
-            if (_canMove && _input.jump && _jumpTimeoutDelta <= 0.0f)
+            if (_canMove && !_crouched && _input.jump && _jumpTimeoutDelta <= 0.0f)
             {
                 // the square root of H * -2 * G = how much velocity needed to reach desired height
                 _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -417,6 +417,9 @@ public class PlayerController : MonoBehaviour
                 {
                     _animator.SetBool(_animIDJump, true);
                 }
+            }
+            else if (_crouched) {
+                _input.jump = false;
             }
 
             // jump timeout
