@@ -42,9 +42,19 @@ public class CamDetection : MonoBehaviour
             Spotting();
             detectedObject.GetComponent<PlayerController>().SetCanMove(false);
             detectedObject.GetComponent<RespawnSystem>().KillPlayer(deathName, SFX, volume);
+            StartCoroutine(waitAndReset(4));
         }else
         {
             Searching();
         }
+    }
+    IEnumerator waitAndReset(float time)
+    {
+        this.GetComponent<CamRotation>().enabled = false;
+        this.GetComponent<AudioSource>().enabled = false;
+        yield return new WaitForSeconds(time);
+        this.GetComponent<CamRotation>().enabled = true;
+        this.GetComponent<AudioSource>().enabled = true;
+        Searching();
     }
 }
