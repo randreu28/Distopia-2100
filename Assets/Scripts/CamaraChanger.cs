@@ -29,6 +29,8 @@ public class CamaraChanger : MonoBehaviour
     private CinemachineFramingTransposer _framingTransposer;
     private CinemachineBasicMultiChannelPerlin _multiChannelPerlin;
 
+    [SerializeField]
+    private GameObject[] _CamaraZonesToDisableOnAction;
 
     void Start()
     {
@@ -75,6 +77,9 @@ public class CamaraChanger : MonoBehaviour
     }
 
     private void Action() {
+        for (int i = 0; i < _CamaraZonesToDisableOnAction.Length; i++) {
+            _CamaraZonesToDisableOnAction[i].SetActive(false);
+        }
         StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _transitionSeconds));
     }
 }

@@ -663,7 +663,7 @@ Transform:
   m_Children:
   - {fileID: 663221}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &32901819
 PrefabInstance:
@@ -1505,12 +1505,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 15, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 1
   _exitTransitionSeconds: 2
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &109307680
 GameObject:
@@ -1830,7 +1838,7 @@ Transform:
   - {fileID: 903602923}
   - {fileID: 1167709031}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &120904969 stripped
 GameObject:
@@ -3165,7 +3173,7 @@ Transform:
   - {fileID: 72895610}
   - {fileID: 1656963583}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228332142 stripped
 GameObject:
@@ -5245,7 +5253,7 @@ Transform:
   - {fileID: 6984172191967682418}
   - {fileID: 6984172191130512925}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &359865601 stripped
 Transform:
@@ -6863,7 +6871,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &394692003
 BoxCollider:
@@ -6895,12 +6903,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 1
   _exitTransitionSeconds: 3
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &396555978 stripped
 GameObject:
@@ -9795,14 +9811,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546750643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 413.8324, y: 74.89009, z: -12.240766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.737671, y: -3.320053, z: 3.0925903}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1653127235}
   - {fileID: 268217765}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1021623030}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &546750647
 BoxCollider:
@@ -9851,13 +9867,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a488ff8c82cd547c1a5706cd3a634d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaCameraDistance: 28
+  _areaCameraDistance: 30
   _areaCameraVerticalArmLength: 0.7
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 2
   _transitionSeconds: 3
   _vcam: {fileID: 1120432007}
+  _CamaraZonesToDisableOnAction:
+  - {fileID: 1275608992}
+  - {fileID: 622257354}
 --- !u!114 &546750650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10401,7 +10420,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1021623030}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &567984738
 MonoBehaviour:
@@ -10944,12 +10963,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &608153571 stripped
 GameObject:
@@ -11125,6 +11152,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f16aad532734be8a52fc0962c5dd8c, type: 3}
+--- !u!1 &622257354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622257355}
+  - component: {fileID: 622257357}
+  - component: {fileID: 622257356}
+  m_Layer: 0
+  m_Name: Wracking Ball (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &622257355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622257354}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 376.9, y: -0.57, z: 4.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715874683}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &622257356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622257354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.1359863, y: 13.011055, z: 5.993764}
+  m_Center: {x: 0.9770508, y: 4.0961494, z: 6.75421}
+--- !u!114 &622257357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622257354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1276b3552532c4b3792d9932b50ac0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _areaCameraDistance: 14
+  _areaCameraVerticalArmLength: 0.5
+  _areaCameraRotation: {x: 0, y: 0, z: 0}
+  _areaNoiseFrequencyGain: 0.3
+  _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
+  _enterTransition: 1
+  _enterTransitionSeconds: 2
+  _exitTransition: 0
+  _exitTransitionSeconds: 2
+  _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
+  _justOnce: 0
+  _entered: 0
+  _useCamaraRotation: 0
 --- !u!1 &625827563
 GameObject:
   m_ObjectHideFlags: 0
@@ -11270,12 +11374,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &662344855
 GameObject:
@@ -11387,8 +11499,85 @@ Transform:
   m_LocalScale: {x: 0.3125, y: 3.3200002, z: 1}
   m_Children: []
   m_Father: {fileID: 1021623030}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!1 &666413878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 666413879}
+  - component: {fileID: 666413881}
+  - component: {fileID: 666413880}
+  m_Layer: 0
+  m_Name: Wracking Ball (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &666413879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666413878}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 378.57, y: -0.57, z: 4.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715874683}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &666413880
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666413878}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.6062927, y: 13.011055, z: 5.993764}
+  m_Center: {x: 6.5390472, y: 4.0961494, z: 6.75421}
+--- !u!114 &666413881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666413878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1276b3552532c4b3792d9932b50ac0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _areaCameraDistance: 14
+  _areaCameraVerticalArmLength: 0.5
+  _areaCameraRotation: {x: 0, y: 25, z: 0}
+  _areaNoiseFrequencyGain: 0.3
+  _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
+  _enterTransition: 1
+  _enterTransitionSeconds: 4
+  _exitTransition: 0
+  _exitTransitionSeconds: 2
+  _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
+  _justOnce: 0
+  _entered: 0
+  _useCamaraRotation: 0
 --- !u!1 &670711342
 GameObject:
   m_ObjectHideFlags: 0
@@ -12125,7 +12314,7 @@ Transform:
   - {fileID: 507853893}
   - {fileID: 1062114577}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &738962832
 PrefabInstance:
@@ -12549,12 +12738,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 0.5
   _exitTransition: 1
   _exitTransitionSeconds: 0.5
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1001 &777976717
 PrefabInstance:
@@ -12681,12 +12878,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 15, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 0
   _exitTransitionSeconds: 0.5
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &789107393
 GameObject:
@@ -12772,7 +12977,7 @@ Transform:
   - {fileID: 1601435634}
   - {fileID: 557520275}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &802828105
 GameObject:
@@ -13288,12 +13493,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: -20, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 0.5
   _exitTransition: 1
   _exitTransitionSeconds: 2
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &827945505
 GameObject:
@@ -13527,12 +13740,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 55, y: 90, z: 0}
   _areaNoiseFrequencyGain: 12
   _areaAmplitudGain: 1.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 0.5
   _exitTransition: 1
   _exitTransitionSeconds: 2
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 1
 --- !u!1 &854851646 stripped
 GameObject:
@@ -13634,12 +13855,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 20, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 0
   _exitTransitionSeconds: 0.5
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1001 &887521067
 PrefabInstance:
@@ -15005,6 +15234,7 @@ Transform:
   m_LocalPosition: {x: 426.57007, y: 78.210144, z: -15.333356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 546750646}
   - {fileID: 1244798451}
   - {fileID: 662344860}
   - {fileID: 1974052916}
@@ -15910,12 +16140,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 25, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &1075251103 stripped
 GameObject:
@@ -16340,7 +16578,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5816595350597743793, guid: be4603baba87048568130bcbb3336ac6, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5816595350597743793, guid: be4603baba87048568130bcbb3336ac6, type: 3}
       propertyPath: m_LocalScale.y
@@ -17754,7 +17992,7 @@ Transform:
   - {fileID: 477752747}
   - {fileID: 1445166544}
   m_Father: {fileID: 1021623030}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -54}
 --- !u!1001 &1248606423
 PrefabInstance:
@@ -18271,12 +18509,12 @@ GameObject:
   - component: {fileID: 1275608995}
   - component: {fileID: 1275608994}
   m_Layer: 0
-  m_Name: Wracking Ball
+  m_Name: Wracking Ball (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1275608993
 Transform:
   m_ObjectHideFlags: 0
@@ -18285,7 +18523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275608992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 385.7, y: -16.8, z: 4.06}
+  m_LocalPosition: {x: 371.6, y: -0.57, z: 4.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
@@ -18302,8 +18540,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.43573, y: 22.408875, z: 5.993764}
-  m_Center: {x: -6.12677, y: 16.355915, z: 6.75421}
+  m_Size: {x: 5.5400696, y: 13.011055, z: 5.993764}
+  m_Center: {x: 0.21559143, y: 4.0961494, z: 6.75421}
 --- !u!114 &1275608995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18316,17 +18554,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1276b3552532c4b3792d9932b50ac0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaCameraDistance: 12
+  _areaCameraDistance: 30
   _areaCameraVerticalArmLength: 0.8
-  _areaCameraRotation: {x: 0, y: 0, z: 0}
+  _areaCameraRotation: {x: 0, y: -25, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
-  _enterTransitionSeconds: 2
-  _exitTransition: 1
+  _enterTransitionSeconds: 4
+  _exitTransition: 0
   _exitTransitionSeconds: 2
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &1291445726
 GameObject:
@@ -21963,12 +22209,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 40, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 1
   _exitTransitionSeconds: 2
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 1
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &1581375402 stripped
 GameObject:
@@ -23937,12 +24191,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 1
   _exitTransitionSeconds: 3
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &1699948165 stripped
 GameObject:
@@ -24020,6 +24282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715874683}
+  - component: {fileID: 1715874684}
   m_Layer: 0
   m_Name: CameraZones
   m_TagString: Untagged
@@ -24052,10 +24315,25 @@ Transform:
   - {fileID: 787728336}
   - {fileID: 777659579}
   - {fileID: 1275608993}
+  - {fileID: 622257355}
+  - {fileID: 666413879}
   - {fileID: 394692002}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715874684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715874682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91df84be30c043618c612b4037bec95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vcam: {fileID: 1120432007}
 --- !u!1 &1716739157
 GameObject:
   m_ObjectHideFlags: 0
@@ -24131,7 +24409,7 @@ Transform:
   m_LocalScale: {x: 4.1134796, y: 0.21768998, z: 1}
   m_Children: []
   m_Father: {fileID: 1021623030}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1722031826
 MeshCollider:
@@ -24662,7 +24940,7 @@ Transform:
   m_LocalScale: {x: 4.113478, y: 0.21768996, z: 1}
   m_Children: []
   m_Father: {fileID: 1021623030}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1741684536
 MonoBehaviour:
@@ -25144,12 +25422,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 25, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1001 &1798924123
 PrefabInstance:
@@ -25850,12 +26136,20 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
+  _defaultAreaCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultAreaNoiseFrequencyGain: 0.3
+  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 1
   _exitTransitionSeconds: 2
   _vcam: {fileID: 1120432007}
+  _framingTransposer: {fileID: 0}
+  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
+  _entered: 0
   _useCamaraRotation: 0
 --- !u!1 &1853487947 stripped
 GameObject:
@@ -27873,7 +28167,7 @@ Transform:
   m_LocalScale: {x: 0.3125, y: 3.3200002, z: 1}
   m_Children: []
   m_Father: {fileID: 1021623030}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!1 &1974483144 stripped
 GameObject:

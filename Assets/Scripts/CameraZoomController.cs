@@ -6,46 +6,46 @@ using Cinemachine;
 public class CameraZoomController : MonoBehaviour
 {
     [SerializeField]
-    private float _areaCameraDistance = 10;
+    public float _areaCameraDistance = 10;
     [SerializeField]
-    private float _areaCameraVerticalArmLength = 1.25f;
+    public float _areaCameraVerticalArmLength = 1.25f;
     [SerializeField]
-    private Vector3 _areaCameraRotation;
+    public Vector3 _areaCameraRotation;
 
     [SerializeField]
-    private float _areaNoiseFrequencyGain = 0.3f;
+    public float _areaNoiseFrequencyGain = 0.3f;
 
     [SerializeField]
-    private float _areaAmplitudGain = 2f;
+    public float _areaAmplitudGain = 2f;
 
-    private float _defaultAreaCameraDistance = 8;
-    private float _defaultVerticalArmLength = 0.66f;
-    private Vector3 _defaultAreaCameraRotation = Vector3.zero;
-    private float _defaultAreaNoiseFrequencyGain = 0.3f;
-    private float _defaultAreaAmplitudGain = 0.5f;
-
-    [SerializeField]
-    private bool _enterTransition;
+    public float _defaultAreaCameraDistance = 8;
+    public float _defaultVerticalArmLength = 0.66f;
+    public Vector3 _defaultAreaCameraRotation = Vector3.zero;
+    public float _defaultAreaNoiseFrequencyGain = 0.3f;
+    public float _defaultAreaAmplitudGain = 0.5f;
 
     [SerializeField]
-    private float _enterTransitionSeconds = 2;
+    public bool _enterTransition;
 
     [SerializeField]
-    private bool _exitTransition;
+    public float _enterTransitionSeconds = 2;
 
     [SerializeField]
-    private float _exitTransitionSeconds = 2;
+    public bool _exitTransition;
+
+    [SerializeField]
+    public float _exitTransitionSeconds = 2;
 
     public CinemachineVirtualCamera _vcam;
-    private CinemachineFramingTransposer _framingTransposer;
-    private CinemachineBasicMultiChannelPerlin _multiChannelPerlin;
+    public CinemachineFramingTransposer _framingTransposer;
+    public CinemachineBasicMultiChannelPerlin _multiChannelPerlin;
 
     [SerializeField]
-    private bool _justOnce;
-    private bool _entered;
+    public bool _justOnce;
+    public bool _entered;
 
     [SerializeField]
-    private bool _useCamaraRotation;
+    public bool _useCamaraRotation;
 
 
     void Start()
@@ -98,9 +98,10 @@ public class CameraZoomController : MonoBehaviour
             if (other.tag == "Player" && (!_justOnce || (_justOnce && !_entered))) {
                 other.GetComponent<PlayerController>()._useCameraRotation = _useCamaraRotation;
                 //Debug.Log("Player Enter Camera Zone");
-                StopAllCoroutines();
-                StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _enterTransitionSeconds));
+                //StopAllCoroutines();
+                //StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _enterTransitionSeconds));
                 _entered = true;
+                SendMessageUpwards("CameraMovementEnter", this);
             }
         }
     }
@@ -111,9 +112,10 @@ public class CameraZoomController : MonoBehaviour
         {
             if (other.tag == "Player")
             {
+                BroadcastMessage("CameraMovementExit", this);
                 //Debug.Log("Player Exit Camera Zone");
-                StopAllCoroutines();
-                StartCoroutine(SetCameraDistance(_defaultAreaCameraDistance, _defaultVerticalArmLength, _defaultAreaCameraRotation, _defaultAreaNoiseFrequencyGain, _defaultAreaAmplitudGain, _exitTransitionSeconds));
+                //StopAllCoroutines();
+                //StartCoroutine(SetCameraDistance(_defaultAreaCameraDistance, _defaultVerticalArmLength, _defaultAreaCameraRotation, _defaultAreaNoiseFrequencyGain, _defaultAreaAmplitudGain, _exitTransitionSeconds));
             }
         }
     }
