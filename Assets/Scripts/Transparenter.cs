@@ -45,19 +45,24 @@ public class Transparenter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < _objects.Length; i++)
-        {
-            _objects[i].GetComponent<Renderer>().material = _activeMaterial[i];
+        if (other.tag == "Player") { 
+            for (int i = 0; i < _objects.Length; i++)
+            {
+                _objects[i].GetComponent<Renderer>().material = _activeMaterial[i];
+            }
+            Action(0.3f);
         }
-        Action(0.3f);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Action(1f);
-        for (int i = 0; i < _objects.Length; i++)
+        if (other.tag == "Player")
         {
-            _objects[i].GetComponent<Renderer>().material = _defaultMaterial[i];
+            Action(1f);
+            for (int i = 0; i < _objects.Length; i++)
+            {
+                _objects[i].GetComponent<Renderer>().material = _defaultMaterial[i];
+            }
         }
     }
 
