@@ -1473,7 +1473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &107207363
 BoxCollider:
@@ -1505,18 +1505,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 15, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 1
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -6871,7 +6864,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &394692003
 BoxCollider:
@@ -6903,18 +6896,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 1
   _exitTransitionSeconds: 3
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -10931,7 +10917,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &600513083
 BoxCollider:
@@ -10963,18 +10949,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -11182,7 +11161,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &622257356
 BoxCollider:
@@ -11214,18 +11193,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 0
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -11342,7 +11314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &649507874
 BoxCollider:
@@ -11374,18 +11346,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -11531,7 +11496,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &666413880
 BoxCollider:
@@ -11563,18 +11528,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 25, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 4
   _exitTransition: 0
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -12706,7 +12664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &777659580
 BoxCollider:
@@ -12738,18 +12696,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 0.5
   _exitTransition: 1
   _exitTransitionSeconds: 0.5
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -12846,7 +12797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &787728337
 BoxCollider:
@@ -12878,18 +12829,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 15, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 0
   _exitTransitionSeconds: 0.5
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -12917,7 +12861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789107393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.16, y: 11.11, z: -49.28}
+  m_LocalPosition: {x: -20.16, y: 15.26, z: -49.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1777459528}
@@ -13461,7 +13405,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &825818792
 BoxCollider:
@@ -13493,18 +13437,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: -20, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 0.5
   _exitTransition: 1
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -13708,7 +13645,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &844533934
 BoxCollider:
@@ -13740,18 +13677,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 55, y: 90, z: 0}
   _areaNoiseFrequencyGain: 12
   _areaAmplitudGain: 1.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 0.5
   _exitTransition: 1
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 1
@@ -13823,7 +13753,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &876736372
 BoxCollider:
@@ -13855,18 +13785,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 20, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 0
   _exitTransitionSeconds: 0.5
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -16108,7 +16031,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1072311534
 BoxCollider:
@@ -16140,18 +16063,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 25, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -17167,12 +17083,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afaaf36f91109489e861b49719309314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointOfView: {fileID: 0}
-  radius: 0
-  angle: 0
+  _pointOfView: {fileID: 315009872}
+  radius: 1.6
+  angle: 135
   targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   obstaclesLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -18527,7 +18443,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1275608994
 BoxCollider:
@@ -18559,18 +18475,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: -25, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 4
   _exitTransition: 0
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -20303,6 +20212,76 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9999998, y: 2.0000007, z: 1.9999987}
   m_Center: {x: -0.057230465, y: 0.123806916, z: 1.0004809}
+--- !u!1 &1398127258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398127259}
+  - component: {fileID: 1398127261}
+  - component: {fileID: 1398127260}
+  m_Layer: 0
+  m_Name: Inici
+  m_TagString: Start
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1398127259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398127258}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -35.3, y: -2.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715874683}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1398127260
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398127258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.4789543, y: 0.47032928, z: 17.12341}
+  m_Center: {x: 9.782743, y: -3.243969, z: 8.061707}
+--- !u!114 &1398127261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398127258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1276b3552532c4b3792d9932b50ac0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _areaCameraDistance: 28
+  _areaCameraVerticalArmLength: 0.43
+  _areaCameraRotation: {x: 20, y: 0, z: 0}
+  _areaNoiseFrequencyGain: 0.3
+  _areaAmplitudGain: 0.5
+  _enterTransition: 0
+  _enterTransitionSeconds: 0
+  _exitTransition: 0
+  _exitTransitionSeconds: 2
+  _framingTransposer: {fileID: 0}
+  _justOnce: 1
+  _entered: 0
+  _useCamaraRotation: 0
 --- !u!1 &1398877354 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3266618362427837072, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -22159,7 +22138,7 @@ GameObject:
   - component: {fileID: 1571731926}
   - component: {fileID: 1571731925}
   m_Layer: 0
-  m_Name: Start
+  m_Name: ZoomIn
   m_TagString: Start
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22177,7 +22156,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1571731925
 BoxCollider:
@@ -22204,23 +22183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1276b3552532c4b3792d9932b50ac0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaCameraDistance: 10
-  _areaCameraVerticalArmLength: 0.25
+  _areaCameraDistance: 14
+  _areaCameraVerticalArmLength: 0.43
   _areaCameraRotation: {x: 40, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
-  _enterTransitionSeconds: 2
+  _enterTransitionSeconds: 6
   _exitTransition: 1
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 1
   _entered: 0
   _useCamaraRotation: 0
@@ -23785,11 +23757,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334235715600961259, guid: d6b5f0f93108542e6ac6905b5fe29089, type: 3}
       propertyPath: m_Size.z
-      value: 0.9263449
+      value: 1.0810213
       objectReference: {fileID: 0}
     - target: {fileID: 2334235715600961259, guid: d6b5f0f93108542e6ac6905b5fe29089, type: 3}
       propertyPath: m_Center.z
-      value: -0.20571661
+      value: -0.28305483
       objectReference: {fileID: 0}
     - target: {fileID: 2334235715977182154, guid: d6b5f0f93108542e6ac6905b5fe29089, type: 3}
       propertyPath: m_RootOrder
@@ -24159,7 +24131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1697954401
 BoxCollider:
@@ -24191,18 +24163,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 1
   _exitTransitionSeconds: 3
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -24301,6 +24266,7 @@ Transform:
   m_LocalPosition: {x: 38.53, y: 76.15, z: -25.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1398127259}
   - {fileID: 1571731924}
   - {fileID: 876736371}
   - {fileID: 825818791}
@@ -24334,6 +24300,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vcam: {fileID: 1120432007}
+  _defaultCameraDistance: 8
+  _defaultVerticalArmLength: 0.66
+  _defaultCameraRotation: {x: 0, y: 0, z: 0}
+  _defaultNoiseFrequencyGain: 0.3
+  _defaultAmplitudGain: 0.5
 --- !u!1 &1716739157
 GameObject:
   m_ObjectHideFlags: 0
@@ -25390,7 +25361,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1797914373
 BoxCollider:
@@ -25422,18 +25393,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 25, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 3
   _exitTransition: 0
   _exitTransitionSeconds: 3
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -26104,7 +26068,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715874683}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1852498264
 BoxCollider:
@@ -26136,18 +26100,11 @@ MonoBehaviour:
   _areaCameraRotation: {x: 0, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
-  _defaultAreaCameraDistance: 8
-  _defaultVerticalArmLength: 0.66
-  _defaultAreaCameraRotation: {x: 0, y: 0, z: 0}
-  _defaultAreaNoiseFrequencyGain: 0.3
-  _defaultAreaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
   _exitTransition: 1
   _exitTransitionSeconds: 2
-  _vcam: {fileID: 1120432007}
   _framingTransposer: {fileID: 0}
-  _multiChannelPerlin: {fileID: 0}
   _justOnce: 0
   _entered: 0
   _useCamaraRotation: 0
@@ -33547,6 +33504,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lift B
       objectReference: {fileID: 0}
+    - target: {fileID: 4191282632995661680, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+      propertyPath: m_Size.z
+      value: 6.1080647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191282632995661680, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+      propertyPath: m_Center.y
+      value: 5.1068394e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191282632995661680, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+      propertyPath: m_Center.z
+      value: 1.4610316
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191282632995661680, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5526006757385513621, guid: d804f53a44f824497869659bf27e15ee, type: 3}
       propertyPath: m_Size.x
       value: 3.6351013
@@ -33554,6 +33527,18 @@ PrefabInstance:
     - target: {fileID: 5526006757385513621, guid: d804f53a44f824497869659bf27e15ee, type: 3}
       propertyPath: m_Center.x
       value: 1.0736237
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566572680164598636, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+      propertyPath: m_Size.z
+      value: 6.21521
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566572680164598636, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+      propertyPath: m_Center.y
+      value: 6.929428e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566572680164598636, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+      propertyPath: m_Center.z
+      value: 1.5146402
       objectReference: {fileID: 0}
     - target: {fileID: 8358400069390052462, guid: d804f53a44f824497869659bf27e15ee, type: 3}
       propertyPath: player
@@ -33611,6 +33596,8 @@ PrefabInstance:
     - {fileID: 3307987631536728094, guid: d804f53a44f824497869659bf27e15ee, type: 3}
     - {fileID: 5526006757868130845, guid: d804f53a44f824497869659bf27e15ee, type: 3}
     - {fileID: 5526006758689947575, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+    - {fileID: 4399337631095005967, guid: d804f53a44f824497869659bf27e15ee, type: 3}
+    - {fileID: 1001123187511327745, guid: d804f53a44f824497869659bf27e15ee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d804f53a44f824497869659bf27e15ee, type: 3}
 --- !u!1001 &561365533805920902
 PrefabInstance:
@@ -33981,19 +33968,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1296901718984765058, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Size.z
-      value: 5.311718
+      value: 5.760627
       objectReference: {fileID: 0}
     - target: {fileID: 1296901718984765058, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Center.x
-      value: -2.467247e-19
+      value: -6.005056e-19
       objectReference: {fileID: 0}
     - target: {fileID: 1296901718984765058, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Center.y
-      value: 1.3339145e-12
+      value: -9.150458e-13
       objectReference: {fileID: 0}
     - target: {fileID: 1296901718984765058, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Center.z
-      value: 1.0628608
+      value: 1.2873155
       objectReference: {fileID: 0}
     - target: {fileID: 1445172703800289286, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_IsActive
@@ -34069,15 +34056,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8139358486789663382, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Size.z
-      value: 5.1083326
+      value: 5.64572
       objectReference: {fileID: 0}
     - target: {fileID: 8139358486789663382, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Center.x
-      value: 1.5511541e-15
+      value: 3.3399343e-16
       objectReference: {fileID: 0}
     - target: {fileID: 8139358486789663382, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Center.z
-      value: 0.9612019
+      value: 1.229897
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7839412108227242185, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
