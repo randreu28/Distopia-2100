@@ -36,7 +36,7 @@ public class IdleState : AbstractFSMState
     {
         if (EnteredState) {
             _totalDuration += Time.deltaTime;
-            Debug.Log("UPDATING IDLE STATE");
+            //Debug.Log("UPDATING IDLE STATE");
             if (_totalDuration >= _idleDuration) {
                 _fsm.EnterState(FSMStateType.PATROL);
             }

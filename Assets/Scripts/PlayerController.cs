@@ -563,7 +563,7 @@ public class PlayerController : MonoBehaviour
     {
         _crouch = false;
         RaycastHit hit;
-        if (!Physics.Raycast(_crouchPoint.position, _crouchPoint.TransformDirection(Vector3.up), out hit, 2)) {
+        if (!Physics.Raycast(_crouchPoint.position, _crouchPoint.TransformDirection(Vector3.up), out hit, 0.5f)) {
             _controller.height = _controllerHeight;
             _controller.center = _controllerCenter;
             _crouched = false;
@@ -578,7 +578,7 @@ public class PlayerController : MonoBehaviour
         if (!_crouch && _controller.height != _controllerHeight)
         {
             RaycastHit hit;
-            if (!Physics.Raycast(_crouchPoint.position, _crouchPoint.TransformDirection(Vector3.up), out hit, 2))
+            if (!Physics.Raycast(_crouchPoint.position, _crouchPoint.TransformDirection(Vector3.up), out hit, 0.5f))
             {
                 _crouched = false;
                 _controller.height = _controllerHeight;
