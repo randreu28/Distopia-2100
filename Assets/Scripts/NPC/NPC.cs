@@ -10,6 +10,9 @@ public class NPC : MonoBehaviour
     [SerializeField]
     public NPCPatrolPoint[] _patrolPoints;
 
+    [SerializeField]
+    public bool IdleAfterChase;
+
     NavMeshAgent _navMeshAgent;
     FiniteStateMachine _finiteStateMachine;
     NPCFieldOfView _fieldOfView;

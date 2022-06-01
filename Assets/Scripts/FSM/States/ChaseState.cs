@@ -39,7 +39,10 @@ public class ChaseState : AbstractFSMState
             }
             else
             {
-                _fsm.EnterState(FSMStateType.PATROL);
+                if (_npc.IdleAfterChase)
+                    _fsm.EnterState(FSMStateType.IDLE);
+                else
+                    _fsm.EnterState(FSMStateType.PATROL);
             }
         }
     }
