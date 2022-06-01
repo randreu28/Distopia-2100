@@ -16,7 +16,7 @@ public class RespawnSystem : MonoBehaviour
     private bool cooldown = false;
 
     [SerializeField]
-    EnemyMove[] _enemies;
+    NPC[] _enemies;
 
 
     private void Start()
