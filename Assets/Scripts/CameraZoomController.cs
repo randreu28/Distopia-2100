@@ -7,8 +7,10 @@ public class CameraZoomController : MonoBehaviour
 {
     [SerializeField]
     public float _areaCameraDistance = 10;
+
     [SerializeField]
     public float _areaCameraVerticalArmLength = 1.25f;
+
     [SerializeField]
     public Vector3 _areaCameraRotation;
 
@@ -17,9 +19,6 @@ public class CameraZoomController : MonoBehaviour
 
     [SerializeField]
     public float _areaAmplitudGain = 2f;
-    public Vector3 _defaultAreaCameraRotation = Vector3.zero;
-    public float _defaultAreaNoiseFrequencyGain = 0.3f;
-    public float _defaultAreaAmplitudGain = 0.5f;
 
     [SerializeField]
     public bool _enterTransition;
@@ -59,7 +58,7 @@ public class CameraZoomController : MonoBehaviour
         {
             if (other.tag == "Player")
             {
-                BroadcastMessage("CameraMovementExit", this);
+                SendMessageUpwards("CameraMovementExit", this);
             }
         }
     }

@@ -9,30 +9,38 @@ public class CameraMainController : MonoBehaviour
     private CinemachineFramingTransposer _framingTransposer;
     private CinemachineBasicMultiChannelPerlin _multiChannelPerlin;
 
-    public float _defaultAreaCameraDistance = 8;
-    public float _defaultVerticalArmLength = 0.66f;
+    [SerializeField]
+    private float _defaultCameraDistance = 8;
+    [SerializeField]
+    private float _defaultVerticalArmLength = 0.66f;
+    [SerializeField]
+    private Vector3 _defaultCameraRotation = Vector3.zero;
+    [SerializeField]
+    private float _defaultNoiseFrequencyGain = 0.3f;
+    [SerializeField]
+    private float _defaultAmplitudGain = 0.5f;
 
     void Start()
     {
         _framingTransposer = _vcam.GetCinemachineComponent<CinemachineFramingTransposer>();
         _multiChannelPerlin = _vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        _defaultAreaCameraDistance = _framingTransposer.m_CameraDistance;
+        _defaultCameraDistance = _framingTransposer.m_CameraDistance;
         _defaultVerticalArmLength = _framingTransposer.m_ScreenY;
     }
 
     public void CameraMovementEnter(CameraZoomController camera)
     {
         StopAllCoroutines();
-        StartCoroutine(DoCameraMovement(camera, camera._areaCameraDistance, camera._areaCameraVerticalArmLength, camera._areaCameraRotation, camera._areaNoiseFrequencyGain, camera._areaAmplitudGain, camera._enterTransitionSeconds));
+        StartCoroutine(DoCameraMovement(camera._areaCameraDistance, camera._areaCameraVerticalArmLength, camera._areaCameraRotation, camera._areaNoiseFrequencyGain, camera._areaAmplitudGain, camera._enterTransitionSeconds));
     }
 
     public void CameraMovementExit(CameraZoomController camera)
     {
         StopAllCoroutines();
-        StartCoroutine(DoCameraMovement(camera, _defaultAreaCameraDistance, _defaultVerticalArmLength, camera._defaultAreaCameraRotation, camera._defaultAreaNoiseFrequencyGain, camera._defaultAreaAmplitudGain, camera._exitTransitionSeconds));
+        StartCoroutine(DoCameraMovement(_defaultCameraDistance, _defaultVerticalArmLength, _defaultCameraRotation, _defaultNoiseFrequencyGain, _defaultAmplitudGain, camera._exitTransitionSeconds));
     }
 
-    private IEnumerator DoCameraMovement(CameraZoomController camera, float distance, float verticalArmLength, Vector3 cameraRotation, float noiseFrequencyGain, float noiseAmplitudGain, float duration)
+    private IEnumerator DoCameraMovement(float distance, float verticalArmLength, Vector3 cameraRotation, float noiseFrequencyGain, float noiseAmplitudGain, float duration)
     {
         float startDistance = _framingTransposer.m_CameraDistance;
         float endDistance = distance;
