@@ -632,10 +632,6 @@ public class PlayerController : MonoBehaviour
             transform.parent = other.GetComponent<Collider>().transform;
         }
 
-        if (other.tag == "PlatformLeverOutside") {
-            _platformController = other.GetComponent<LeverOutsider>().PlatformController;
-        }
-
         if (other.tag == "Switch") {
             _switchController = other.GetComponent<Switch>();
         }
