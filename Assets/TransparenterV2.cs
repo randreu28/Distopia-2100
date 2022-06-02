@@ -7,8 +7,6 @@ public class TransparenterV2 : MonoBehaviour
     [SerializeField]
     private float _duration;
 
-    private List<float> _defaultAlpha;
-
     [SerializeField]
     private float[] _activeAlpha;
 
@@ -18,11 +16,11 @@ public class TransparenterV2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _defaultAlpha = new List<float>(_materials.Length);
-
         for (int i = 0; i < _materials.Length; i++)
         {
-            _defaultAlpha.Add(_materials[i].GetColor("_BaseColor").a);
+            Color color = _materials[i].GetColor("_BaseColor");
+            color.a = 1;
+            _materials[i].SetColor("_BaseColor", color);
         }
     }
 
@@ -61,7 +59,7 @@ public class TransparenterV2 : MonoBehaviour
         {
             for (int i = 0; i < _materials.Length; i++)
             {
-                StartCoroutine(ChangeAlpha(_materials[i], _defaultAlpha[i], _duration));
+                StartCoroutine(ChangeAlpha(_materials[i], 1, _duration));
             }
         }
     }

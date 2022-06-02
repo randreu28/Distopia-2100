@@ -38,6 +38,9 @@ public class PlatformController : MonoBehaviour
     private Material _buttonOn;
     private Material _buttonOff;
 
+    [SerializeField]
+    private bool _startMovingOnTriggerEnter;
+
     void Start()
     {
         if (ButtonUp != null) { 
@@ -151,6 +154,13 @@ public class PlatformController : MonoBehaviour
             ButtonDown.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
             MovePlatform();
         }
-    }  
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (_startMovingOnTriggerEnter) {
+            MovePlatform();
+        }
+    }
 
 }

@@ -12,6 +12,9 @@ public class CameraZoomController : MonoBehaviour
     public float _areaCameraVerticalArmLength = 1.25f;
 
     [SerializeField]
+    public float _areaScreenX = 0.5f;
+
+    [SerializeField]
     public Vector3 _areaCameraRotation;
 
     [SerializeField]
@@ -38,6 +41,9 @@ public class CameraZoomController : MonoBehaviour
 
     [SerializeField]
     public bool _useCamaraRotation;
+
+    [SerializeField]
+    public float _areaDampingX = 1f;
 
     private void OnTriggerEnter(Collider other)
     {

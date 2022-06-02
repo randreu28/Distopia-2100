@@ -24,7 +24,7 @@ public class EndingCinematic : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         EndingCredits.SetActive(true);
     }
 }

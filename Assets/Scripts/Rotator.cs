@@ -6,6 +6,9 @@ public class Rotator : MonoBehaviour
 {
 
     [SerializeField]
+    private bool _absoluteDegrees;
+
+    [SerializeField]
     private Vector3[] _degrees;
 
     [SerializeField]
@@ -16,6 +19,12 @@ public class Rotator : MonoBehaviour
 
     [SerializeField]
     private float _initialDelay;
+
+    [SerializeField]
+    private bool _onAction = true;
+
+    [SerializeField]
+    private bool _onTrigger = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +39,24 @@ public class Rotator : MonoBehaviour
     }
 
     public void Action() {
-        for (int i = 0; i < _objects.Length; i++) {
-            StartCoroutine(Rotate(_objects[i], _degrees[i], _duration));
+        if (_onAction) { 
+            for (int i = 0; i < _objects.Length; i++) {
+                StartCoroutine(Rotate(_objects[i], _degrees[i], _duration));
+            }
         }
     }
 
     private IEnumerator Rotate(GameObject obj, Vector3 rotation, float duration)
     {
         Quaternion startPosition = obj.transform.rotation;
-        Quaternion endPosition = Quaternion.Euler(startPosition.x + rotation.x, startPosition.x + rotation.y, startPosition.x + rotation.z);
+        Quaternion endPosition;
+        if (!_absoluteDegrees)
+        {
+            endPosition = Quaternion.Euler(startPosition.x + rotation.x, startPosition.x + rotation.y, startPosition.x + rotation.z);
+        }
+        else { 
+            endPosition = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
+        }
         yield return new WaitForSeconds(_initialDelay);
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {
@@ -46,6 +64,18 @@ public class Rotator : MonoBehaviour
             float f = 3 * Mathf.Pow(x, 2) - 2 * Mathf.Pow(x, 3);
             obj.transform.rotation = Quaternion.Lerp(startPosition, endPosition, f);
             yield return null;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (_onTrigger) { 
+            if (other.tag == "Player") {
+                for (int i = 0; i < _objects.Length; i++)
+                {
+                    StartCoroutine(Rotate(_objects[i], _degrees[i], _duration));
+                }
+            }
         }
     }
 
