@@ -14,24 +14,30 @@ public class WallMaker : MonoBehaviour
     [SerializeField]
     private int _bricksV;
 
-    private GameObject[] _bricks;
+    private List<GameObject> _bricks;
 
     // Start is called before the first frame update
     void Start()
     {
+        _bricks = new List<GameObject>();
+
         for (int h = 0; h < _bricksH; h++) {
             for (int v = 0; v < _bricksV; v++)
             {
                 GameObject go = GameObject.Instantiate(_brick);
                 go.transform.rotation = transform.rotation;
                 go.transform.position = new Vector3(transform.position.x, transform.position.y + (go.transform.localScale.x * v), transform.position.z - (go.transform.localScale.x * h));
+                go.transform.parent = gameObject.transform;
+                _bricks.Add(go);
             }
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void BreakWall() {
+        BroadcastMessage("FreeConstrains");
+        for (int i = 0; i < _bricks.Count ; i++) {
+        //    _bricks[i].GetComponent<Brick>().FreeConstrains(i);
+        }    
     }
+
 }

@@ -41,7 +41,7 @@ public class PatrolState : AbstractFSMState
 
                 SetDestination(_patrolPoints[_patrolPointIndex]);
                 EnteredState = true;
-                Debug.Log("PATROL EnterState()");
+                //Debug.Log("PATROL EnterState()");
             }
 
         }
@@ -64,7 +64,7 @@ public class PatrolState : AbstractFSMState
 
     private void SetDestination(NPCPatrolPoint destination)
     {
-        Debug.Log("PATROL STATE -> SetDestination()");
+        //Debug.Log("PATROL STATE -> SetDestination()");
         if (_navMeshAgent != null && destination != null) {
             _navMeshAgent.SetDestination(destination.transform.position);
         }

@@ -15,6 +15,7 @@ TagManager:
   - RampZone
   - Wrecking Ball
   - Start
+  - PlatformLeverOutside
   layers:
   - Default
   - TransparentFX

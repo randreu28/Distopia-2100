@@ -28,7 +28,7 @@ public class IdleState : AbstractFSMState
                 
             _totalDuration = 0f;
         }
-        Debug.Log("IDLE EnterState()");
+        //Debug.Log("IDLE EnterState()");
         return EnteredState;
     }
 

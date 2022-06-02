@@ -65,7 +65,7 @@ public class FiniteStateMachine : MonoBehaviour
 
     public void EnterState(FSMStateType stateType)
     {
-        Debug.Log("FSMStateType: " + stateType);
+        //Debug.Log("FSMStateType: " + stateType);
         if (_fsmStates.ContainsKey(stateType)) {
             AbstractFSMState nextState = _fsmStates[stateType];
             EnterState(nextState);

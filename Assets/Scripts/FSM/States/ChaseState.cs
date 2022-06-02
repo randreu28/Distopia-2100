@@ -17,7 +17,7 @@ public class ChaseState : AbstractFSMState
 
     public override bool EnterState()
     {
-        Debug.Log("ENTERING CHASE STATE");
+        //Debug.Log("ENTERING CHASE STATE");
         EnteredState = false;
         if (base.EnterState())
         {
@@ -34,7 +34,7 @@ public class ChaseState : AbstractFSMState
                 SetDestination(_fieldOfView.objectInFOV);
                 if (Vector3.Distance(_navMeshAgent.transform.position, _fieldOfView.objectInFOV.transform.position) <= 1f)
                 {
-                    Debug.Log("Kill The Player");
+                    //Debug.Log("Kill The Player");
                 }
             }
             else
