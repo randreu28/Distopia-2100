@@ -32,8 +32,6 @@ public class CameraZoomController : MonoBehaviour
     [SerializeField]
     public float _exitTransitionSeconds = 2;
 
-    public CinemachineFramingTransposer _framingTransposer;
-
     [SerializeField]
     public bool _justOnce;
     public bool _entered;

@@ -57,16 +57,26 @@ public class CameraMainController : MonoBehaviour
         Quaternion startRotation = _vcam.transform.rotation;
         Quaternion endRotation = Quaternion.Euler(startRotation.x + cameraRotation.x, startRotation.y + cameraRotation.y, startRotation.z + cameraRotation.z);
 
-        for (float t = 0; t <= duration; t += Time.deltaTime)
-        {
-            float x = Mathf.Clamp01(t / duration);
-            float f = 3 * Mathf.Pow(x, 2) - 2 * Mathf.Pow(x, 3);
-            _framingTransposer.m_CameraDistance = Mathf.Lerp(startDistance, endDistance, f);
-            _framingTransposer.m_ScreenY = Mathf.Lerp(startVerticalArmLength, endVerticalArmLength, f);
-            _vcam.gameObject.transform.rotation = Quaternion.Lerp(startRotation, endRotation, f);
-            _multiChannelPerlin.m_FrequencyGain = Mathf.Lerp(startNoiseFrequencyGain, endNoiseFrequencyGain, f);
-            _multiChannelPerlin.m_AmplitudeGain = Mathf.Lerp(startNoiseAmplitudGain, endNoiseAmplitudGain, f);
-            yield return null;
+        if (duration != 0) { 
+            for (float t = 0; t <= duration; t += Time.deltaTime)
+            {
+                float x = Mathf.Clamp01(t / duration);
+                float f = 3 * Mathf.Pow(x, 2) - 2 * Mathf.Pow(x, 3);
+                _framingTransposer.m_CameraDistance = Mathf.Lerp(startDistance, endDistance, f);
+                _framingTransposer.m_ScreenY = Mathf.Lerp(startVerticalArmLength, endVerticalArmLength, f);
+                _vcam.gameObject.transform.rotation = Quaternion.Lerp(startRotation, endRotation, f);
+                _multiChannelPerlin.m_FrequencyGain = Mathf.Lerp(startNoiseFrequencyGain, endNoiseFrequencyGain, f);
+                _multiChannelPerlin.m_AmplitudeGain = Mathf.Lerp(startNoiseAmplitudGain, endNoiseAmplitudGain, f);
+                yield return null;
+            }
         }
+
+        _framingTransposer.m_CameraDistance = distance;
+        _framingTransposer.m_ScreenY = verticalArmLength;
+        _vcam.gameObject.transform.rotation = Quaternion.Euler(startRotation.x + cameraRotation.x, startRotation.y + cameraRotation.y, startRotation.z + cameraRotation.z); ;
+        _multiChannelPerlin.m_FrequencyGain = noiseFrequencyGain;
+        _multiChannelPerlin.m_AmplitudeGain = noiseAmplitudGain;
+        yield return null;
+
     }
 }
