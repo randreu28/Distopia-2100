@@ -38,8 +38,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - ElectricityScale_: 5.02
-    - ElectricityWidth_: 0
+    - ElectricityScale_: 36.8
+    - ElectricityWidth_: 0.927
     - EmissionPower_: 170.3
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
@@ -90,7 +90,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_: {r: 0.9622642, g: 0.873469, b: 0.086240634, a: 1}
-    - ElectricitySpeed_: {r: 0.3, g: 0.3, b: 0, a: 1}
+    - ElectricitySpeed_: {r: 0.1, g: 0.1, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
