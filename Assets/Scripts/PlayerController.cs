@@ -154,6 +154,7 @@ public class PlayerController : MonoBehaviour
     public float _activeMaxFallingDistance;
 
     private bool _canMove;
+    private bool _canRun = true;
 
     public bool boatTravel;
 
@@ -283,7 +284,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
-        float targetSpeed = _input.sprint && !_crouched  ? SprintSpeed : MoveSpeed;
+        float targetSpeed = _input.sprint && !_crouched && _canRun ? SprintSpeed : MoveSpeed;
         if (_crouched)
         {
             targetSpeed = CrouchSpeed;
@@ -515,6 +516,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnAction() {
+
+        _canRun = false;
+
         if (_platformController != null) {
             if (_platformController.ButtonUp != null && _platformController.ButtonDown != null)
             {
@@ -545,6 +549,11 @@ public class PlayerController : MonoBehaviour
         if (_buttonController != null) {
             _buttonController.action(this);
         }
+    }
+
+    private void OnActionEnd()
+    {
+        _canRun = true;
     }
 
     private void OnCrouch()
