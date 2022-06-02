@@ -92,6 +92,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SuperJumpStart",
+                    "type": "Button",
+                    "id": "c477cbbe-457e-4206-bb28-5065a06e7580",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SuperJumpEnd",
+                    "type": "Button",
+                    "id": "ca64c2c4-235e-4e42-9dce-890d52108e4b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -345,6 +361,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "GoToNextSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94c54151-8f84-470c-ad43-820e06bbfed5",
+                    "path": "<Keyboard>/3",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd1b1c40-9417-4a94-8d08-c9ebf3086a98",
+                    "path": "<Keyboard>/3",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpEnd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
