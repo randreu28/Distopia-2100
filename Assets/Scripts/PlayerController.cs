@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     [Tooltip("The height the player can jump")]
     public float JumpHeight = 1.2f;
+    public float SuperJumpHeight = 3f;
+    private float _activeJumpHeight;
 
     [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
     public float Gravity = -15.0f;
@@ -207,8 +209,9 @@ public class PlayerController : MonoBehaviour
         // reset our timeouts on start
         _jumpTimeoutDelta = JumpTimeout;
         _fallTimeoutDelta = FallTimeout;
-
         _activeMaxFallingDistance = _maxFallingDistance;
+
+        _activeJumpHeight = JumpHeight;
     }
 
     private void Update()
@@ -411,7 +414,7 @@ public class PlayerController : MonoBehaviour
             if (_canMove && !_crouched && _input.jump && _jumpTimeoutDelta <= 0.0f)
             {
                 // the square root of H * -2 * G = how much velocity needed to reach desired height
-                _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+                _verticalVelocity = Mathf.Sqrt(_activeJumpHeight * -2f * Gravity);
 
                 // update animator if using character
                 if (_hasAnimator)
@@ -708,6 +711,15 @@ public class PlayerController : MonoBehaviour
     public void SetMaxFallingDistance(float value)
     {
         _activeMaxFallingDistance = value;
+    }
+
+    public void OnSuperJumpStart() {
+        _activeJumpHeight = SuperJumpHeight;
+    }
+
+    public void OnSuperJumpEnd()
+    {
+        _activeJumpHeight = JumpHeight;
     }
 
 }
