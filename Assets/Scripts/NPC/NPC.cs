@@ -17,6 +17,11 @@ public class NPC : MonoBehaviour
     FiniteStateMachine _finiteStateMachine;
     NPCFieldOfView _fieldOfView;
 
+    private Animator _animator;
+    private bool _hasAnimator;
+
+    private int _animIDPunch;
+
     public void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -26,7 +31,8 @@ public class NPC : MonoBehaviour
 
     public void Start()
     {
-
+        _hasAnimator = TryGetComponent(out _animator);
+        AssignAnimationID();
     }
 
     public void Update()
@@ -43,6 +49,24 @@ public class NPC : MonoBehaviour
     public void Reset()
     {
         _navMeshAgent.transform.position = _patrolPoints[0].transform.position;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            _animator.SetBool(_animIDPunch, true);
+        }
+    }
+
+    void PunchEnd()
+    {
+        _animator.SetBool(_animIDPunch, false);
+    }
+
+    private void AssignAnimationID()
+    {
+        _animIDPunch = Animator.StringToHash("Punch");
     }
 
 }
