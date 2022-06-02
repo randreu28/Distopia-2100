@@ -37,11 +37,10 @@ public class ButtonController : MonoBehaviour
 
     public void action(PlayerController Player)
     {
-        _player = Player;
-        StopAllCoroutines();
-
         if (!_pressed)
         {
+            _player = Player;
+            StopAllCoroutines();
             StartCoroutine(PressButton());
 
             if (_door != null)
