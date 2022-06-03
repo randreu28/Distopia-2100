@@ -24,6 +24,12 @@ public class LeverController : MonoBehaviour
 
     private AudioSource audioSource;
 
+    [SerializeField]
+    private GameObject _materialsGameObject;
+
+    [SerializeField]
+    private Material[] _activeMaterials;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +86,9 @@ public class LeverController : MonoBehaviour
 
     public void SetActive(bool value) {
         _isActive = value;
+        if (_materialsGameObject != null) {
+            _materialsGameObject.GetComponent<MeshRenderer>().materials = _activeMaterials;
+        }
     }
 
 }
