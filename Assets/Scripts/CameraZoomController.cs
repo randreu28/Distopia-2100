@@ -9,10 +9,10 @@ public class CameraZoomController : MonoBehaviour
     public float _areaCameraDistance = 10;
 
     [SerializeField]
-    public float _areaCameraVerticalArmLength = 1.25f;
+    public float _areaScreenX = 0.5f;
 
     [SerializeField]
-    public float _areaScreenX = 0.5f;
+    public float _areaCameraVerticalArmLength = 1.25f;
 
     [SerializeField]
     public Vector3 _areaCameraRotation;

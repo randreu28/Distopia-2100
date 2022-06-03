@@ -8,6 +8,9 @@ public class DoorController : MonoBehaviour
     [SerializeField]
     private Vector3 _endPosition;
 
+    [SerializeField]
+    private float _duration;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,7 @@ public class DoorController : MonoBehaviour
     }
 
     public void Action(bool isStartPoint) {
-        StartCoroutine(OpenDoor(1));
+        StartCoroutine(OpenDoor(_duration));
     }
 
     private IEnumerator OpenDoor(float duration)
