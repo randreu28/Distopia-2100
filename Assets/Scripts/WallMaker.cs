@@ -16,6 +16,8 @@ public class WallMaker : MonoBehaviour
 
     private List<GameObject> _bricks;
 
+    private bool _wallbreaked;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,14 @@ public class WallMaker : MonoBehaviour
             {
                 GameObject go = GameObject.Instantiate(_brick);
                 go.transform.rotation = transform.rotation;
-                go.transform.position = new Vector3(transform.position.x, transform.position.y + (go.transform.localScale.x * v), transform.position.z - (go.transform.localScale.x * h));
+                if (v % 2 == 0)
+                {
+                    go.transform.position = new Vector3(transform.position.x, transform.position.y + (go.transform.localScale.y * v), transform.position.z - (go.transform.localScale.z * 2 * h));
+                }
+                else
+                {
+                    go.transform.position = new Vector3(transform.position.x, transform.position.y + (go.transform.localScale.y * v), transform.position.z - (go.transform.localScale.z * 2 * h) - (go.transform.localScale.z / 2));
+                }
                 go.transform.parent = gameObject.transform;
                 _bricks.Add(go);
             }
@@ -34,10 +43,10 @@ public class WallMaker : MonoBehaviour
     }
 
     public void BreakWall() {
-        BroadcastMessage("FreeConstrains");
-        for (int i = 0; i < _bricks.Count ; i++) {
-        //    _bricks[i].GetComponent<Brick>().FreeConstrains(i);
-        }    
+        if (!_wallbreaked) {
+            //BroadcastMessage("FreeConstrains");
+            _wallbreaked = true;
+        }
     }
 
 }

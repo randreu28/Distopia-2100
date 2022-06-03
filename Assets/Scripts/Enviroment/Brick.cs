@@ -23,6 +23,13 @@ public class Brick : MonoBehaviour
     {
         if (other.gameObject.tag == "Wrecking Ball") {
             _rigidbody.constraints = RigidbodyConstraints.None;
+            SendMessageUpwards("BreakWall");
         }
+    }
+
+    public void FreeConstrains()
+    {
+        _rigidbody.constraints = RigidbodyConstraints.None;
+        Debug.Log("FREE RigidbodyConstraints");
     }
 }
