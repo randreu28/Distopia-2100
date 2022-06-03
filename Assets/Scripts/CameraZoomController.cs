@@ -45,6 +45,9 @@ public class CameraZoomController : MonoBehaviour
     [SerializeField]
     public float _areaDampingX = 1f;
 
+    [SerializeField]
+    public float _areaDampingY = 1f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (_enterTransition) {
