@@ -22520,7 +22520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491305206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 241.08214, y: 33.5, z: -6.0985956}
+  m_LocalPosition: {x: 289.30405, y: 33.49999, z: -6.0985956}
   m_LocalScale: {x: 1, y: 0.41152257, z: 1}
   m_Children: []
   m_Father: {fileID: 684848899}
@@ -22546,13 +22546,13 @@ MonoBehaviour:
     volumeMask: {fileID: 0}
     textureScrollingSpeed: {x: 0, y: 0, z: 0}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.006747026, y: 0.038548756, z: 0.05081999}
-    negativeFade: {x: 0.006747026, y: 0.038548756, z: 0.05081999}
+    positiveFade: {x: 0.005663178, y: 0.038548756, z: 0.05081999}
+    negativeFade: {x: 0.005663178, y: 0.038548756, z: 0.05081999}
     m_EditorUniformFade: 3.4
     m_EditorPositiveFade: {x: 0, y: 0, z: 0}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0}
     m_EditorAdvancedFade: 0
-    size: {x: 503.92575, y: 88.2, z: 66.90281}
+    size: {x: 600.3696, y: 88.2, z: 66.90281}
     invertFade: 0
     distanceFadeStart: 10000
     distanceFadeEnd: 10000
@@ -30780,7 +30780,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019198731}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e13a517041be44639fe106651b5d3ce, type: 3}
   m_Name: 

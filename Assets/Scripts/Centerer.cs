@@ -11,12 +11,11 @@ public class Centerer: MonoBehaviour
 
     private IEnumerator SetPosition(Transform obj, float duration)
     {
-        Vector3 startPosition = obj.position;
-        Vector3 endPosition = new Vector3(transform.position.x, transform.position.x, transform.position.z);
-
         //yield return new WaitForSeconds(_initialDelay);
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {
+            Vector3 startPosition = obj.position;
+            Vector3 endPosition = new Vector3(transform.position.x, obj.position.y, transform.position.z);
             float x = Mathf.Clamp01(t / duration);
             float f = 3 * Mathf.Pow(x, 2) - 2 * Mathf.Pow(x, 3);
             obj.transform.position = Vector3.Lerp(startPosition, endPosition, f);
@@ -30,7 +29,7 @@ public class Centerer: MonoBehaviour
         {
             Debug.Log("Player position: " + other.transform.position);
             Debug.Log("Platform position: " + transform.position);
-            //StartCoroutine(SetPosition(other.transform, _duration));
+            StartCoroutine(SetPosition(other.transform, _duration));
         }
     }
 
