@@ -90,7 +90,10 @@ public class CameraMainController : MonoBehaviour
         }
 
         _framingTransposer.m_CameraDistance = distance;
+        _framingTransposer.m_ScreenX = endScreenX;
         _framingTransposer.m_ScreenY = verticalArmLength;
+        _framingTransposer.m_XDamping = endDampingX;
+        _framingTransposer.m_YDamping = endDampingY;
         _vcam.gameObject.transform.rotation = Quaternion.Euler(startRotation.x + cameraRotation.x, startRotation.y + cameraRotation.y, startRotation.z + cameraRotation.z); ;
         _multiChannelPerlin.m_FrequencyGain = noiseFrequencyGain;
         _multiChannelPerlin.m_AmplitudeGain = noiseAmplitudGain;
