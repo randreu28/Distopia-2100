@@ -164,6 +164,8 @@ public class PlayerController : MonoBehaviour
 
     public bool _useCameraRotation = true;
 
+    public bool WordLimitsEnabled = true;
+
     private bool IsCurrentDeviceMouse
     {
         get
@@ -368,18 +370,21 @@ public class PlayerController : MonoBehaviour
                                 new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
         }
         else {
-            _rigidbody.AddForce(new Vector3(0, 0, targetDirection.normalized.z) * (SlideSpeed * Time.deltaTime), ForceMode.Force);
+            if (!boatTravel) { 
+                _rigidbody.AddForce(new Vector3(0, 0, targetDirection.normalized.z) * (SlideSpeed * Time.deltaTime), ForceMode.Force);
+            }
         }
 
         
+        if (WordLimitsEnabled) {
+            if (transform.position.z < _worldLimitZ) {
+                transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
+            }
 
-        if (transform.position.z < _worldLimitZ) {
-            transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
-        }
-
-        if (transform.position.z > _worldLimitZFar)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZFar);
+            if (transform.position.z > _worldLimitZFar)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZFar);
+            }
         }
 
         // update animator if using character

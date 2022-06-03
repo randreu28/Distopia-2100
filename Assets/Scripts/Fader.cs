@@ -23,6 +23,18 @@ public class Fader : MonoBehaviour
     [SerializeField]
     private float _FadeOutDuration = 1;
 
+    [SerializeField]
+    private bool _fadeinOnTriggerEnter;
+
+    [SerializeField]
+    private bool _fadeoutOnTriggerEnter;
+
+    [SerializeField]
+    private float _initialDelay = 0;
+
+    [SerializeField]
+    private bool _initialFadeIn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +43,9 @@ public class Fader : MonoBehaviour
         {
             caComponent = colorAdjustments;
             caComponent.postExposure.value = _FadeOutValue;
-            FadeIn();
+            if (_initialFadeIn) { 
+                FadeIn();
+            }
         }
     }
 
@@ -43,9 +57,10 @@ public class Fader : MonoBehaviour
 
     private IEnumerator Fade(float colorAdjustment, float duration, string endBroadcastMessage)
     {
+
+        yield return new WaitForSeconds(_initialDelay);
         float startColorAdjustment = caComponent.postExposure.value;
         float endColorAdjustmnet = colorAdjustment;
-
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {
             float x = Mathf.Clamp01(t / duration);
@@ -65,4 +80,16 @@ public class Fader : MonoBehaviour
         StartCoroutine(Fade(_defaultColorAdjustment, _FadeInDuration, "FadeInEnd"));
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player") { 
+            if (_fadeinOnTriggerEnter) {
+                FadeIn();
+            }
+            if (_fadeoutOnTriggerEnter)
+            {
+                FadeOut();
+            }
+        }
+    }
 }

@@ -8,6 +8,46 @@ public class Centerer: MonoBehaviour
     [SerializeField]
     private float _duration;
 
+    [SerializeField]
+    private bool _infinity;
+
+    [SerializeField]
+    private bool _ignoreY;
+
+    [SerializeField]
+    private float _speed;
+
+    private Rigidbody _player;
+
+    [SerializeField]
+    private float _initialDelay;
+    private float counter;
+
+    private void Start()
+    {
+        counter = Time.time;
+    }
+
+    void Update()
+    {
+        if (_infinity && _player != null) {
+            if (counter > _initialDelay)
+            {
+                Vector3 newPosition = Vector3.MoveTowards(_player.position, transform.position, _speed * Time.deltaTime);
+                if (_ignoreY)
+                {
+                    _player.MovePosition(new Vector3(newPosition.x, _player.position.y, newPosition.z));
+                }
+                else
+                {
+                    _player.MovePosition(newPosition);
+                }
+            }
+            else {
+                counter += Time.deltaTime;
+            }
+        }
+    }
 
     private IEnumerator SetPosition(Transform obj, float duration)
     {
@@ -27,9 +67,12 @@ public class Centerer: MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            _player = other.GetComponent<Rigidbody>();
             Debug.Log("Player position: " + other.transform.position);
             Debug.Log("Platform position: " + transform.position);
-            StartCoroutine(SetPosition(other.transform, _duration));
+            if (!_infinity) { 
+                StartCoroutine(SetPosition(other.transform, _duration));
+            }
         }
     }
 

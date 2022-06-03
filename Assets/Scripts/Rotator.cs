@@ -12,7 +12,7 @@ public class Rotator : MonoBehaviour
     private Vector3[] _degrees;
 
     [SerializeField]
-    private float _duration;
+    private float[] _duration;
 
     [SerializeField]
     private GameObject[] _objects;
@@ -41,23 +41,26 @@ public class Rotator : MonoBehaviour
     public void Action() {
         if (_onAction) { 
             for (int i = 0; i < _objects.Length; i++) {
-                StartCoroutine(Rotate(_objects[i], _degrees[i], _duration));
+                StartCoroutine(Rotate(_objects[i], _degrees[i], _duration[i]));
             }
         }
     }
 
     private IEnumerator Rotate(GameObject obj, Vector3 rotation, float duration)
     {
+        yield return new WaitForSeconds(_initialDelay);
+
         Quaternion startPosition = obj.transform.rotation;
         Quaternion endPosition;
         if (!_absoluteDegrees)
         {
             endPosition = Quaternion.Euler(startPosition.x + rotation.x, startPosition.x + rotation.y, startPosition.x + rotation.z);
         }
-        else { 
+        else
+        {
             endPosition = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
         }
-        yield return new WaitForSeconds(_initialDelay);
+
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {
             float x = Mathf.Clamp01(t / duration);
@@ -73,7 +76,7 @@ public class Rotator : MonoBehaviour
             if (other.tag == "Player") {
                 for (int i = 0; i < _objects.Length; i++)
                 {
-                    StartCoroutine(Rotate(_objects[i], _degrees[i], _duration));
+                    StartCoroutine(Rotate(_objects[i], _degrees[i], _duration[i]));
                 }
             }
         }

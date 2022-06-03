@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoatMover : MonoBehaviour
 {
 
-    Rigidbody _rigidbody;
+    Rigidbody _boatRigidbody;
     private bool _canMove = false;
 
     [SerializeField]
@@ -16,10 +17,26 @@ public class BoatMover : MonoBehaviour
     [SerializeField]
     private float _boatSpeed = 10;
 
+    [SerializeField]
+    private float _minWavesForce;
+
+    [SerializeField]
+    private float _maxWavesForce;
+
+    [SerializeField]
+    [Range(1, 100)]
+    private int _wavesQuantity;
+
+    private CharacterController _characterController;
+    private Rigidbody _playerRigidbody;
+
+    [SerializeField]
+    private GameObject _ocean;
+
     // Start is called before the first frame update
     void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        _boatRigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -41,12 +58,18 @@ public class BoatMover : MonoBehaviour
             _canMove = true;
             _player = other.gameObject;
             _player.GetComponent<PlayerController>().boatTravel = true;
+            _player.GetComponent<PlayerController>().WordLimitsEnabled = false;
+            _playerRigidbody = other.GetComponent<Rigidbody>();
+            _characterController = other.GetComponent<CharacterController>();
+            EnableRigidbody(true);
+            Destroy(_ocean.GetComponent<KillPlayer>());
         }
 
         if (other.transform == _destination)
         {
             _canMove = false;
             _player.GetComponent<PlayerController>().boatTravel = false;
+            EnableRigidbody(false);
         }
     }
 
@@ -61,7 +84,35 @@ public class BoatMover : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.AddForce(transform.right * _boatSpeed);
+        _boatRigidbody.AddForce(transform.right * _boatSpeed);
+
+        if (Random.Range(1, 100-_wavesQuantity) == 1) {
+            Debug.Log("Onada");
+            _boatRigidbody.AddForce(-transform.up * Random.Range(_minWavesForce,_maxWavesForce), ForceMode.Impulse);
+            _boatRigidbody.AddTorque(transform.right * Random.Range(0, 0.1f), ForceMode.Impulse);
+            _boatRigidbody.AddTorque(transform.forward * Random.Range(0, 0.1f), ForceMode.Impulse);
+
+        }
+    }
+
+    private void EnableRigidbody(bool value)
+    {
+        if (value)
+        {
+            _characterController.enabled = false;
+            _playerRigidbody.isKinematic = false;
+            _playerRigidbody.detectCollisions = true;
+        }
+        else
+        {
+            _characterController.enabled = true;
+            _playerRigidbody.isKinematic = true;
+            _playerRigidbody.detectCollisions = false;
+        }
+    }
+
+    public void FadeOutEnd() {
+        SceneManager.LoadScene("Lvl 2");
     }
 
 }

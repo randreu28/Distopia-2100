@@ -6,7 +6,14 @@ public class EndAnimationSetter : MonoBehaviour
 {
     private bool _hasAnimator;
     private Animator _animator;
+
+    private int _animIDEndLevel1;
     private int _animIDEnd;
+
+    [SerializeField]
+    private bool _level1;
+    [SerializeField]
+    private bool _level2;
 
     // Start is called before the first frame update
     void Start()
@@ -16,13 +23,20 @@ public class EndAnimationSetter : MonoBehaviour
 
     private void AssignAnimationIDs()
     {
+        _animIDEndLevel1 = Animator.StringToHash("EndLevel1");
         _animIDEnd = Animator.StringToHash("End");
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player") {
-            other.GetComponent<Animator>().SetBool(_animIDEnd, true);
+            if (_level1) { 
+                other.GetComponent<Animator>().SetBool(_animIDEndLevel1, true);
+            }
+            if (_level2) {
+                other.GetComponent<Animator>().SetBool(_animIDEnd, true);
+            }
         }
     }
 
