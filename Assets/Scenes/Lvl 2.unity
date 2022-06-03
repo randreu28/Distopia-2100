@@ -17417,6 +17417,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2900059320127008801, guid: c530c9d4e27e347b18fc6fb8c41e2eab, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1242678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900059320127008801, guid: c530c9d4e27e347b18fc6fb8c41e2eab, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0000028685615
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900059320127008801, guid: c530c9d4e27e347b18fc6fb8c41e2eab, type: 3}
+      propertyPath: m_Center.y
+      value: -0.05540802
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900059320127008803, guid: c530c9d4e27e347b18fc6fb8c41e2eab, type: 3}
+      propertyPath: m_Size.y
+      value: 2.3174286
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900059320127008803, guid: c530c9d4e27e347b18fc6fb8c41e2eab, type: 3}
+      propertyPath: m_Center.x
+      value: -0.003640297
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900059320127008803, guid: c530c9d4e27e347b18fc6fb8c41e2eab, type: 3}
+      propertyPath: m_Center.y
+      value: -0.0444724
+      objectReference: {fileID: 0}
     - target: {fileID: 5160646121690732150, guid: c530c9d4e27e347b18fc6fb8c41e2eab, type: 3}
       propertyPath: m_Name
       value: Pushable Container
@@ -31558,8 +31582,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6739273, z: 2.6848164}
-  m_Center: {x: 0, y: -1.4320946, z: 2.7237873}
+  m_Size: {x: 1.193512, y: 1.6739273, z: 2.388856}
+  m_Center: {x: -0.09675598, y: -1.4320946, z: 2.6270308}
 --- !u!4 &2018352713
 Transform:
   m_ObjectHideFlags: 0
