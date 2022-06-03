@@ -25,6 +25,10 @@ public class CameraMainController : MonoBehaviour
     private float _defaultDampingX = 1f;
     [SerializeField]
     private float _defaultDampingY = 1f;
+    [SerializeField]
+    private float _defaultFieldOfView = 40;
+
+    private bool _coroutineRunning;
 
     void Start()
     {
@@ -37,16 +41,20 @@ public class CameraMainController : MonoBehaviour
     public void CameraMovementEnter(CameraZoomController camera)
     {
         StopAllCoroutines();
-        StartCoroutine(DoCameraMovement(camera._areaCameraDistance, camera._areaCameraVerticalArmLength, camera._areaScreenX, camera._areaCameraRotation, camera._areaNoiseFrequencyGain, camera._areaAmplitudGain, camera._areaDampingX, camera._areaDampingY, camera._enterTransitionSeconds));
+        StartCoroutine(DoCameraMovement(camera._areaCameraDistance, camera._areaCameraVerticalArmLength, camera._areaScreenX, camera._areaCameraRotation, camera._areaNoiseFrequencyGain, camera._areaAmplitudGain, camera._areaDampingX, camera._areaDampingY, camera._areaFieldOfView, camera._enterTransitionSeconds));
+        _coroutineRunning = true;
     }
 
     public void CameraMovementExit(CameraZoomController camera)
     {
-        StopAllCoroutines();
-        StartCoroutine(DoCameraMovement(_defaultCameraDistance, _defaultVerticalArmLength, _defaultScreenX, _defaultCameraRotation, _defaultNoiseFrequencyGain, _defaultAmplitudGain, _defaultDampingX, _defaultDampingY, camera._exitTransitionSeconds));
+        if (!_coroutineRunning) { 
+            StopAllCoroutines();
+            StartCoroutine(DoCameraMovement(_defaultCameraDistance, _defaultVerticalArmLength, _defaultScreenX, _defaultCameraRotation, _defaultNoiseFrequencyGain, _defaultAmplitudGain, _defaultDampingX, _defaultDampingY, _defaultFieldOfView, camera._exitTransitionSeconds));
+        }
+        
     }
 
-    private IEnumerator DoCameraMovement(float distance, float verticalArmLength, float screenX, Vector3 cameraRotation, float noiseFrequencyGain, float noiseAmplitudGain, float dampingX, float dampingY, float duration)
+    private IEnumerator DoCameraMovement(float distance, float verticalArmLength, float screenX, Vector3 cameraRotation, float noiseFrequencyGain, float noiseAmplitudGain, float dampingX, float dampingY, float fieldOfView, float duration)
     {
         float startDistance = _framingTransposer.m_CameraDistance;
         float endDistance = distance;
@@ -69,6 +77,9 @@ public class CameraMainController : MonoBehaviour
         float startDampingY = _framingTransposer.m_XDamping;
         float endDampingY = dampingY;
 
+        float startFieldOfView = _vcam.m_Lens.FieldOfView;
+        float endFieldOfView = fieldOfView;
+
         Quaternion startRotation = _vcam.transform.rotation;
         Quaternion endRotation = Quaternion.Euler(startRotation.x + cameraRotation.x, startRotation.y + cameraRotation.y, startRotation.z + cameraRotation.z);
 
@@ -85,6 +96,7 @@ public class CameraMainController : MonoBehaviour
                 _vcam.gameObject.transform.rotation = Quaternion.Lerp(startRotation, endRotation, f);
                 _multiChannelPerlin.m_FrequencyGain = Mathf.Lerp(startNoiseFrequencyGain, endNoiseFrequencyGain, f);
                 _multiChannelPerlin.m_AmplitudeGain = Mathf.Lerp(startNoiseAmplitudGain, endNoiseAmplitudGain, f);
+                _vcam.m_Lens.FieldOfView = Mathf.Lerp(startFieldOfView, endFieldOfView, f);
                 yield return null;
             }
         }
@@ -97,6 +109,10 @@ public class CameraMainController : MonoBehaviour
         _vcam.gameObject.transform.rotation = Quaternion.Euler(startRotation.x + cameraRotation.x, startRotation.y + cameraRotation.y, startRotation.z + cameraRotation.z); ;
         _multiChannelPerlin.m_FrequencyGain = noiseFrequencyGain;
         _multiChannelPerlin.m_AmplitudeGain = noiseAmplitudGain;
+        _vcam.m_Lens.FieldOfView = endFieldOfView;
+
+        _coroutineRunning = false;
+        
         yield return null;
 
     }

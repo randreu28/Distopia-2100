@@ -18,6 +18,9 @@ public class CamaraChanger : MonoBehaviour
     [SerializeField]
     private float _areaAmplitudGain = 2f;
 
+    [SerializeField]
+    private float _areaFieldOfView;
+
     private float _defaultAreaCameraDistance = 8;
     private float _defaultVerticalArmLength = 0.66f;
     private Vector3 _defaultAreaCameraRotation = Vector3.zero;
@@ -28,6 +31,8 @@ public class CamaraChanger : MonoBehaviour
     public CinemachineVirtualCamera _vcam;
     private CinemachineFramingTransposer _framingTransposer;
     private CinemachineBasicMultiChannelPerlin _multiChannelPerlin;
+
+    
 
     [SerializeField]
     private GameObject[] _CamaraZonesToDisableOnAction;
@@ -46,7 +51,7 @@ public class CamaraChanger : MonoBehaviour
         
     }
 
-    private IEnumerator SetCameraDistance(float distance, float verticalArmLength, Vector3 cameraRotation, float noiseFrequencyGain, float noiseAmplitudGain, float duration)
+    private IEnumerator SetCameraDistance(float distance, float verticalArmLength, Vector3 cameraRotation, float noiseFrequencyGain, float noiseAmplitudGain, float fieldOfView, float duration)
     {
         float startDistance = _framingTransposer.m_CameraDistance;
         float endDistance = distance;
@@ -63,6 +68,9 @@ public class CamaraChanger : MonoBehaviour
         Quaternion startRotation = _vcam.gameObject.transform.rotation;
         Quaternion endRotation = Quaternion.Euler(startRotation.x + cameraRotation.x, startRotation.y + cameraRotation.y, startRotation.z + cameraRotation.z);
 
+        float startFieldOfView = _vcam.m_Lens.FieldOfView;
+        float endFieldOfView = fieldOfView;
+
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {
             float x = Mathf.Clamp01(t / duration);
@@ -72,6 +80,7 @@ public class CamaraChanger : MonoBehaviour
             _vcam.gameObject.transform.rotation = Quaternion.Lerp(startRotation, endRotation, f);
             _multiChannelPerlin.m_FrequencyGain = Mathf.Lerp(startNoiseFrequencyGain, endNoiseFrequencyGain, f);
             _multiChannelPerlin.m_AmplitudeGain = Mathf.Lerp(startNoiseAmplitudGain, endNoiseAmplitudGain, f);
+            _vcam.m_Lens.FieldOfView = Mathf.Lerp(startFieldOfView, endFieldOfView, f);
             yield return null;
         }
     }
@@ -80,6 +89,6 @@ public class CamaraChanger : MonoBehaviour
         for (int i = 0; i < _CamaraZonesToDisableOnAction.Length; i++) {
             _CamaraZonesToDisableOnAction[i].SetActive(false);
         }
-        StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _transitionSeconds));
+        StartCoroutine(SetCameraDistance(_areaCameraDistance, _areaCameraVerticalArmLength, _areaCameraRotation, _areaNoiseFrequencyGain, _areaAmplitudGain, _areaFieldOfView, _transitionSeconds));
     }
 }

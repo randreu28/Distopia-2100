@@ -645,6 +645,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!4 &28253942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7379454128385995902, guid: cba9b6d96e58ac24190bff99ac4fc29a, type: 3}
@@ -1653,6 +1654,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &109115946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8512645129913163634, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -5783,6 +5785,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &358091978
 GameObject:
   m_ObjectHideFlags: 0
@@ -6405,6 +6408,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &396555978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f16aad532734be8a52fc0962c5dd8c, type: 3}
@@ -9847,11 +9851,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a488ff8c82cd547c1a5706cd3a634d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaCameraDistance: 30
-  _areaCameraVerticalArmLength: 0.7
-  _areaCameraRotation: {x: 0, y: 0, z: 0}
+  _areaCameraDistance: 18.7
+  _areaCameraVerticalArmLength: 0.77
+  _areaCameraRotation: {x: -9, y: 6.75, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 2
+  _areaFieldOfView: 62
   _transitionSeconds: 3
   _vcam: {fileID: 1120432007}
   _CamaraZonesToDisableOnAction:
@@ -11103,6 +11108,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &608153571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3641000652193603279, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -11349,6 +11355,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &628603754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8498130517475870111, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -11774,6 +11781,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &662185275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3145410376104319116, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -11962,8 +11970,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.6062927, y: 13.011055, z: 5.993764}
-  m_Center: {x: 6.5390472, y: 4.0961494, z: 6.75421}
+  m_Size: {x: 3.4425964, y: 13.011055, z: 8.025507}
+  m_Center: {x: 7.6208954, y: 4.0961494, z: 5.7383375}
 --- !u!114 &666413881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11976,10 +11984,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1276b3552532c4b3792d9932b50ac0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _areaCameraDistance: 14
-  _areaScreenX: 0.5
+  _areaCameraDistance: 10
+  _areaScreenX: 0.3
   _areaCameraVerticalArmLength: 0.5
-  _areaCameraRotation: {x: 0, y: 25, z: 0}
+  _areaCameraRotation: {x: 26, y: 25, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
   _enterTransition: 1
@@ -11991,6 +11999,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &670123763 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -750902524182502677, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -12623,7 +12632,7 @@ MonoBehaviour:
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
   _enterTransition: 1
-  _enterTransitionSeconds: 3
+  _enterTransitionSeconds: 1.5
   _exitTransition: 0
   _exitTransitionSeconds: 3
   _justOnce: 0
@@ -12631,6 +12640,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!4 &678803365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8095789217197954210, guid: 3c9556e6d0b8c430189bed60e2f6811e, type: 3}
@@ -13443,6 +13453,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1001 &777976717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13567,8 +13578,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.6247864, y: 22.408875, z: 5.993764}
-  m_Center: {x: -1.4647064, y: 16.355915, z: 6.75421}
+  m_Size: {x: 2.6247864, y: 22.408875, z: 9.356634}
+  m_Center: {x: -1.4647064, y: 16.355915, z: 5.694869}
 --- !u!114 &787728338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13596,6 +13607,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &789107393
 GameObject:
   m_ObjectHideFlags: 0
@@ -14206,6 +14218,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &827945505
 GameObject:
   m_ObjectHideFlags: 0
@@ -14482,6 +14495,7 @@ MonoBehaviour:
   _useCamaraRotation: 1
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &845029253 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4994185365806130421, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -14744,6 +14758,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &877278174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7142125157920166331, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -17427,8 +17442,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9713745, y: 13.760086, z: 14.9352}
-  m_Center: {x: 6.829712, y: 20.68031, z: 4.0717793}
+  m_Size: {x: 5.7279663, y: 13.760086, z: 14.9352}
+  m_Center: {x: 5.451416, y: 20.68031, z: 4.0717793}
 --- !u!114 &1072311535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17448,7 +17463,7 @@ MonoBehaviour:
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
   _enterTransition: 1
-  _enterTransitionSeconds: 3
+  _enterTransitionSeconds: 2
   _exitTransition: 0
   _exitTransitionSeconds: 3
   _justOnce: 0
@@ -17456,6 +17471,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1075251103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1923434930105775906, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -19490,6 +19506,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1239566725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1539868639035805480, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -20222,6 +20239,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1291445726
 GameObject:
   m_ObjectHideFlags: 0
@@ -22084,6 +22102,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1398877354 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3266618362427837072, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -24335,6 +24354,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1572055504
 GameObject:
   m_ObjectHideFlags: 0
@@ -24407,6 +24427,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1580398926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -397091281332773996, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -26392,6 +26413,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1692237301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5194334309628646677, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -26701,6 +26723,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1699948165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -706420649473542966, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -26865,6 +26888,7 @@ MonoBehaviour:
   _defaultAmplitudGain: 0.5
   _defaultDampingX: 1
   _defaultDampingY: 1
+  _defaultFieldOfView: 40
 --- !u!1 &1722031824
 GameObject:
   m_ObjectHideFlags: 0
@@ -27469,6 +27493,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1740088718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 758555732398722146, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -27783,6 +27808,7 @@ MonoBehaviour:
   _defaultAmplitudGain: 0.5
   _defaultDampingX: 1
   _defaultDampingY: 1
+  _defaultFieldOfView: 40
 --- !u!1001 &1747549493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28154,7 +28180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _areaCameraDistance: 14
-  _areaScreenX: 0.5
+  _areaScreenX: 0.3
   _areaCameraVerticalArmLength: 0.5
   _areaCameraRotation: {x: 30, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
@@ -28168,6 +28194,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1001 &1798924123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29005,6 +29032,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1853487947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5190630082793040378, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -29934,6 +29962,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1900577353
 GameObject:
   m_ObjectHideFlags: 0
@@ -30086,6 +30115,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 1
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &1901649614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1558721567721526513, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -32242,8 +32272,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.193512, y: 1.6739273, z: 2.388856}
-  m_Center: {x: -0.09675598, y: -1.4320946, z: 2.6270308}
+  m_Size: {x: 1.457367, y: 1.4364548, z: 2.388856}
+  m_Center: {x: -0.22868347, y: -1.5508308, z: 2.6270308}
 --- !u!4 &2018352713
 Transform:
   m_ObjectHideFlags: 0
@@ -32553,6 +32583,7 @@ MonoBehaviour:
   _useCamaraRotation: 0
   _areaDampingX: 0
   _areaDampingY: 1
+  _areaFieldOfView: 40
 --- !u!1 &2020325120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4134923711975762840, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
