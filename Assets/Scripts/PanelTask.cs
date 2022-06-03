@@ -5,6 +5,9 @@ using TMPro;
 
 public class PanelTask : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _panel;
+
     public TextMeshProUGUI display;
     public TextMeshProUGUI papel;
 
@@ -12,7 +15,11 @@ public class PanelTask : MonoBehaviour
     public AudioClip denied;
 
     private AudioSource audioSource;
-    public GameObject luzObjeto;
+
+    public PlayerController _playerController;
+
+    [SerializeField]
+    private LeverController _lever;
 
     // Start is called before the first frame update
     void Start()
@@ -54,13 +61,38 @@ public class PanelTask : MonoBehaviour
             audioSource.PlayOneShot(approved);
             display.color = Color.green;
             display.text = "Correcto";
-            Destroy(gameObject, 1.0f);
-            luzObjeto.SetActive(true);
+            Destroy( gameObject, 1.0f);
+            _playerController.SetCanMove(true);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            _lever.SetActive(true);
         }
         else
         {
             audioSource.PlayOneShot(denied);
             display.text = "Acceso denegado";
+        }
+    }
+
+    public void ClosePanel() {
+        _playerController.SetCanMove(true);
+        _panel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void ShowPanel() {
+        _playerController.SetCanMove(false);
+        _panel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            ShowPanel();
         }
     }
 }

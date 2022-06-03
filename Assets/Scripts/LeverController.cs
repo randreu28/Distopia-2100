@@ -15,11 +15,19 @@ public class LeverController : MonoBehaviour
 
     private bool _isClose;
     private bool _isStartPoint;
-    
+
+    [SerializeField]
+    private bool _isActive = true;
+
+    public AudioClip _active;
+    public AudioClip _inactive;
+
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +37,12 @@ public class LeverController : MonoBehaviour
 
     public void action(PlayerController Player)
     {
+        if (!_isActive)
+        {
+            audioSource.PlayOneShot(_inactive);
+            return;
+        }
+
         _player = Player;
         StopAllCoroutines();
 
@@ -45,6 +59,8 @@ public class LeverController : MonoBehaviour
         }
 
         _isStartPoint = !_isStartPoint;
+
+        audioSource.PlayOneShot(_active);
     }
 
     private IEnumerator ToggleLever(float rotation, float duration)
@@ -60,6 +76,10 @@ public class LeverController : MonoBehaviour
             yield return null;
         }
         _player.actionEnd();
+    }
+
+    public void SetActive(bool value) {
+        _isActive = value;
     }
 
 }
