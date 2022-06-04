@@ -6,7 +6,167 @@ ModelImporter:
   - first:
       74: -623603649343465320
     second: Scene
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ascensor
+    second: {fileID: 2100000, guid: 6d389164f40555d4bbb175e9764bbdb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ascensor barras
+    second: {fileID: 2100000, guid: 057eeb2312e65b34d8564288db6a7619, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: asfalto
+    second: {fileID: 2100000, guid: adb32d4230e05ac4bbab3978c3ee0bad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: barriles.002
+    second: {fileID: 2100000, guid: 6effa8ae3978ad8429095ce83f57b0f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base
+    second: {fileID: 2100000, guid: 6225b738730b89441a240fe8f16cf100, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base2
+    second: {fileID: 2100000, guid: 369376ac169e7ab40869b5c62ecb91e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_ascensor
+    second: {fileID: 2100000, guid: 71294f337e7d3e64bbc8a785c2dfc05e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: botones1
+    second: {fileID: 2100000, guid: c8ed678180ad44d44976b228957da54f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bricks1
+    second: {fileID: 2100000, guid: 0854fddad87519c499a9c73658759e42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: caja_elec
+    second: {fileID: 2100000, guid: 5f8ad0e9fbf0a5443bf919a542daa6aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cristales
+    second: {fileID: 2100000, guid: 5f3b20c4f85d8c24c92190dc09bd37f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deposito1
+    second: {fileID: 2100000, guid: d90dac8a1140cf24dbf6470be84b20e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deposito2
+    second: {fileID: 2100000, guid: 98a395f507c582243ae4e4aa0ffcbcd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deposito3
+    second: {fileID: 2100000, guid: ff908c3a460987f4f846c3111207a6fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flechas
+    second: {fileID: 2100000, guid: c3c514115b759714dbd977462ee9f27c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flechas.001
+    second: {fileID: 2100000, guid: 0ee3b3da4bb3c3641823f0feccfddf80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hilos
+    second: {fileID: 2100000, guid: 4d986f79d682eb845adcad33d9992ba4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luz amarilla
+    second: {fileID: 2100000, guid: 97223c3225637744bbc0d97835b0d005, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luz_checkpoint
+    second: {fileID: 2100000, guid: f346471d11a2a2140a66ad42ab6abd21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luz_colgante
+    second: {fileID: 2100000, guid: b4957bcefd2ea3d4e90c24cc1d53d261, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: madera
+    second: {fileID: 2100000, guid: f04a4b2f69ac1ed43b67ede9be8bcf9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: madera2
+    second: {fileID: 2100000, guid: c92defa93e9b23b45be47f3346c53ef9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: madera3
+    second: {fileID: 2100000, guid: 7937c5a8b5bd899468d53a2faa186b3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: marcas
+    second: {fileID: 2100000, guid: e4903c30f3e9c8e46b00f3b182358025, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: marcas2
+    second: {fileID: 2100000, guid: de1555330c5b76e44b60eee43b634fea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palanca
+    second: {fileID: 2100000, guid: ea248bde9c847484995b11a7925c70ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red
+    second: {fileID: 2100000, guid: c8dcb92a55a2cac44b43a34413f86579, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rejilla
+    second: {fileID: 2100000, guid: 33db2a7697a2b9f49b37b50128385c3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rocas
+    second: {fileID: 2100000, guid: 3066b24018677b44c9bb95ac4fd3964d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tuberia1
+    second: {fileID: 2100000, guid: 070a5368acdc7904aac9d468ea081d0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tuberia2
+    second: {fileID: 2100000, guid: a4e9ab8f4e02aaa46ab464de6f96d2e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: water
+    second: {fileID: 2100000, guid: 626ab2dff75208144aeb451bbc07b0c8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
