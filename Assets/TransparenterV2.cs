@@ -38,6 +38,7 @@ public class TransparenterV2 : MonoBehaviour
             yield return null;
         }
         color.a = endAlpha;
+        material.SetColor("_BaseColor", color);
         yield return null;
     }
 
