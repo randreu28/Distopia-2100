@@ -23,14 +23,14 @@ public class Cepelin : MonoBehaviour
 
     IEnumerator Loop()
     {
-        for(int i = 0; i <= points.Length; i++)
+        for(int i = 0; i < points.Length; i++)
         {
             yield return currentTransform = this.gameObject.transform;
+            StartCoroutine(LerpRotation(currentTransform.rotation, points[i].rotation, timeRotation));
             yield return StartCoroutine(LerpPosition(currentTransform.position, points[i].position, timePosition));
-            yield return StartCoroutine(LerpRotation(currentTransform.rotation, points[i].rotation, timeRotation));
             yield return StartCoroutine(wait(timeWait));
         }
-        //yield return StartCoroutine(Loop());
+        yield return StartCoroutine(Loop());
     }
 
     IEnumerator wait(float time)
