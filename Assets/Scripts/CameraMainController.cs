@@ -47,10 +47,10 @@ public class CameraMainController : MonoBehaviour
 
     public void CameraMovementExit(CameraZoomController camera)
     {
-        if (!_coroutineRunning) { 
+        //if (!_coroutineRunning) { 
             StopAllCoroutines();
             StartCoroutine(DoCameraMovement(_defaultCameraDistance, _defaultVerticalArmLength, _defaultScreenX, _defaultCameraRotation, _defaultNoiseFrequencyGain, _defaultAmplitudGain, _defaultDampingX, _defaultDampingY, _defaultFieldOfView, camera._exitTransitionSeconds));
-        }
+        //}
         
     }
 

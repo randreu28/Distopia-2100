@@ -166,6 +166,8 @@ public class PlayerController : MonoBehaviour
 
     public bool WordLimitsEnabled = true;
 
+    public bool neverDie;
+
     private bool IsCurrentDeviceMouse
     {
         get
@@ -725,6 +727,10 @@ public class PlayerController : MonoBehaviour
     public void OnSuperJumpEnd()
     {
         _activeJumpHeight = JumpHeight;
+    }
+
+    public void OnToggleNeverDie() {
+        neverDie = !neverDie;
     }
 
 }

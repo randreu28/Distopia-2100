@@ -27,22 +27,24 @@ public class RespawnSystem : MonoBehaviour
 
     public void KillPlayer(string message, AudioClip audioClip, float volume)
     {
-        if(audioClip)
-        {
-            AudioSource SFX = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
-            SFX.clip = audioClip;
-            SFX.volume = volume;
-            if (!cooldown) 
+        if (!gameObject.GetComponent<PlayerController>().neverDie) { 
+            if (audioClip)
             {
-                SFX.Play();
-                cooldown = true;
-                StartCoroutine(waitForCooldown(cooldown, 4));
+                AudioSource SFX = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+                SFX.clip = audioClip;
+                SFX.volume = volume;
+                if (!cooldown) 
+                {
+                    SFX.Play();
+                    cooldown = true;
+                    StartCoroutine(waitForCooldown(cooldown, 4));
+                }
             }
-        }
-        _deadMessage = message;
-        if (_hasAnimator)
-        {
-            _animator.SetBool(_animIDDie, true);
+            _deadMessage = message;
+            if (_hasAnimator)
+            {
+                _animator.SetBool(_animIDDie, true);
+            }
         }
     }
     IEnumerator waitForCooldown(bool cooldown, float time)

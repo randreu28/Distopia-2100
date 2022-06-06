@@ -43,10 +43,14 @@ public class CamDetection : MonoBehaviour
         if (detectedObject != null)
         {
             Spotting();
-            detectedObject.GetComponent<PlayerController>().SetCanMove(false);
+            if (!detectedObject.GetComponent<PlayerController>().neverDie)
+            {
+                detectedObject.GetComponent<PlayerController>().SetCanMove(false);
+            }
             detectedObject.GetComponent<RespawnSystem>().KillPlayer(deathName, SFX, volume);
             StartCoroutine(waitAndReset(4));
-        }else
+        }
+        else
         {
             Searching();
         }

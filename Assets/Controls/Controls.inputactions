@@ -108,6 +108,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ToggleNeverDie",
+                    "type": "Button",
+                    "id": "df061dd2-4105-4154-aaa8-bf6b8f0de0f2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -383,6 +391,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SuperJumpEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58f151a5-a887-4c79-b7c9-3c4b8a34a5d1",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleNeverDie",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
