@@ -12,6 +12,11 @@ public class RespawnSystem : MonoBehaviour
     private Animator _animator;
     private bool _hasAnimator;
     private int _animIDDie;
+    private int _animIDCrouch;
+    private int _animIDPull;
+    private int _animIDPush;
+    private int _animIDPress;
+    private int _animIDFreeFall;
     private string _deadMessage;
     private bool cooldown = false;
 
@@ -45,6 +50,11 @@ public class RespawnSystem : MonoBehaviour
             if (_hasAnimator)
             {
                 _animator.SetBool(_animIDDie, true);
+                _animator.SetBool(_animIDCrouch, false);
+                _animator.SetBool(_animIDPull, false);
+                _animator.SetBool(_animIDPush, false);
+                _animator.SetBool(_animIDPress, false);
+                _animator.SetBool(_animIDFreeFall, false);
             }
         }
     }
@@ -87,6 +97,11 @@ public class RespawnSystem : MonoBehaviour
     private void AssignAnimationID()
     {
         _animIDDie = Animator.StringToHash("Die");
+        _animIDCrouch = Animator.StringToHash("Crouch");
+        _animIDPull = Animator.StringToHash("Pulling");
+        _animIDPush = Animator.StringToHash("Pushing");
+        _animIDPress = Animator.StringToHash("PressButton");
+        _animIDFreeFall = Animator.StringToHash("FreeFall");
     }
 
     
