@@ -12164,7 +12164,7 @@ MonoBehaviour:
   _endLeverRotation: -130
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
+  _autoReturn: 1
   _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
   _startMovingOnTriggerEnter: 0
