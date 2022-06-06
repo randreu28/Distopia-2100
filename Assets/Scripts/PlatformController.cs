@@ -6,26 +6,15 @@ public class PlatformController : MonoBehaviour
 {
     public Transform startPoint;
     public Transform endPoint;
-    public Transform Lever;
+    
     public float travelTime;
     private Vector3 currentPos;
     private bool _moving = false;
     private float _currentTime;
     private bool isStartPoint = true;
     public bool _alwaysMoving = false;
-    public AudioClip MovingAudioClip;
-    [Range(0, 1)] public float MovingAudioVolume = 0.5f;
-    private PlayerController _player;
-
     [SerializeField]
-    private float _startLeverRotation = -90f;
-    [SerializeField]
-    private float _endLeverRotation = -30f;
-
-    [SerializeField]
-    public Transform ButtonUp;
-    [SerializeField]
-    public Transform ButtonDown;
+    private bool _startMovingOnTriggerEnter;
 
     [Header("Auto Return")]
     [SerializeField]
@@ -34,12 +23,29 @@ public class PlatformController : MonoBehaviour
     private float _autoReturnDelay = 5;
     private float _autoReturnTimer;
 
+    [Header("Lever")]
+    public Transform Lever;
+    [SerializeField]
+    private float _startLeverRotation = -90f;
+    [SerializeField]
+    private float _endLeverRotation = -30f;
+
+    [Header("Buttons")]
+    [SerializeField]
+    public Transform ButtonUp;
+    [SerializeField]
+    public Transform ButtonDown;
     [SerializeField]
     private Material _buttonOn;
     private Material _buttonOff;
 
-    [SerializeField]
-    private bool _startMovingOnTriggerEnter;
+    [Header("Platform Sounds")]
+    public AudioClip MovingAudioClip;
+    [Range(0, 1)] public float MovingAudioVolume = 0.5f;
+    public AudioClip ButtonAudioClip;
+    [Range(0, 1)] public float ButtonAudioVolume = 0.5f;
+
+    private PlayerController _player;
 
     void Start()
     {
@@ -143,6 +149,7 @@ public class PlatformController : MonoBehaviour
         _player.actionStart();
         if (isStartPoint) {
             ButtonUp.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
+            AudioSource.PlayClipAtPoint(ButtonAudioClip, ButtonUp.transform.position, ButtonAudioVolume);
             MovePlatform();
         }
     }
@@ -153,6 +160,7 @@ public class PlatformController : MonoBehaviour
         _player.actionStart();
         if (!isStartPoint) {
             ButtonDown.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
+            AudioSource.PlayClipAtPoint(ButtonAudioClip, ButtonDown.transform.position, ButtonAudioVolume);
             MovePlatform();
         }
     }
