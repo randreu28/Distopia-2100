@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -141,7 +142,8 @@ public class PlayerController : MonoBehaviour
     private float _beltVelocity;
 
     public float _worldLimitZ = -19.5f;
-    public float _worldLimitZFar = -11f;
+    public float _worldLimitZFarNvl1 = -12.3f;
+    public float _worldLimitZFarNvl2 = -11f;
 
     public float _fallingDistance;
     public float _lastGroundedPositionY;
@@ -383,9 +385,9 @@ public class PlayerController : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZ);
             }
 
-            if (transform.position.z > _worldLimitZFar)
+            if (transform.position.z > GetWorldLimitzFar())
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y, _worldLimitZFar);
+                transform.position = new Vector3(transform.position.x, transform.position.y, GetWorldLimitzFar());
             }
         }
 
@@ -731,6 +733,16 @@ public class PlayerController : MonoBehaviour
 
     public void OnToggleNeverDie() {
         neverDie = !neverDie;
+    }
+
+    private float GetWorldLimitzFar() {
+        if (SceneManager.GetActiveScene().name == "Lvl 1")
+        {
+            return _worldLimitZFarNvl1;
+        }
+        else {
+            return _worldLimitZFarNvl2;
+        }
     }
 
 }
