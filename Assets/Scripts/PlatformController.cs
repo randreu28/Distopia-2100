@@ -149,7 +149,10 @@ public class PlatformController : MonoBehaviour
         _player.actionStart();
         if (isStartPoint) {
             ButtonUp.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
-            AudioSource.PlayClipAtPoint(ButtonAudioClip, ButtonUp.transform.position, ButtonAudioVolume);
+            if (ButtonAudioClip != null)
+            {
+                AudioSource.PlayClipAtPoint(ButtonAudioClip, ButtonUp.transform.position, ButtonAudioVolume);
+            }
             MovePlatform();
         }
     }
@@ -160,7 +163,10 @@ public class PlatformController : MonoBehaviour
         _player.actionStart();
         if (!isStartPoint) {
             ButtonDown.GetChild(0).GetComponent<Renderer>().material = _buttonOn;
-            AudioSource.PlayClipAtPoint(ButtonAudioClip, ButtonDown.transform.position, ButtonAudioVolume);
+            if (ButtonAudioClip != null)
+            {
+                AudioSource.PlayClipAtPoint(ButtonAudioClip, ButtonDown.transform.position, ButtonAudioVolume);
+            }
             MovePlatform();
         }
     }
