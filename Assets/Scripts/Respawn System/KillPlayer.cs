@@ -9,13 +9,15 @@ public class KillPlayer : MonoBehaviour
     [Range(0,1)]
     public float volume = 1f;
 
+    public DeadType _deadType;
+
     void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "Player")
         {
             if (!collider.gameObject.GetComponent<PlayerController>().neverDie) { 
                 collider.GetComponent<PlayerController>().SetCanMove(false);
-                collider.GetComponent<RespawnSystem>().KillPlayer(deathName, SFX, volume);
+                collider.GetComponent<RespawnSystem>().KillPlayer(_deadType, deathName, SFX, volume);
             }
         }
     }

@@ -19,11 +19,14 @@ public class CamDetection : MonoBehaviour
     private Material lens;
     private bool inFOV;
 
+    private DeadType _deadType;
+
     void Start()
     {
         myLight = transform.GetChild(0).GetChild(0).GetComponent<Light>();
         lens = transform.GetChild(0).GetComponent<Renderer>().materials[1];
         inFOV = GetComponent<FieldOfView>().inFOV;
+        _deadType = DeadType.Seen;
     }
 
     void Spotting()
@@ -47,7 +50,7 @@ public class CamDetection : MonoBehaviour
             {
                 detectedObject.GetComponent<PlayerController>().SetCanMove(false);
             }
-            detectedObject.GetComponent<RespawnSystem>().KillPlayer(deathName, SFX, volume);
+            detectedObject.GetComponent<RespawnSystem>().KillPlayer(_deadType, deathName, SFX, volume);
             StartCoroutine(waitAndReset(4));
         }
         else

@@ -170,6 +170,8 @@ public class PlayerController : MonoBehaviour
 
     public bool neverDie;
 
+    private DeadType _deadType;
+
     private bool IsCurrentDeviceMouse
     {
         get
@@ -448,7 +450,7 @@ public class PlayerController : MonoBehaviour
             _fallingDistance = _lastGroundedPositionY - transform.position.y;
             if (_fallingDistance > _activeMaxFallingDistance) {
                 Debug.Log("Falling distance: " + _fallingDistance);
-                GetComponent<RespawnSystem>().KillPlayer(FallDeathName, FallDeathSound, FallDeathVolume);
+                GetComponent<RespawnSystem>().KillPlayer(_deadType, FallDeathName, FallDeathSound, FallDeathVolume);
             }
 
             // reset the jump timeout timer

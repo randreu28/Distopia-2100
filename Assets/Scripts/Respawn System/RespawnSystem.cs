@@ -17,6 +17,7 @@ public class RespawnSystem : MonoBehaviour
     private int _animIDPush;
     private int _animIDPress;
     private int _animIDFreeFall;
+    private int _animIDSeen;
     private string _deadMessage;
     private bool cooldown = false;
 
@@ -30,7 +31,7 @@ public class RespawnSystem : MonoBehaviour
         AssignAnimationID();
     }
 
-    public void KillPlayer(string message, AudioClip audioClip, float volume)
+    public void KillPlayer(DeadType deadType, string message, AudioClip audioClip, float volume)
     {
         if (!gameObject.GetComponent<PlayerController>().neverDie) {
             gameObject.GetComponent<PlayerController>().SetCanMove(false);
@@ -49,7 +50,13 @@ public class RespawnSystem : MonoBehaviour
             _deadMessage = message;
             if (_hasAnimator)
             {
-                _animator.SetBool(_animIDDie, true);
+                if (deadType == DeadType.Killed)
+                {
+                    _animator.SetBool(_animIDDie, true);
+                }
+                else if (deadType == DeadType.Seen) {
+                    _animator.SetBool(_animIDSeen, true);
+                }
                 _animator.SetBool(_animIDCrouch, false);
                 _animator.SetBool(_animIDPull, false);
                 _animator.SetBool(_animIDPush, false);
@@ -74,6 +81,7 @@ public class RespawnSystem : MonoBehaviour
             _enemies[i].Reset();
         }
         _animator.SetBool(_animIDDie, false);
+        _animator.SetBool(_animIDSeen, false);
         gameObject.GetComponent<PlayerController>().SetCanMove(true);
         gameObject.transform.position = SpawnPoint.position;
         Physics.SyncTransforms();
@@ -102,6 +110,7 @@ public class RespawnSystem : MonoBehaviour
         _animIDPush = Animator.StringToHash("Pushing");
         _animIDPress = Animator.StringToHash("PressButton");
         _animIDFreeFall = Animator.StringToHash("FreeFall");
+        _animIDSeen = Animator.StringToHash("Seen");
     }
 
     
