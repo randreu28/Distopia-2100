@@ -27,7 +27,8 @@ public class RespawnSystem : MonoBehaviour
 
     public void KillPlayer(string message, AudioClip audioClip, float volume)
     {
-        if (!gameObject.GetComponent<PlayerController>().neverDie) { 
+        if (!gameObject.GetComponent<PlayerController>().neverDie) {
+            gameObject.GetComponent<PlayerController>().SetCanMove(false);
             if (audioClip)
             {
                 AudioSource SFX = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
