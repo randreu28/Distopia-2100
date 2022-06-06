@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8330078, g: 0.8330078, b: 0.8330078, a: 1}
+  m_IndirectSpecularColor: {r: 0.7093582, g: 0.7093582, b: 0.7061042, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19838,19 +19838,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 2095590547}
   endPoint: {fileID: 175230572}
-  Lever: {fileID: 0}
   travelTime: 5
   _alwaysMoving: 1
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 0
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
-  _startMovingOnTriggerEnter: 0
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!114 &1156175780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20484,7 +20486,8 @@ MonoBehaviour:
   _crouchPoint: {fileID: 802828106}
   _beltVelocity: 4
   _worldLimitZ: -19.5
-  _worldLimitZFar: -11
+  _worldLimitZFarNvl1: -12.3
+  _worldLimitZFarNvl2: -11
   _fallingDistance: 0
   _lastGroundedPositionY: 0
   FallDeathSound: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
@@ -20495,6 +20498,7 @@ MonoBehaviour:
   boatTravel: 0
   _useCameraRotation: 0
   WordLimitsEnabled: 1
+  neverDie: 0
 --- !u!114 &1178961735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34748,7 +34752,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -34924,19 +34928,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1431822793}
   endPoint: {fileID: 39916119}
-  Lever: {fileID: 0}
   travelTime: 120
   _alwaysMoving: 0
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 1
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
-  _startMovingOnTriggerEnter: 1
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!114 &2019198737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41734,19 +41740,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 6984172191366285862}
   endPoint: {fileID: 6984172191593359577}
-  Lever: {fileID: 0}
   travelTime: 5
   _alwaysMoving: 1
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 0
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
-  _startMovingOnTriggerEnter: 0
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!4 &6984172190695256343
 Transform:
   m_ObjectHideFlags: 0
@@ -41948,19 +41956,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 6984172190928236232}
   endPoint: {fileID: 6984172192311905335}
-  Lever: {fileID: 0}
   travelTime: 5
   _alwaysMoving: 1
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 0
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
-  _startMovingOnTriggerEnter: 0
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!4 &6984172191062529529
 Transform:
   m_ObjectHideFlags: 0
@@ -42326,19 +42336,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 6984172190553867800}
   endPoint: {fileID: 6984172192409445607}
-  Lever: {fileID: 0}
   travelTime: 5
   _alwaysMoving: 1
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 0
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
-  _startMovingOnTriggerEnter: 0
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!4 &6984172191493520681
 Transform:
   m_ObjectHideFlags: 0
@@ -42451,19 +42463,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 6984172192535410551}
   endPoint: {fileID: 6984172190696609160}
-  Lever: {fileID: 0}
   travelTime: 5
   _alwaysMoving: 1
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 0
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
-  _startMovingOnTriggerEnter: 0
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!4 &6984172191662569378
 Transform:
   m_ObjectHideFlags: 0
@@ -42738,19 +42752,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 6984172191895391002}
   endPoint: {fileID: 6984172191064517093}
-  Lever: {fileID: 0}
   travelTime: 5
   _alwaysMoving: 1
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 0
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
-  _startMovingOnTriggerEnter: 0
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!4 &6984172192298168363
 Transform:
   m_ObjectHideFlags: 0
