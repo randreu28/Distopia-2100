@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7093582, g: 0.7093582, b: 0.7061042, a: 1}
+  m_IndirectSpecularColor: {r: 0.8330078, g: 0.8330078, b: 0.8330078, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2018,6 +2018,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &110348014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2066,6 +2067,7 @@ MonoBehaviour:
   deathName: Te has ahogado
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!23 &111510857
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2451,6 +2453,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &126203444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2657,6 +2660,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &147866685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2723,6 +2727,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &154273020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3193,6 +3198,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &177499184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3473,6 +3479,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &196171645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4197,6 +4204,7 @@ MonoBehaviour:
   deathName: Te has ahogado
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &246710091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4230,6 +4238,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &247932555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4849,6 +4858,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &300594913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5638,6 +5648,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &352790018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6564,6 +6575,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &391398834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7340,6 +7352,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &431261984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8062,6 +8075,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &484835016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8095,6 +8109,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &485559385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9717,6 +9732,7 @@ MonoBehaviour:
   deathName: Te has ahogado
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &509232133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10283,6 +10299,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &532301118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10922,6 +10939,7 @@ MonoBehaviour:
   deathName: Te has ahogado
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &546813449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11131,6 +11149,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &552192528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11301,6 +11320,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &560966245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12201,6 +12221,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &628603757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12627,6 +12648,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &662185278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12845,6 +12867,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &670123766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13076,6 +13099,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &672352871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13592,6 +13616,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &694324040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13648,6 +13673,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &705780946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14609,6 +14635,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &777240961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15015,6 +15042,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &815414501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15531,7 +15559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828887936}
   m_LocalRotation: {x: -0.58458453, y: -0.11270197, z: 0.08243447, w: 0.79922694}
-  m_LocalPosition: {x: -1.2683753, y: 4.6369247, z: 50.930317}
+  m_LocalPosition: {x: -1.27, y: 4.12, z: 50.32}
   m_LocalScale: {x: 0.02556874, y: 0.017404422, z: 0.015589666}
   m_Children: []
   m_Father: {fileID: 1863573405}
@@ -15613,6 +15641,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &835009074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16615,6 +16644,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &925101500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16839,6 +16869,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &931411709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16979,6 +17010,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &940178385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17110,6 +17142,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!4 &952149346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8095789217197954210, guid: 3c9556e6d0b8c430189bed60e2f6811e, type: 3}
@@ -17751,6 +17784,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1024263976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18307,6 +18341,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1043290523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18398,6 +18433,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1047965659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18479,6 +18515,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1048918460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19329,6 +19366,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1095709674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19393,6 +19431,7 @@ MonoBehaviour:
   deathName: 
   SFX: {fileID: 0}
   volume: 1
+  _deadType: 0
 --- !u!65 &1110760145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19458,6 +19497,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1118510541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20350,6 +20390,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1176643980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21293,6 +21334,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1239566730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21814,6 +21856,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1271062379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22460,6 +22503,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1297736448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23216,6 +23260,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1341993672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24059,6 +24104,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1397108751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24360,6 +24406,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1414418165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24894,6 +24941,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!135 &1445166549
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25990,6 +26038,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1532016192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26192,6 +26241,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1544966180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26883,6 +26933,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1584568852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27230,6 +27281,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1609551747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27263,6 +27315,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1611446561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29637,6 +29690,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1732578043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29773,6 +29827,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1740088721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29939,6 +29994,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1740699318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30712,6 +30768,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1818362960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32755,6 +32812,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1922489855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33182,6 +33240,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1946528268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33239,6 +33298,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1951803084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33863,6 +33923,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &1979815639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35279,6 +35340,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &2028476001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35507,6 +35569,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &2040040021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36376,6 +36439,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &2090061143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36667,6 +36731,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &2099217381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40820,6 +40885,7 @@ MonoBehaviour:
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &2113787998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41129,6 +41195,7 @@ MonoBehaviour:
   deathName: Te has electrocutado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!65 &2132577643
 BoxCollider:
   m_ObjectHideFlags: 0
