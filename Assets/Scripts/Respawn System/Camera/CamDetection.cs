@@ -51,7 +51,7 @@ public class CamDetection : MonoBehaviour
                 detectedObject.GetComponent<PlayerController>().SetCanMove(false);
             }
             detectedObject.GetComponent<RespawnSystem>().KillPlayer(_deadType, deathName, SFX, volume);
-            StartCoroutine(waitAndReset(4));
+            StartCoroutine(waitAndReset(6));
         }
         else
         {

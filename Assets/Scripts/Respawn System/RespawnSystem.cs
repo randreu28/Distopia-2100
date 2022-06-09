@@ -8,7 +8,8 @@ public class RespawnSystem : MonoBehaviour
     public Transform SpawnPoint;
     public GameObject GameOver;
     public GameObject PauseMenu;
-
+    [HideInInspector] public bool isDead = false;
+    
     private Animator _animator;
     private bool _hasAnimator;
     private int _animIDDie;
@@ -33,8 +34,9 @@ public class RespawnSystem : MonoBehaviour
 
     public void KillPlayer(DeadType deadType, string message, AudioClip audioClip, float volume)
     {
-        if (!gameObject.GetComponent<PlayerController>().neverDie) {
+        if (!gameObject.GetComponent<PlayerController>().neverDie && !isDead) {
             gameObject.GetComponent<PlayerController>().SetCanMove(false);
+            isDead = true;
             if (audioClip)
             {
                 if(TryGetComponent(out AudioSource SFX))
@@ -86,6 +88,7 @@ public class RespawnSystem : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         GameObject.Find("DeathName").GetComponent<Text>().text = _deadMessage;
+        isDead = false;
     }
 
     public void ChangeSpawn(Transform newSpawnPoint)
