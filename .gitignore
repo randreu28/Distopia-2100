@@ -74,5 +74,6 @@ crashlytics-build.properties
 
 # Blender Caché
 *.blend1
+*.blend1.meta
 Assets/.DS_Store
 Assets/Scripts/.DS_Store
