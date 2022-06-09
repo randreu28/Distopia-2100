@@ -243,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7564697
+      value: -2.124588
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.1799984
+      value: -27.943567
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1649,6 +1649,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 324218559}
   Flag: {fileID: 1793631784}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &79357805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4474,6 +4476,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 8098919}
   Flag: {fileID: 1012723022}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &255057368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4723,6 +4727,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 533866558}
   Flag: {fileID: 910864376}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &266165920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5302,6 +5308,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 2000356290}
   Flag: {fileID: 973061209}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &308398407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16690,6 +16698,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1733136727}
   Flag: {fileID: 972453532}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &915922171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17342,6 +17352,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1850353948}
   Flag: {fileID: 1681807569}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &963422380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17943,6 +17955,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 2053465460}
   Flag: {fileID: 1136300683}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &1026754315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21234,8 +21248,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.66
-  m_CameraDistance: 16
+  m_ScreenY: 0.5558786
+  m_CameraDistance: 36.76357
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -23419,6 +23433,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1654337658}
   Flag: {fileID: 1583211394}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &1360181710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31679,11 +31695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7564697
+      value: -2.124588
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.1799984
+      value: -27.943567
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31971,6 +31987,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 726548414}
   Flag: {fileID: 777976719}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &1874803152
 BoxCollider:
   m_ObjectHideFlags: 0
