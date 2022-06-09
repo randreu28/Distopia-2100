@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8330078, g: 0.8330078, b: 0.8330078, a: 1}
+  m_IndirectSpecularColor: {r: 0.7093582, g: 0.7093582, b: 0.7061042, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29376,7 +29376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vcam: {fileID: 1120432007}
-  _defaultCameraDistance: 8
+  _defaultCameraDistance: 14
   _defaultVerticalArmLength: 0.66
   _defaultScreenX: 0.5
   _defaultCameraRotation: {x: 0, y: 0, z: 0}
