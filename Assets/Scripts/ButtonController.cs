@@ -22,7 +22,12 @@ public class ButtonController : MonoBehaviour
     private Material _pressedMaterial;
 
     private Renderer _renderer;
-    
+
+    [Header("Sounds")]
+    public AudioClip ButtonAudioClip;
+    [Range(0, 1)] public float ButtonAudioVolume = 0.5f;
+    public AudioClip DoorAudioClip;
+    [Range(0, 1)] public float DoorAudioVolume = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,12 +45,14 @@ public class ButtonController : MonoBehaviour
         if (!_pressed)
         {
             _player = Player;
+            AudioSource.PlayClipAtPoint(ButtonAudioClip, transform.position, ButtonAudioVolume);
             StopAllCoroutines();
             StartCoroutine(PressButton());
 
             if (_door != null)
             {
                 _door.Action(true);
+                AudioSource.PlayClipAtPoint(DoorAudioClip, _door.transform.position, DoorAudioVolume);
             }
 
             _pressed = true;
