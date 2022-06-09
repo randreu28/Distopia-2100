@@ -37,15 +37,16 @@ public class RespawnSystem : MonoBehaviour
             gameObject.GetComponent<PlayerController>().SetCanMove(false);
             if (audioClip)
             {
-                AudioSource SFX = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
-                SFX.clip = audioClip;
-                SFX.volume = volume;
-                if (!cooldown) 
+                if(TryGetComponent(out AudioSource SFX))
                 {
+                    SFX.clip = audioClip;
+                    SFX.volume = volume;
                     SFX.Play();
-                    cooldown = true;
-                    StartCoroutine(waitForCooldown(cooldown, 4));
+                }else{
+                    Debug.LogError("RespawnSystem is trying to access an unexisting audioSource");
                 }
+            }else{
+                Debug.LogError("There is no SFX for this death");
             }
             _deadMessage = message;
             if (_hasAnimator)
@@ -64,11 +65,6 @@ public class RespawnSystem : MonoBehaviour
                 _animator.SetBool(_animIDFreeFall, false);
             }
         }
-    }
-    IEnumerator waitForCooldown(bool cooldown, float time)
-    {
-        yield return new WaitForSeconds(time);
-        yield return cooldown = false;
     }
 
     public void Dead() {
