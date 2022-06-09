@@ -530,7 +530,7 @@ MonoBehaviour:
   spotIntensity: 40
   searchIntensity: 60
   deathName: Te han pillado
-  volume: 0.112
+  volume: 0.014
   SFX: {fileID: 8300000, guid: a4573206645d62e4aa0138a1201d15a1, type: 3}
 --- !u!82 &8164688489874418957
 AudioSource:
