@@ -13,19 +13,30 @@ public class Switch : MonoBehaviour
     
     [Header("Plataforma")]
     public GameObject platform;
-    public AudioClip AudioClip;
+
+    [Header("SFX")]
+    public AudioClip leverAudioClip;
     [Range(0, 1)]
-    public float volume = 1f;
+    public float leverVolume = 1f;
+    [Space(10)]
+    public AudioClip platformAudioClip;
+    [Range(0, 1)]
+    public float platformVolume = 1f;
 
     private bool isClose = false;
     private bool isMoving = false;
     private bool hasMoved = false;
-    private AudioSource SFX;
+    private AudioSource leverSFX;
+    private AudioSource platformSFX;
 
     void Awake(){
-        SFX = platform.AddComponent(typeof(AudioSource)) as AudioSource;
-        SFX.clip = AudioClip;
-        SFX.volume = volume;
+        leverSFX = platform.AddComponent(typeof(AudioSource)) as AudioSource;
+        leverSFX.clip = leverAudioClip;
+        leverSFX.volume = leverVolume;
+
+        platformSFX = platform.AddComponent(typeof(AudioSource)) as AudioSource;
+        platformSFX.clip = platformAudioClip;
+        platformSFX.volume = platformVolume;
     }
 
     public void action(){
@@ -39,7 +50,8 @@ public class Switch : MonoBehaviour
     {
         Vector3 targetRotation = hasMoved ? new Vector3(this.transform.eulerAngles.x + 45, this.transform.eulerAngles.y, this.transform.eulerAngles.z) : new Vector3(this.transform.eulerAngles.x - 45, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
         yield return LerpRotation(this.gameObject, this.transform.eulerAngles, targetRotation, leverDuration);
-        SFX.Play();
+        leverSFX.Play();
+        platformSFX.Play();
         isMoving = true;
         if (hasMoved)
         {

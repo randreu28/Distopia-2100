@@ -243,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.124588
+      value: -0.41706085
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.943567
+      value: -13.179998
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21248,8 +21248,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5558786
-  m_CameraDistance: 36.76357
+  m_ScreenY: 0.7
+  m_CameraDistance: 22
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -26301,7 +26301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceUp: 4
   duration: 1
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 34dd16034192fab43b8e2069779441da, type: 3}
   volume: 1
 --- !u!65 &1541836635
 BoxCollider:
@@ -28909,10 +28909,12 @@ MonoBehaviour:
   startPoint: {fileID: 1670047777}
   endPoint: {fileID: 828887937}
   leverDuration: 0.5
-  platformDuration: 6
+  platformDuration: 9
   platform: {fileID: 575662226}
-  AudioClip: {fileID: 0}
-  volume: 1
+  leverAudioClip: {fileID: 8300000, guid: 1ac029c6f39c1774aa6241a0dc3212ee, type: 3}
+  leverVolume: 0.35
+  platformAudioClip: {fileID: 8300000, guid: 26d5686700d36bf42bed0d70e29f81ee, type: 3}
+  platformVolume: 0.092
 --- !u!1001 &1692757158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31695,11 +31697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.124588
+      value: -0.41706085
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.943567
+      value: -13.179998
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
