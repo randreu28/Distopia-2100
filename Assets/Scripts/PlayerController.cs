@@ -753,7 +753,8 @@ public class PlayerController : MonoBehaviour
         GameObject pauseMenu = GetComponent<RespawnSystem>().PauseMenu;
         if(gameOverMenu.activeSelf || pauseMenu.activeSelf)
         {
-            gameOverMenu.GetComponent<Menu>().ContinueButton();
+            //gameOverMenu.GetComponent<Menu>().ContinueButton();
+            pauseMenu.GetComponent<Menu>().ContinueButton();
         }
     }
 
