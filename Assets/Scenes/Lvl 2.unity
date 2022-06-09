@@ -41846,6 +41846,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5771868361486606984, guid: 258a2334556074ed0b46d26fa1d7d39a, type: 3}
+      propertyPath: ButtonAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40e5f9e59c745a7b76e31f1bcb2d16, type: 3}
+    - target: {fileID: 5771868361486606984, guid: 258a2334556074ed0b46d26fa1d7d39a, type: 3}
+      propertyPath: MovingAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 564ac8962ee2b460b903838113c3c950, type: 3}
     - target: {fileID: 7101544907022394219, guid: 258a2334556074ed0b46d26fa1d7d39a, type: 3}
       propertyPath: m_Name
       value: Lift B
@@ -41891,6 +41899,22 @@ PrefabInstance:
       propertyPath: _buttonOn
       value: 
       objectReference: {fileID: 2100000, guid: 009c72aa1c8090a40abe6dcad4dd07f2, type: 2}
+    - target: {fileID: 3732291346710566160, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
+      propertyPath: _autoReturn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732291346710566160, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
+      propertyPath: ButtonAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40e5f9e59c745a7b76e31f1bcb2d16, type: 3}
+    - target: {fileID: 3732291346710566160, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
+      propertyPath: MovingAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 564ac8962ee2b460b903838113c3c950, type: 3}
+    - target: {fileID: 3732291346710566160, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
+      propertyPath: _autoReturnDelay
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4210273666513445187, guid: 80d5ac0d477ec46afa53082d05c42e41, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
