@@ -3634,7 +3634,7 @@ MonoBehaviour:
   _buttonOn: {fileID: 0}
   MovingAudioClip: {fileID: 8300000, guid: 3643bf43a3e2a4a92bf6f99e81eb608f, type: 3}
   MovingAudioVolume: 0.5
-  ButtonAudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  ButtonAudioClip: {fileID: 8300000, guid: 96fb222f5705e5346af4f19c67f3910a, type: 3}
   ButtonAudioVolume: 0.5
 --- !u!1 &539782861
 GameObject:
