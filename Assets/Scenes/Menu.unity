@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scene: Lvl 1
   AudioClip: {fileID: 8300000, guid: 40d06f4311973854cb7870b674a0b432, type: 3}
-  volume: 1
+  volume: 0.2
 --- !u!114 &1101047364
 MonoBehaviour:
   m_ObjectHideFlags: 0

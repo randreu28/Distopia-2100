@@ -747,4 +747,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnJump()
+    {
+        GameObject gameOverMenu = GetComponent<RespawnSystem>().GameOver;
+        GameObject pauseMenu = GetComponent<RespawnSystem>().PauseMenu;
+        if(gameOverMenu.activeSelf || pauseMenu.activeSelf)
+        {
+            gameOverMenu.GetComponent<Menu>().ContinueButton();
+        }
+    }
+
 }
