@@ -89,6 +89,10 @@ public class PlatformController : MonoBehaviour
                 }
                 _currentTime = Time.time - (travelTime / 2);
                 _moving = true;
+                if (MovingAudioClip != null)
+                {
+                    AudioSource.PlayClipAtPoint(MovingAudioClip, transform.position, MovingAudioVolume);
+                }
             }
         }
     }

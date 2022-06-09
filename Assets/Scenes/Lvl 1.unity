@@ -5292,6 +5292,14 @@ PrefabInstance:
       propertyPath: travelTime
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5771868361486606984, guid: 258a2334556074ed0b46d26fa1d7d39a, type: 3}
+      propertyPath: ButtonAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d40e5f9e59c745a7b76e31f1bcb2d16, type: 3}
+    - target: {fileID: 5771868361486606984, guid: 258a2334556074ed0b46d26fa1d7d39a, type: 3}
+      propertyPath: MovingAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 93371f8dc37dc4cef9090d46582c7d27, type: 3}
     - target: {fileID: 5900608553327871832, guid: 258a2334556074ed0b46d26fa1d7d39a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.97
