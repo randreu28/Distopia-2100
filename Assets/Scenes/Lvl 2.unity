@@ -31128,6 +31128,10 @@ MonoBehaviour:
   _door: {fileID: 827945507}
   _duration: 1
   _pressedMaterial: {fileID: 2100000, guid: f2758cbf7b6e94b60a07ba61a6dc069b, type: 2}
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
+  DoorAudioClip: {fileID: 0}
+  DoorAudioVolume: 0.5
 --- !u!65 &1837996141
 BoxCollider:
   m_ObjectHideFlags: 0
