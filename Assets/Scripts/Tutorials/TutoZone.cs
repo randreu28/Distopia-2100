@@ -31,8 +31,7 @@ public class TutoZone : MonoBehaviour
             {
                 if(TutorialCanvas.transform.GetChild(i).TryGetComponent(out Image image))
                 {
-                    //image.color = new Color(image.color.r, image.color.g, image.color.b, 255);
-                    StartCoroutine(LerpAlpha(image, 255, fadeTime));
+                    StartCoroutine(LerpAlpha(image, 1, fadeTime));
                 }
             }
         }
@@ -62,11 +61,9 @@ public class TutoZone : MonoBehaviour
         {
             float newAlpha = Mathf.Lerp(startValue.a, endValue, time / duration);
             image.color = new Color(startValue.r, startValue.g, startValue.b, newAlpha);
-            Debug.Log(image.color.a);
             time += Time.deltaTime;
             yield return null;
         }
-        Debug.Log(image.color.a);
         image.color = new Color(startValue.r, startValue.g, startValue.b, endValue);
     }
 }
