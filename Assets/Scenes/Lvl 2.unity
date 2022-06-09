@@ -243,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7082367
+      value: -2.124588
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.179998
+      value: -27.943567
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1649,6 +1649,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 324218559}
   Flag: {fileID: 1793631784}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &79357805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2045,6 +2047,7 @@ GameObject:
   - component: {fileID: 111510857}
   - component: {fileID: 111510860}
   - component: {fileID: 111510856}
+  - component: {fileID: 111510861}
   m_Layer: 0
   m_Name: Agua
   m_TagString: Untagged
@@ -2144,6 +2147,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.044156, y: 2.2695224, z: 10}
   m_Center: {x: -0.47792196, y: -0.07271124, z: 0}
+--- !u!82 &111510861
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111510855}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 90bfbc387271bfe4998f282e57757750, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 374.1
+  MaxDistance: 393.92
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &117657195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4377,6 +4476,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 8098919}
   Flag: {fileID: 1012723022}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &255057368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4626,6 +4727,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 533866558}
   Flag: {fileID: 910864376}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &266165920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5205,6 +5308,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 2000356290}
   Flag: {fileID: 973061209}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &308398407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16593,6 +16698,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1733136727}
   Flag: {fileID: 972453532}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &915922171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17245,6 +17352,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1850353948}
   Flag: {fileID: 1681807569}
   LightIntensity: 48
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &963422380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17846,6 +17955,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 2053465460}
   Flag: {fileID: 1136300683}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &1026754315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19905,7 +20016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178961729}
 --- !u!1001 &1159124677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20603,6 +20713,7 @@ MonoBehaviour:
   SpawnPoint: {fileID: 789107394}
   GameOver: {fileID: 1072009816}
   PauseMenu: {fileID: 1481463139}
+  isDead: 0
   _enemies:
   - {fileID: 937291032}
   - {fileID: 359865605}
@@ -21137,8 +21248,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.7
-  m_CameraDistance: 20
+  m_ScreenY: 0.5558786
+  m_CameraDistance: 36.76357
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -23322,6 +23433,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1654337658}
   Flag: {fileID: 1583211394}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &1360181710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31582,11 +31695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7082367
+      value: -2.124588
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.179998
+      value: -27.943567
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31874,6 +31987,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 726548414}
   Flag: {fileID: 777976719}
   LightIntensity: 75
+  AudioClip: {fileID: 8300000, guid: b611083816896a64aa9e14e7c9849169, type: 3}
+  volume: 1
 --- !u!65 &1874803152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34974,7 +35089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178961729}
 --- !u!114 &2019198736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41438,7 +41552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178961729}
 --- !u!114 &4592148403963192532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41451,7 +41564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178961729}
 --- !u!114 &4592148404268305412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41464,7 +41576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178961729}
 --- !u!114 &4592148404800427451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41477,7 +41588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178961729}
 --- !u!114 &4592148405306550742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41490,7 +41600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178961729}
 --- !u!1001 &5284780744355168215
 PrefabInstance:
   m_ObjectHideFlags: 0
