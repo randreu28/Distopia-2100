@@ -34,8 +34,8 @@ public class CameraMainController : MonoBehaviour
     {
         _framingTransposer = _vcam.GetCinemachineComponent<CinemachineFramingTransposer>();
         _multiChannelPerlin = _vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        _defaultCameraDistance = _framingTransposer.m_CameraDistance;
-        _defaultVerticalArmLength = _framingTransposer.m_ScreenY;
+        //_defaultCameraDistance = _framingTransposer.m_CameraDistance;
+        //_defaultVerticalArmLength = _framingTransposer.m_ScreenY;
     }
 
     public void CameraMovementEnter(CameraZoomController camera)

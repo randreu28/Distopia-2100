@@ -45,14 +45,19 @@ public class ButtonController : MonoBehaviour
         if (!_pressed)
         {
             _player = Player;
-            AudioSource.PlayClipAtPoint(ButtonAudioClip, transform.position, ButtonAudioVolume);
+            if (ButtonAudioClip != null) { 
+                AudioSource.PlayClipAtPoint(ButtonAudioClip, transform.position, ButtonAudioVolume);
+            }
             StopAllCoroutines();
             StartCoroutine(PressButton());
 
             if (_door != null)
             {
                 _door.Action(true);
-                AudioSource.PlayClipAtPoint(DoorAudioClip, _door.transform.position, DoorAudioVolume);
+                if (DoorAudioClip != null)
+                {
+                    AudioSource.PlayClipAtPoint(DoorAudioClip, _door.transform.position, DoorAudioVolume);
+                }
             }
 
             _pressed = true;
