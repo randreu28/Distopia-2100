@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathName: Te han pillado
   SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
-  volume: 1
+  volume: 0.675
   _deadType: 0
 --- !u!114 &9157845800265870249
 MonoBehaviour:
