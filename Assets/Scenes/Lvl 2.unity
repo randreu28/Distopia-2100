@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has ahogado
-  SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
+  SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
   _deadType: 0
 --- !u!23 &111510857
@@ -4301,7 +4301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has ahogado
-  SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
+  SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
   _deadType: 0
 --- !u!65 &246710091
@@ -11213,7 +11213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceUp: 4
   duration: 0.3
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 34dd16034192fab43b8e2069779441da, type: 3}
   volume: 1
 --- !u!1 &551456300 stripped
 GameObject:
@@ -17234,7 +17234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has muerto
-  SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
+  SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
   _deadType: 0
 --- !u!4 &952149346 stripped
@@ -20003,6 +20003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1001 &1159124677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20628,7 +20629,7 @@ MonoBehaviour:
   _worldLimitZFarNvl2: -11
   _fallingDistance: 0
   _lastGroundedPositionY: 0
-  FallDeathSound: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
+  FallDeathSound: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   FallDeathName: Te has caido desde muy alto
   FallDeathVolume: 1
   _maxFallingDistance: 7
@@ -21430,7 +21431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has muerto
-  SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
+  SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
   _deadType: 0
 --- !u!65 &1239566730
@@ -22793,7 +22794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceUp: 5
   duration: 0.3
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: eb5fecd14c4ab5c4b96067b304d66373, type: 3}
   volume: 1
 --- !u!1 &1316480985 stripped
 GameObject:
@@ -25039,7 +25040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has muerto
-  SFX: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
+  SFX: {fileID: 8300000, guid: ddc3b2280da266b4cb789e8c99e013b5, type: 3}
   volume: 1
   _deadType: 0
 --- !u!135 &1445166549
@@ -25599,7 +25600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceUp: 5
   duration: 0.3
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: eb5fecd14c4ab5c4b96067b304d66373, type: 3}
   volume: 1
 --- !u!65 &1490340810
 BoxCollider:
@@ -35078,6 +35079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &2019198736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41541,6 +41543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &4592148403963192532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41553,6 +41556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &4592148404268305412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41565,6 +41569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &4592148404800427451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41577,6 +41582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &4592148405306550742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41589,6 +41595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157e1438d1c34d8c99022454327ca23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1001 &5284780744355168215
 PrefabInstance:
   m_ObjectHideFlags: 0

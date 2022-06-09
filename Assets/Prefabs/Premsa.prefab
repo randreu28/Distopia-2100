@@ -146,18 +146,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 8095789217822058891}
   endPoint: {fileID: 8095789217188193120}
-  Lever: {fileID: 0}
   travelTime: 2
   _alwaysMoving: 1
-  MovingAudioClip: {fileID: 0}
-  MovingAudioVolume: 0.5
+  _startMovingOnTriggerEnter: 0
+  _autoReturn: 0
+  _autoReturnDelay: 5
+  Lever: {fileID: 0}
   _startLeverRotation: -90
   _endLeverRotation: -30
   ButtonUp: {fileID: 0}
   ButtonDown: {fileID: 0}
-  _autoReturn: 0
-  _autoReturnDelay: 5
   _buttonOn: {fileID: 0}
+  MovingAudioClip: {fileID: 0}
+  MovingAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 0}
+  ButtonAudioVolume: 0.5
 --- !u!1 &8095789216611134425
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,8 +463,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has muerto
-  SFX: {fileID: 0}
+  SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
   volume: 1
+  _deadType: 0
 --- !u!1 &8095789217822058892
 GameObject:
   m_ObjectHideFlags: 0
