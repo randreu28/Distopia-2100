@@ -144,15 +144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.840963
+      value: 16.3
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.47921
+      value: 70.36059
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.80381
+      value: -31.55
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3075,7 +3075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: ddc3b2280da266b4cb789e8c99e013b5, type: 3}
-  volume: 1
+  volume: 0.055
   _deadType: 0
 --- !u!1 &237481118 stripped
 GameObject:
@@ -12816,9 +12816,9 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.405471
-  m_ScreenY: 0.6316413
-  m_CameraDistance: 18.25381
+  m_ScreenX: 0.5
+  m_ScreenY: 0.66
+  m_CameraDistance: 14
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -17174,7 +17174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: ddc3b2280da266b4cb789e8c99e013b5, type: 3}
-  volume: 1
+  volume: 0.055
   _deadType: 0
 --- !u!114 &1712298873 stripped
 MonoBehaviour:
@@ -19065,15 +19065,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.840963
+      value: 16.3
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.47921
+      value: 70.36059
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.80381
+      value: -31.55
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34592,7 +34592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: ddc3b2280da266b4cb789e8c99e013b5, type: 3}
-  volume: 1
+  volume: 0.055
   _deadType: 0
 --- !u!23 &5136656772340445796
 MeshRenderer:
