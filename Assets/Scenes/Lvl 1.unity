@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8330078, g: 0.8330078, b: 0.8330078, a: 1}
+  m_IndirectSpecularColor: {r: 0.7093582, g: 0.7093582, b: 0.7061042, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20803,6 +20803,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1660863081}
     m_Modifications:
+    - target: {fileID: -8961359253771211100, guid: a196fa903e529054dbc62965a26b688c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -20971,11 +20975,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -710814040539430988, guid: a196fa903e529054dbc62965a26b688c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -652209905907201759, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -466329591000292508, guid: a196fa903e529054dbc62965a26b688c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -264176175528008898, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -21108,6 +21120,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6273404169352142439, guid: a196fa903e529054dbc62965a26b688c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507901977716847365, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
