@@ -74,21 +74,23 @@ public class RespawnSystem : MonoBehaviour
     }
 
     public void FadeOutEnd() {
-        for (int i = 0; i < _enemies.Length; i++)
-        {
-            _enemies[i].Reset();
+        if (isDead) { 
+            for (int i = 0; i < _enemies.Length; i++)
+            {
+                _enemies[i].Reset();
+            }
+            _animator.SetBool(_animIDDie, false);
+            _animator.SetBool(_animIDSeen, false);
+            gameObject.GetComponent<PlayerController>().SetCanMove(true);
+            gameObject.transform.position = SpawnPoint.position;
+            Physics.SyncTransforms();
+            Time.timeScale = 0;
+            GameOver.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            GameObject.Find("DeathName").GetComponent<Text>().text = _deadMessage;
+            isDead = false;
         }
-        _animator.SetBool(_animIDDie, false);
-        _animator.SetBool(_animIDSeen, false);
-        gameObject.GetComponent<PlayerController>().SetCanMove(true);
-        gameObject.transform.position = SpawnPoint.position;
-        Physics.SyncTransforms();
-        Time.timeScale = 0;
-        GameOver.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        GameObject.Find("DeathName").GetComponent<Text>().text = _deadMessage;
-        isDead = false;
     }
 
     public void ChangeSpawn(Transform newSpawnPoint)
