@@ -20,7 +20,12 @@ public class LeverController : MonoBehaviour
     private bool _isActive = true;
 
     public AudioClip _active;
+    [Range(0, 1)]
+    public float _activeVolume = 1f;
+
     public AudioClip _inactive;
+    [Range(0, 1)]
+    public float _inactiveVolume = 1f;
 
     private AudioSource audioSource;
 
@@ -30,15 +35,21 @@ public class LeverController : MonoBehaviour
     [SerializeField]
     private Material[] _activeMaterials;
 
-    // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if (TryGetComponent(out AudioSource myAudioSource))
+        {
+            audioSource = myAudioSource;
+        }else {
+            audioSource = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+        }
+        if(_isActive)
+        {
+            audioSource.volume = _activeVolume;
+        }else
+        {
+            audioSource.volume = _inactiveVolume;
+        }
     }
 
     public void action(PlayerController Player)
@@ -86,6 +97,13 @@ public class LeverController : MonoBehaviour
 
     public void SetActive(bool value) {
         _isActive = value;
+        if(value == true)
+        {
+            audioSource.volume = _activeVolume;
+        }else
+        {
+            audioSource.volume = _inactiveVolume;
+        }
         if (_materialsGameObject != null) {
             _materialsGameObject.GetComponent<MeshRenderer>().materials = _activeMaterials;
         }
