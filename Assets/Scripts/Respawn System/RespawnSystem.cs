@@ -34,7 +34,7 @@ public class RespawnSystem : MonoBehaviour
 
     public void KillPlayer(DeadType deadType, string message, AudioClip audioClip, float volume)
     {
-        if (!gameObject.GetComponent<PlayerController>().neverDie && !isDead) {
+        if (!gameObject.GetComponent<PlayerController>().neverDie && !isDead && !gameObject.GetComponent<PlayerController>().boatTravel) {
             gameObject.GetComponent<PlayerController>().SetCanMove(false);
             isDead = true;
             if (audioClip)
