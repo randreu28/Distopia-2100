@@ -243,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9016113
+      value: -3.619995
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.19239
+      value: 0.8199997
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1698,6 +1698,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.348462, y: 2.1105504, z: 3.1895308}
   m_Center: {x: -0.17423116, y: -0.055305883, z: 0.59476566}
+--- !u!65 &82388276
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82388273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.459366, y: 15.69237, z: 0.67456126}
+  m_Center: {x: 5.6008573, y: -6.846219, z: -3.86}
 --- !u!1 &83422249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7333631254909853010, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -17065,7 +17078,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0316553, y: 2.0316556, z: 2.4184117}
+  m_Size: {x: 2.0316553, y: 2.0316556, z: 0.1}
   m_Center: {x: -0.00000008486644, y: -0.000007639173, z: -3.4092057}
 --- !u!114 &946168341
 MonoBehaviour:
@@ -17080,8 +17093,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has muerto
-  SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
-  volume: 1
+  SFX: {fileID: 8300000, guid: ddc3b2280da266b4cb789e8c99e013b5, type: 3}
+  volume: 0.055
   _deadType: 0
 --- !u!4 &952149346 stripped
 Transform:
@@ -21194,8 +21207,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5575585
-  m_CameraDistance: 41.01239
+  m_ScreenY: 0.5
+  m_CameraDistance: 8
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -26151,8 +26164,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2519092360280523269, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
   m_PrefabInstance: {fileID: 2111639222}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1539961407
-MeshCollider:
+--- !u!65 &1539961407
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -26161,10 +26174,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6657180443270484345, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.01, y: 3.42, z: 1.62}
+  m_Center: {x: 0, y: -1.95, z: -25.43}
 --- !u!1 &1541815499
 GameObject:
   m_ObjectHideFlags: 0
@@ -31593,11 +31605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9016113
+      value: -3.619995
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.19239
+      value: 0.8199997
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -40990,8 +41002,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathName: Te has muerto
-  SFX: {fileID: 8300000, guid: 145d7f6a8fa0941499f93aba8afde064, type: 3}
-  volume: 1
+  SFX: {fileID: 8300000, guid: ddc3b2280da266b4cb789e8c99e013b5, type: 3}
+  volume: 0.055
   _deadType: 0
 --- !u!65 &2113787998
 BoxCollider:
@@ -41004,8 +41016,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0638514, y: 2.0638523, z: 2.2695568}
-  m_Center: {x: -0.000045022054, y: -0.00004923347, z: -2.6581194}
+  m_Size: {x: 2.0638514, y: 2.0638523, z: 0.1}
+  m_Center: {x: -0.000045022054, y: -0.00004923347, z: -4.52}
 --- !u!1 &2117704829 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6699157030307326032, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
