@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.25058
+      value: 41.952934
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18845,7 +18845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.25058
+      value: 41.952934
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33218,8 +33218,7 @@ GameObject:
   - component: {fileID: 3328151898260088787}
   - component: {fileID: 3328151898260088799}
   - component: {fileID: 3328151898260088796}
-  - component: {fileID: 3328151898260088797}
-  - component: {fileID: 3328151898260088786}
+  - component: {fileID: 3328151898260088785}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -33227,8 +33226,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &3328151898260088786
-MeshCollider:
+--- !u!65 &3328151898260088785
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -33237,10 +33236,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2865104911859505335, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.9999998, y: 2.0000002, z: 2.8366358}
+  m_Center: {x: 0.00038958044, y: 0.00017323758, z: 33.46622}
 --- !u!4 &3328151898260088787
 Transform:
   m_ObjectHideFlags: 0
@@ -33296,20 +33294,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3328151898260088797
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3328151898260088784}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2865104911859505335, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
 --- !u!33 &3328151898260088799
 MeshFilter:
   m_ObjectHideFlags: 0
