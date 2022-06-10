@@ -77,3 +77,5 @@ crashlytics-build.properties
 *.blend1.meta
 Assets/.DS_Store
 Assets/Scripts/.DS_Store
+Assets/Scripts/FieldOfViewEditor.cs
+Assets/Scripts/NPCFieldOfViewEditor.cs
