@@ -159,6 +159,7 @@ public class PlayerController : MonoBehaviour
 
     private bool _canMove;
     private bool _canRun = true;
+    private bool _canJump = true;
 
     public bool boatTravel;
 
@@ -422,7 +423,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // Jump
-            if (_canMove && !_crouched && _input.jump && _jumpTimeoutDelta <= 0.0f)
+            if (_canMove && !_crouched && _canJump && _input.jump && _jumpTimeoutDelta <= 0.0f)
             {
                 // the square root of H * -2 * G = how much velocity needed to reach desired height
                 _verticalVelocity = Mathf.Sqrt(_activeJumpHeight * -2f * Gravity);
@@ -433,7 +434,7 @@ public class PlayerController : MonoBehaviour
                     _animator.SetBool(_animIDJump, true);
                 }
             }
-            else if (_crouched) {
+            else if (_crouched || !_canJump) {
                 _input.jump = false;
             }
 
@@ -532,6 +533,7 @@ public class PlayerController : MonoBehaviour
     private void OnAction() {
 
         _canRun = false;
+        _canJump = false;
 
         if (_platformController != null) {
             if (_platformController.ButtonUp != null && _platformController.ButtonDown != null)
@@ -568,6 +570,7 @@ public class PlayerController : MonoBehaviour
     private void OnActionEnd()
     {
         _canRun = true;
+        _canJump = true;
     }
 
     private void OnCrouch()
