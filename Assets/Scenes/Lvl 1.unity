@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.571064
+      value: 21.59118
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19044,11 +19044,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164688489874418957, guid: cba9b6d96e58ac24190bff99ac4fc29a, type: 3}
       propertyPath: MaxDistance
-      value: 15.06
+      value: 16.55
       objectReference: {fileID: 0}
     - target: {fileID: 8164688489874418957, guid: cba9b6d96e58ac24190bff99ac4fc29a, type: 3}
       propertyPath: MinDistance
-      value: 9
+      value: 10.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164688489874418957, guid: cba9b6d96e58ac24190bff99ac4fc29a, type: 3}
+      propertyPath: DopplerLevel
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164688489874418957, guid: cba9b6d96e58ac24190bff99ac4fc29a, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164688489874418957, guid: cba9b6d96e58ac24190bff99ac4fc29a, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8164688489874418958, guid: cba9b6d96e58ac24190bff99ac4fc29a, type: 3}
       propertyPath: obstaclesLayer.m_Bits
@@ -19288,7 +19300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.571064
+      value: 21.59118
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
