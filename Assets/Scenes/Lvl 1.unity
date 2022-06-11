@@ -18959,25 +18959,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0426025, y: 1.4775301, z: 204.78433}
   m_Center: {x: -0.021301037, y: 0.26123548, z: -92.30208}
---- !u!1 &1851679067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3540944006386398596, guid: a196fa903e529054dbc62965a26b688c, type: 3}
-  m_PrefabInstance: {fileID: 2028457606}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1851679071
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851679067}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6467796493739613186, guid: a196fa903e529054dbc62965a26b688c, type: 3}
 --- !u!1001 &1851878012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20975,7 +20956,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 25a93685a284669448010553868a141f, type: 2}
     - target: {fileID: -7057304685244790499, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.953
+      value: 0.388
       objectReference: {fileID: 0}
     - target: {fileID: -6825049769623130755, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21035,15 +21016,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 25a93685a284669448010553868a141f, type: 2}
     - target: {fileID: -4250141280404998473, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.343
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: -4250141280404998473, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.549
+      value: 0.958
       objectReference: {fileID: 0}
     - target: {fileID: -4250141280404998473, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 77.538
+      value: 63.437
       objectReference: {fileID: 0}
     - target: {fileID: -4133703932355585839, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_IsActive
@@ -21067,7 +21048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3145410376104319116, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2914413575082383075, guid: a196fa903e529054dbc62965a26b688c, type: 3}
       propertyPath: m_IsActive
