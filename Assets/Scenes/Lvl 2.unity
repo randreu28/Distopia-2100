@@ -9761,6 +9761,7 @@ Transform:
   - {fileID: 711579934}
   - {fileID: 526587997}
   - {fileID: 1057972848}
+  - {fileID: 1770706299}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32806,6 +32807,103 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.9999996, z: 1.9999996}
   m_Center: {x: 0, y: 0, z: -0.000030517578}
+--- !u!1 &1770706298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1770706299}
+  - component: {fileID: 1770706300}
+  m_Layer: 0
+  m_Name: Light Probe Group (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1770706299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770706298}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.203583, y: -0.43000412, z: -3.659833}
+  m_LocalScale: {x: 0.95027, y: 0.97333, z: 1}
+  m_Children: []
+  m_Father: {fileID: 506045113}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!220 &1770706300
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770706298}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 0.62249756, y: 1, z: 1}
+  - {x: 0.62249756, y: 1, z: -1}
+  - {x: 0.62249756, y: -1, z: 1}
+  - {x: 0.62249756, y: -1, z: -1}
+  - {x: -1.3775024, y: 1, z: 1}
+  - {x: -1.3775024, y: 1, z: -1}
+  - {x: -1.3775024, y: -1, z: 1}
+  - {x: -1.3775024, y: -1, z: -1}
+  - {x: 2.8543396, y: 1, z: 1}
+  - {x: 2.8543396, y: 1, z: -1}
+  - {x: 2.8543396, y: -1, z: 1}
+  - {x: 2.8543396, y: -1, z: -1}
+  - {x: 5.317383, y: 1, z: 1}
+  - {x: 5.317383, y: 1, z: -1}
+  - {x: 5.317383, y: -1, z: 1}
+  - {x: 5.317383, y: -1, z: -1}
+  - {x: 8.545624, y: 1, z: 1}
+  - {x: 8.545624, y: 1, z: -1}
+  - {x: 8.545624, y: -1, z: 1}
+  - {x: 8.545624, y: -1, z: -1}
+  - {x: -3.6887512, y: 1, z: 1}
+  - {x: -3.6887512, y: 1, z: -1}
+  - {x: -3.6887512, y: -1, z: 1}
+  - {x: -3.6887512, y: -1, z: -1}
+  - {x: -6.7923584, y: 1, z: 1}
+  - {x: -6.7923584, y: 1, z: -1}
+  - {x: -6.7923584, y: -1, z: 1}
+  - {x: -6.7923584, y: -1, z: -1}
+  - {x: 0.62249756, y: 1, z: 5.780534}
+  - {x: 0.62249756, y: 1, z: 3.7805338}
+  - {x: 0.62249756, y: -1, z: 5.780534}
+  - {x: 0.62249756, y: -1, z: 3.7805338}
+  - {x: -1.3775024, y: 1, z: 5.780534}
+  - {x: -1.3775024, y: 1, z: 3.7805338}
+  - {x: -1.3775024, y: -1, z: 5.780534}
+  - {x: -1.3775024, y: -1, z: 3.7805338}
+  - {x: 2.8543396, y: 1, z: 5.780534}
+  - {x: 2.8543396, y: 1, z: 3.7805338}
+  - {x: 2.8543396, y: -1, z: 5.780534}
+  - {x: 2.8543396, y: -1, z: 3.7805338}
+  - {x: 5.317383, y: 1, z: 5.780534}
+  - {x: 5.317383, y: 1, z: 3.7805338}
+  - {x: 5.317383, y: -1, z: 5.780534}
+  - {x: 5.317383, y: -1, z: 3.7805338}
+  - {x: 8.545624, y: 1, z: 5.780534}
+  - {x: 8.545624, y: 1, z: 3.7805338}
+  - {x: 8.545624, y: -1, z: 5.780534}
+  - {x: 8.545624, y: -1, z: 3.7805338}
+  - {x: -3.6887512, y: 1, z: 5.780534}
+  - {x: -3.6887512, y: 1, z: 3.7805338}
+  - {x: -3.6887512, y: -1, z: 5.780534}
+  - {x: -3.6887512, y: -1, z: 3.7805338}
+  - {x: -6.7923584, y: 1, z: 5.780534}
+  - {x: -6.7923584, y: 1, z: 3.7805338}
+  - {x: -6.7923584, y: -1, z: 5.780534}
+  - {x: -6.7923584, y: -1, z: 3.7805338}
+  m_Dering: 1
 --- !u!1 &1772946530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6459697444325630510, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
@@ -45305,7 +45403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8410057375291918132, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8410057375291918132, guid: 679cdc757d3b66740a7d6700e16b3a9e, type: 3}
       propertyPath: m_StaticEditorFlags
