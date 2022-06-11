@@ -148,11 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.36059
+      value: 70.77134
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.55
+      value: -89.532104
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6925,6 +6925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialCanvas: {fileID: 1788434740}
   fadeTime: 0.5
+  initialDelay: 1
+  delayTime: 5
 --- !u!1 &539904705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4039089586508166098, guid: a196fa903e529054dbc62965a26b688c, type: 3}
@@ -7504,6 +7506,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialCanvas: {fileID: 433538373}
   fadeTime: 0.5
+  initialDelay: 0
+  delayTime: 5
 --- !u!1 &598946142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4607579965076306765, guid: a196fa903e529054dbc62965a26b688c, type: 3}
@@ -12923,8 +12927,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.66
-  m_CameraDistance: 14
+  m_ScreenY: 0.5389577
+  m_CameraDistance: 71.9821
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -16357,6 +16361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialCanvas: {fileID: 363637258}
   fadeTime: 0.5
+  initialDelay: 0
+  delayTime: 5
 --- !u!65 &1565849503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17700,6 +17706,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialCanvas: {fileID: 1895129533}
   fadeTime: 0.5
+  initialDelay: 0
+  delayTime: 5
 --- !u!1 &1729961833
 GameObject:
   m_ObjectHideFlags: 0
@@ -18571,6 +18579,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialCanvas: {fileID: 433538373}
   fadeTime: 0.5
+  initialDelay: 0
+  delayTime: 5
 --- !u!1 &1803235370 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1316972776476297248, guid: a196fa903e529054dbc62965a26b688c, type: 3}
@@ -19278,11 +19288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.36059
+      value: 70.77134
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.55
+      value: -89.532104
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w

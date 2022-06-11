@@ -8,6 +8,10 @@ public class TutoZone : MonoBehaviour
     public GameObject TutorialCanvas;
     public float fadeTime = 2;
 
+    [Header("Optional Delay")]
+    public bool initialDelay = false;
+    public float delayTime = 5;
+
     void Awake() //Para asegurarse que todas las imagenes al iniciar el juego tienen alpha 0
     {
         int children = TutorialCanvas.transform.childCount;
@@ -22,9 +26,32 @@ public class TutoZone : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        if(initialDelay)
+        {
+            StartCoroutine(InitialDelay());
+        }
+    }
+
+    IEnumerator InitialDelay()
+    {
+        yield return new WaitForSeconds(delayTime);
+        initialDelay = false;
+        
+        int children = TutorialCanvas.transform.childCount;
+        for(int i = 0; i < children; i++)
+        {
+            if(TutorialCanvas.transform.GetChild(i).TryGetComponent(out Image image))
+            {
+                StartCoroutine(LerpAlpha(image, 1, fadeTime));
+            }
+        }
+    }
+
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if(collider.gameObject.tag == "Player" && !initialDelay)
         {
             int children = TutorialCanvas.transform.childCount;
             for(int i = 0; i < children; i++)
@@ -39,7 +66,7 @@ public class TutoZone : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if(collider.gameObject.tag == "Player" && !initialDelay)
         {
             int children = TutorialCanvas.transform.childCount;
             for(int i = 0; i < children; i++)
