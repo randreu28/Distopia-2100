@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15667,7 +15667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _areaCameraDistance: 16
   _areaScreenX: 0.3
-  _areaCameraVerticalArmLength: 0.5
+  _areaCameraVerticalArmLength: 0.66
   _areaCameraRotation: {x: -6, y: 0, z: 0}
   _areaNoiseFrequencyGain: 0.3
   _areaAmplitudGain: 0.5
@@ -17382,7 +17382,7 @@ MonoBehaviour:
   _areaScreenX: 0.5
   _areaCameraVerticalArmLength: 0.66
   _areaCameraRotation: {x: 55, y: 90, z: 0}
-  _areaNoiseFrequencyGain: 12
+  _areaNoiseFrequencyGain: 9
   _areaAmplitudGain: 1.5
   _enterTransition: 1
   _enterTransitionSeconds: 0.5
@@ -21587,9 +21587,9 @@ Transform:
   m_LocalPosition: {x: 38.53, y: 76.15, z: -25.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2066899104}
   - {fileID: 2008604319}
   - {fileID: 1715874683}
-  - {fileID: 2066899104}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31518,7 +31518,7 @@ Transform:
   - {fileID: 666413879}
   - {fileID: 394692002}
   m_Father: {fileID: 1138048316}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1715874684
 MonoBehaviour:
@@ -33957,7 +33957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
