@@ -78,22 +78,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "GoToNextSpawnPoint",
-                    "type": "Button",
-                    "id": "60fb3f3f-42cf-4fa5-8aa7-0e467e435cfb",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "GoToPreviousSpawnPoint",
-                    "type": "Button",
-                    "id": "f7c203c8-1cc2-427a-8b4b-4c8768778a31",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "SuperJumpStart",
                     "type": "Button",
                     "id": "c477cbbe-457e-4206-bb28-5065a06e7580",
@@ -113,6 +97,22 @@
                     "name": "ToggleNeverDie",
                     "type": "Button",
                     "id": "df061dd2-4105-4154-aaa8-bf6b8f0de0f2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "GoToPreviousSpawnPoint",
+                    "type": "Button",
+                    "id": "11b92d9e-535d-439f-8bff-32b1444f7d1a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "GoToNextSpawnPoint",
+                    "type": "Button",
+                    "id": "90581d0e-01d5-4016-bff2-59aae472758e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -351,59 +351,202 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "5723c972-e679-4c1e-be9f-4cac0382fb76",
-                    "path": "<Keyboard>/1",
+                    "name": "Button With Two Modifiers",
+                    "id": "24fce2d3-9da4-4214-90c6-b511dcf71ac5",
+                    "path": "ButtonWithTwoModifiers",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GoToPreviousSpawnPoint",
-                    "isComposite": false,
+                    "action": "ToggleNeverDie",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "d052c3b5-e251-477f-8090-4a93f1957da8",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "GoToNextSpawnPoint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "94c54151-8f84-470c-ad43-820e06bbfed5",
-                    "path": "<Keyboard>/3",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SuperJumpStart",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bd1b1c40-9417-4a94-8d08-c9ebf3086a98",
-                    "path": "<Keyboard>/3",
-                    "interactions": "Press(behavior=1)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SuperJumpEnd",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "58f151a5-a887-4c79-b7c9-3c4b8a34a5d1",
-                    "path": "<Keyboard>/4",
+                    "name": "modifier1",
+                    "id": "374548bc-ca86-4b6a-86e6-41b9e13fc471",
+                    "path": "<Keyboard>/alt",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ToggleNeverDie",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "modifier2",
+                    "id": "b4c2502e-5c65-4612-8b29-849aca9bc8aa",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleNeverDie",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "af650abc-4bc9-4350-b720-e1d3732fcdc4",
+                    "path": "<Keyboard>/0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleNeverDie",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Button With Two Modifiers",
+                    "id": "6a8498f6-b831-4d94-954d-dc99379bd024",
+                    "path": "ButtonWithTwoModifiers",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToNextSpawnPoint",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier1",
+                    "id": "5f7e37f2-2c27-4ac7-8d1a-21cf268c57e8",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToNextSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "modifier2",
+                    "id": "ab65e10a-2d49-45c6-b6a4-b1b4470e95f0",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToNextSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "af4b84de-6032-45b3-9cbb-6e4e72828299",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToNextSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Button With Two Modifiers",
+                    "id": "66cab1fa-df39-473e-bfed-83bc99b4c60a",
+                    "path": "ButtonWithTwoModifiers",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToPreviousSpawnPoint",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier1",
+                    "id": "3e85a8a2-20ae-41c2-b9a7-5c8802353339",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToPreviousSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "modifier2",
+                    "id": "537a0365-be21-4dd7-a8b8-e9bcf6484815",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToPreviousSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "d0993a82-c326-4192-a096-ac0d6b349d72",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoToPreviousSpawnPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Button With One Modifier",
+                    "id": "6ac744c4-ac47-44f7-8b7c-b38cb949ed66",
+                    "path": "ButtonWithOneModifier",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpStart",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "ed0222e5-8b82-4042-aa94-3003b32c5bc8",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpStart",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "30b30961-8348-46d0-97da-546585f90334",
+                    "path": "<Keyboard>/9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpStart",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Button With One Modifier",
+                    "id": "657937e6-4ca3-411f-a459-55c3015089e7",
+                    "path": "ButtonWithOneModifier",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpEnd",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "07b4b56a-86fd-47ec-9824-ad68dabff385",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "e20a9fed-803d-478b-a0c2-5318db0babf1",
+                    "path": "<Keyboard>/9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperJumpEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
