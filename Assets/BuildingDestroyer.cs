@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildingDestroyer : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class BuildingDestroyer : MonoBehaviour
     private GameObject[] _enemies;
 
     [SerializeField]
-    private float _delay;
+    private int _delay;
 
     [SerializeField]
     private OpenDoor _door;
@@ -19,10 +20,26 @@ public class BuildingDestroyer : MonoBehaviour
     [SerializeField]
     private GameObject _camZone;
 
+    [SerializeField]
+    private GameObject _countDownCanvas;
+
+    [SerializeField]
+    private Text _countDownText;
+
+    private int _countDown;
+
+    private AudioSource _audioSource;
+
+    [SerializeField]
+    private AudioClip _countDownAudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
         _camZone.SetActive(false);
+        _countDownCanvas.SetActive(false);
+        _countDown = _delay;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,8 +53,18 @@ public class BuildingDestroyer : MonoBehaviour
     }
 
     private IEnumerator DestroyBuilding() {
+        _countDownCanvas.SetActive(true);
         _camZone.SetActive(true);
-        yield return new WaitForSeconds(_delay);
+
+        while (_countDown > 0) {
+
+            _countDownText.text = _countDown.ToString();
+            _audioSource.PlayOneShot(_countDownAudioClip, 0.7F);
+            yield return new WaitForSeconds(1f);
+            _countDown--;
+        }
+        _countDownText.gameObject.SetActive(false);
+
         _door._canOpen = true;
         for (int i = 0; i < _buildingObjs.Length; i++)
         {

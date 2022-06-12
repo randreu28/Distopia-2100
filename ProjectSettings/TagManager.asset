@@ -17,7 +17,6 @@ TagManager:
   - Start
   - PlatformLeverOutside
   - BuildingDestroy
-  - test
   layers:
   - Default
   - TransparentFX
