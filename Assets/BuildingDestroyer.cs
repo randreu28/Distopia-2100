@@ -28,10 +28,22 @@ public class BuildingDestroyer : MonoBehaviour
 
     private int _countDown;
 
-    private AudioSource _audioSource;
-
     [SerializeField]
     private AudioClip _countDownAudioClip;
+
+    [SerializeField]
+    private AudioClip _killedSound;
+
+    [SerializeField]
+    private AudioClip _ExplosionSound;
+
+    private AudioSource _audioSource;
+
+    private bool _buildingExploted;
+
+    [SerializeField]
+    [Range(0, 1)]
+    public float _volume = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -59,13 +71,13 @@ public class BuildingDestroyer : MonoBehaviour
         while (_countDown > 0) {
 
             _countDownText.text = _countDown.ToString();
-            _audioSource.PlayOneShot(_countDownAudioClip, 0.7F);
+            _audioSource.PlayOneShot(_countDownAudioClip, _volume);
             yield return new WaitForSeconds(1f);
             _countDown--;
         }
-        _countDownText.gameObject.SetActive(false);
-
+        _countDownCanvas.SetActive(false);
         _door._canOpen = true;
+        _buildingExploted = true;
         for (int i = 0; i < _buildingObjs.Length; i++)
         {
             _buildingObjs[i].AddComponent<Rigidbody>();
@@ -74,7 +86,14 @@ public class BuildingDestroyer : MonoBehaviour
         for (int i = 0; i < _enemies.Length; i++) {
             _enemies[i].SetActive(false);
         }
+        _audioSource.PlayOneShot(_ExplosionSound, _volume);
         yield return null;
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (_buildingExploted && other.tag == "Player") {
+            other.GetComponent<RespawnSystem>().KillPlayer(DeadType.Killed, "Has muerto en la explosión", _killedSound, 1);
+        }
+    }
 }
