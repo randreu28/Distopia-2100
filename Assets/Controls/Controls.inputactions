@@ -549,6 +549,52 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Cinematic",
+            "id": "cbc1923a-4bdd-4d8d-ac1e-43fc99b248fd",
+            "actions": [
+                {
+                    "name": "Omit",
+                    "type": "Button",
+                    "id": "b38d287d-168e-4eaf-8dd7-5d45d6e7788a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=3),Hold(duration=2)"
+                },
+                {
+                    "name": "StartOmit",
+                    "type": "Button",
+                    "id": "abd75c1a-0755-4731-b38c-ee9f1766b333",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f61180aa-9376-4400-9f20-6336642b95ed",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Omit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a624763d-e206-496b-8150-2768a5faec3c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartOmit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
