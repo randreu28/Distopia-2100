@@ -11,6 +11,9 @@ public class ButtonController : MonoBehaviour
     private DoorController _door;
 
     [SerializeField]
+    private BuildingDestroyer _buildingDestroyer;
+
+    [SerializeField]
     private float _duration;
 
     private PlayerController _player;
@@ -59,6 +62,10 @@ public class ButtonController : MonoBehaviour
                     AudioSource.PlayClipAtPoint(DoorAudioClip, _door.transform.position, DoorAudioVolume);
                 }
             }
+
+            if (_buildingDestroyer != null) {
+                _buildingDestroyer.Action();
+            } 
 
             _pressed = true;
             Debug.Log("Button Pressed");

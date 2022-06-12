@@ -14,6 +14,9 @@ public class OpenDoor : MonoBehaviour
     private bool isMoving = false;
     private AudioSource SFX;
 
+    [SerializeField]
+    public bool _canOpen = true;
+
     void Awake(){
         SFX = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
         SFX.clip = AudioClip;
@@ -22,28 +25,32 @@ public class OpenDoor : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "Player")
-        {
-            var endPosition = gameObject.transform.position + new Vector3(0, distanceUp, 0);
-            if(!isUp && !isMoving)
+        if (_canOpen) { 
+            if(collider.gameObject.tag == "Player")
             {
-                SFX.Play();
-                StartCoroutine(LerpPosition(endPosition, duration));
-                isUp = true;
+                var endPosition = gameObject.transform.position + new Vector3(0, distanceUp, 0);
+                if(!isUp && !isMoving)
+                {
+                    SFX.Play();
+                    StartCoroutine(LerpPosition(endPosition, duration));
+                    isUp = true;
+                }
             }
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        if(collider.gameObject.tag == "Player")
-        {
-            var endPosition = gameObject.transform.position - new Vector3(0, distanceUp, 0);
-            if(isUp && !isMoving)
+        if (_canOpen) { 
+            if(collider.gameObject.tag == "Player")
             {
-                SFX.Play();
-                StartCoroutine(LerpPosition(endPosition, duration));
-                isUp = false;
+                var endPosition = gameObject.transform.position - new Vector3(0, distanceUp, 0);
+                if(isUp && !isMoving)
+                {
+                    SFX.Play();
+                    StartCoroutine(LerpPosition(endPosition, duration));
+                    isUp = false;
+                }
             }
         }
     }

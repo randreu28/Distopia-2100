@@ -23,9 +23,11 @@ public class PlataformTrap : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
-        if(isTrap)
-        {
-            StartCoroutine(warnPlayer());
+        if (other.tag == "Player") { 
+            if(isTrap)
+            {
+                StartCoroutine(warnPlayer());
+            }
         }
     }
 

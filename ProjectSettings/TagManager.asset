@@ -16,6 +16,8 @@ TagManager:
   - Wrecking Ball
   - Start
   - PlatformLeverOutside
+  - BuildingDestroy
+  - test
   layers:
   - Default
   - TransparentFX
