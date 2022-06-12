@@ -41,6 +41,7 @@ public class Menu : MonoBehaviour, IPointerEnterHandler
     }
 
     public void MainMenuButton() {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
 
