@@ -616,6 +616,62 @@ Transform:
   m_Father: {fileID: 2495614500202595274}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4383205305897904116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7155904389319082346}
+  - component: {fileID: 8826914175381057104}
+  m_Layer: 7
+  m_Name: Blob shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7155904389319082346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383205305897904116}
+  m_LocalRotation: {x: 0.7069185, y: -0, z: -0, w: 0.7072951}
+  m_LocalPosition: {x: 0.13, y: 0.36, z: 0.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7994565430308873054}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &8826914175381057104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383205305897904116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 2
+  m_Material: {fileID: 2100000, guid: 418e51bd5846aed4e8d9c231e3d05655, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_AffectsTransparency: 0
+  m_DecalLayerMask: 1
+  m_Offset: {x: 0, y: 0, z: 2.5}
+  m_Size: {x: 1, y: 1, z: 5}
+  m_FadeFactor: 1
 --- !u!1 &4702278297719812465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1336,7 @@ Transform:
   - {fileID: 7600070231243870793}
   - {fileID: 7600070230421814060}
   - {fileID: 7600070230908124982}
+  - {fileID: 7155904389319082346}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1463,7 +1520,8 @@ MonoBehaviour:
   _crouchPoint: {fileID: 7600070230421814060}
   _beltVelocity: 4
   _worldLimitZ: -19.5
-  _worldLimitZFar: -11
+  _worldLimitZFarNvl1: -12.3
+  _worldLimitZFarNvl2: -11
   _fallingDistance: 0
   _lastGroundedPositionY: 0
   FallDeathSound: {fileID: 8300000, guid: 2ecf327255829b34dbeda6e08cdb875d, type: 3}
@@ -1473,6 +1531,8 @@ MonoBehaviour:
   _activeMaxFallingDistance: 0
   boatTravel: 0
   _useCameraRotation: 0
+  WordLimitsEnabled: 1
+  neverDie: 0
 --- !u!114 &7600070232191767329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1518,6 +1578,7 @@ MonoBehaviour:
   SpawnPoint: {fileID: 0}
   GameOver: {fileID: 0}
   PauseMenu: {fileID: 0}
+  isDead: 0
   _enemies: []
 --- !u!114 &7600070232191767340
 MonoBehaviour:
@@ -1549,6 +1610,10 @@ MonoBehaviour:
   _FadeOutValue: -10
   _FadeInDuration: 1.5
   _FadeOutDuration: 1.5
+  _fadeinOnTriggerEnter: 0
+  _fadeoutOnTriggerEnter: 0
+  _initialDelay: 0
+  _initialFadeIn: 0
 --- !u!114 &7600070232191767338
 MonoBehaviour:
   m_ObjectHideFlags: 0
