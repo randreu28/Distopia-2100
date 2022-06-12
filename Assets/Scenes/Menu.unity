@@ -435,7 +435,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5acec4751ee90e549abd76f250d6650e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3fb3e1a6c70e349339e49a48041e2474, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.079
   m_Pitch: 1
@@ -2376,7 +2376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa325cf201a11241b690a8bccad46aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Lvl 1
+  Scene: Cinematica
   AudioClip: {fileID: 8300000, guid: 40d06f4311973854cb7870b674a0b432, type: 3}
   volume: 0.2
 --- !u!114 &1101047364
