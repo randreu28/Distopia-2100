@@ -13,12 +13,22 @@ public class PullController : MonoBehaviour
     private bool _hasAnimator;
     private PlayerController _playerController;
 
+    [SerializeField]
+    private AudioClip _movingSound;
+
+    [SerializeField]
+    [Range(0, 1)]
+    private float _volume;
+
+    private AudioSource _audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         _input = GetComponent<Inputs>();
         _hasAnimator = TryGetComponent(out _animator);
         _playerController = GetComponent<PlayerController>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,6 +61,11 @@ public class PullController : MonoBehaviour
 
             _rbToPull.AddForce(directionVector * strength * Time.deltaTime, ForceMode.Impulse);
 
+            if (!_audioSource.isPlaying)
+            {
+                _audioSource.Play();
+            }
+
             if (_hasAnimator)
             {
                 _animator.SetBool("Pulling", true);
@@ -65,6 +80,7 @@ public class PullController : MonoBehaviour
         {
             _rbToPull = null;
             _playerController.Pulling = false;
+            _audioSource.Stop();
 
             if (_hasAnimator)
             {
@@ -77,6 +93,8 @@ public class PullController : MonoBehaviour
     {
         Debug.Log("Action");
         Action = true;
+        _audioSource.clip = _movingSound;
+        _audioSource.volume = _volume;
     }
 
     public void OnActionEnd()

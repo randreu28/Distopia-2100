@@ -24475,6 +24475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 40
   Action: 0
+  _movingSound: {fileID: 8300000, guid: 4864c0eb1937a5c4d99929b6efdce79d, type: 3}
+  _volume: 0.2
 --- !u!114 &1178961739
 MonoBehaviour:
   m_ObjectHideFlags: 0
