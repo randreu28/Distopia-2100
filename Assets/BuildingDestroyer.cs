@@ -133,7 +133,7 @@ public class BuildingDestroyer : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (_buildingExploted && other.tag == "Player") {
-            other.GetComponent<RespawnSystem>().KillPlayer(DeadType.Killed, "Has muerto en la explosión", _killedSound, 1);
+            other.GetComponent<RespawnSystem>().KillPlayer(DeadType.Killed, "Has muerto en la explosion", _killedSound, 1);
         }
     }
 
