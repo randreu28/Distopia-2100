@@ -82,7 +82,10 @@ public class RespawnSystem : MonoBehaviour
             {
                 _enemies[i].Reset();
             }
-            _buildingDestroyer.Reset();
+            if(_buildingDestroyer != null)
+            {
+                _buildingDestroyer.Reset();
+            }
             _animator.SetBool(_animIDDie, false);
             _animator.SetBool(_animIDSeen, false);
             gameObject.GetComponent<PlayerController>().SetCanMove(true);
