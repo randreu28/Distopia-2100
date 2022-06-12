@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8330078, g: 0.8330078, b: 0.8330078, a: 1}
+  m_IndirectSpecularColor: {r: 0.7093582, g: 0.7093582, b: 0.7061042, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -493,7 +493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23537748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 354.77, y: 21.87, z: 0.41}
+  m_LocalPosition: {x: 353.15, y: 18.58, z: -2.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1062114577}
@@ -17239,15 +17239,15 @@ PrefabInstance:
     - target: {fileID: 9157845800265870249, guid: e90f4b164a5e84c85b9a0f657b788865, type: 3}
       propertyPath: _validStates.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 34fc5e22606124ba1b43204c46bafeb1, type: 2}
+      objectReference: {fileID: 11400000, guid: b56a9aef6c9be4f84a3b352b7b16907d, type: 2}
     - target: {fileID: 9157845800265870249, guid: e90f4b164a5e84c85b9a0f657b788865, type: 3}
       propertyPath: _validStates.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: c2c8138c60e9a4a38b36d3f5a2c82f43, type: 2}
+      objectReference: {fileID: 11400000, guid: d1f7772a151c6404ca879d2c820e071b, type: 2}
     - target: {fileID: 9157845800265870249, guid: e90f4b164a5e84c85b9a0f657b788865, type: 3}
       propertyPath: _validStates.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 8875fe71392c149ccaa43b64ec9a1c66, type: 2}
+      objectReference: {fileID: 11400000, guid: aa2869f4f60f04bad8d292b5ff4e6f92, type: 2}
     - target: {fileID: 9157845800265870254, guid: e90f4b164a5e84c85b9a0f657b788865, type: 3}
       propertyPath: IdleAfterChase
       value: 0
@@ -29177,7 +29177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438637245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 356.77, y: 18.54, z: 1.46}
+  m_LocalPosition: {x: 363.28, y: 18.54, z: -3.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1062114577}
