@@ -144,15 +144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.19445
+      value: 16.3
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 69.7063
+      value: 70.59353
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -34.32898
+      value: -33.55
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7956,6 +7956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _endPosition: {x: -0.2, y: 0, z: 0}
   _door: {fileID: 451452994}
+  _buildingDestroyer: {fileID: 0}
   _duration: 1
   _pressedMaterial: {fileID: 2100000, guid: f2758cbf7b6e94b60a07ba61a6dc069b, type: 2}
   ButtonAudioClip: {fileID: 8300000, guid: 96fb222f5705e5346af4f19c67f3910a, type: 3}
@@ -14279,9 +14280,9 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.4210646
-  m_ScreenY: 0.579932
-  m_CameraDistance: 16.77898
+  m_ScreenX: 0.5
+  m_ScreenY: 0.66
+  m_CameraDistance: 16
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -14986,6 +14987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _endPosition: {x: -0.2, y: 0, z: 0}
   _door: {fileID: 451452994}
+  _buildingDestroyer: {fileID: 0}
   _duration: 1
   _pressedMaterial: {fileID: 2100000, guid: f2758cbf7b6e94b60a07ba61a6dc069b, type: 2}
   ButtonAudioClip: {fileID: 8300000, guid: 96fb222f5705e5346af4f19c67f3910a, type: 3}
@@ -18171,7 +18173,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3fb3e1a6c70e349339e49a48041e2474, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b15123b258fc5614589693bfef3852a8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.079
   m_Pitch: 1
@@ -21296,15 +21298,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.19445
+      value: 16.3
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 69.7063
+      value: 70.59353
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -34.32898
+      value: -33.55
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
