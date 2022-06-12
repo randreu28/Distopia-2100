@@ -464,7 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathName: Te has muerto
   SFX: {fileID: 8300000, guid: ddc3b2280da266b4cb789e8c99e013b5, type: 3}
-  volume: 1
+  volume: 0.2
   _deadType: 0
 --- !u!1 &8095789217822058892
 GameObject:

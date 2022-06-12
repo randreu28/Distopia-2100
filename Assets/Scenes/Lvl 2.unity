@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7093582, g: 0.7093582, b: 0.7061042, a: 1}
+  m_IndirectSpecularColor: {r: 0.8330078, g: 0.8330078, b: 0.8330078, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -243,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9894104
+      value: -0.99941254
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.1800003
+      value: -9.179998
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25093,8 +25093,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.66
-  m_CameraDistance: 14
+  m_ScreenY: 0.7
+  m_CameraDistance: 18
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -33792,11 +33792,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334235715451421922, guid: d6b5f0f93108542e6ac6905b5fe29089, type: 3}
       propertyPath: ButtonAudioVolume
-      value: 0.875
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2334235715451421922, guid: d6b5f0f93108542e6ac6905b5fe29089, type: 3}
       propertyPath: MovingAudioVolume
-      value: 0.802
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2334235715600961256, guid: d6b5f0f93108542e6ac6905b5fe29089, type: 3}
       propertyPath: m_RootOrder
@@ -36865,10 +36865,10 @@ MonoBehaviour:
   _duration: 1
   _defaultMaterial: {fileID: 0}
   _pressedMaterial: {fileID: 2100000, guid: f2758cbf7b6e94b60a07ba61a6dc069b, type: 2}
-  ButtonAudioClip: {fileID: 0}
-  ButtonAudioVolume: 0.5
-  DoorAudioClip: {fileID: 0}
-  DoorAudioVolume: 0.5
+  ButtonAudioClip: {fileID: 8300000, guid: 5d40e5f9e59c745a7b76e31f1bcb2d16, type: 3}
+  ButtonAudioVolume: 1
+  DoorAudioClip: {fileID: 8300000, guid: eb5fecd14c4ab5c4b96067b304d66373, type: 3}
+  DoorAudioVolume: 1
 --- !u!65 &1837996141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37441,11 +37441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9894104
+      value: -0.99941254
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.1800003
+      value: -9.179998
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
