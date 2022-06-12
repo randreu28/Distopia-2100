@@ -7501,9 +7501,9 @@ MonoBehaviour:
   ButtonDown: {fileID: 0}
   _buttonOn: {fileID: 0}
   MovingAudioClip: {fileID: 8300000, guid: 3643bf43a3e2a4a92bf6f99e81eb608f, type: 3}
-  MovingAudioVolume: 0.5
+  MovingAudioVolume: 1
   ButtonAudioClip: {fileID: 8300000, guid: 96fb222f5705e5346af4f19c67f3910a, type: 3}
-  ButtonAudioVolume: 0.5
+  ButtonAudioVolume: 1
 --- !u!1 &539782861
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,6 +7958,7 @@ MonoBehaviour:
   _door: {fileID: 451452994}
   _buildingDestroyer: {fileID: 0}
   _duration: 1
+  _defaultMaterial: {fileID: 0}
   _pressedMaterial: {fileID: 2100000, guid: f2758cbf7b6e94b60a07ba61a6dc069b, type: 2}
   ButtonAudioClip: {fileID: 8300000, guid: 96fb222f5705e5346af4f19c67f3910a, type: 3}
   ButtonAudioVolume: 1
@@ -14989,6 +14990,7 @@ MonoBehaviour:
   _door: {fileID: 451452994}
   _buildingDestroyer: {fileID: 0}
   _duration: 1
+  _defaultMaterial: {fileID: 0}
   _pressedMaterial: {fileID: 2100000, guid: f2758cbf7b6e94b60a07ba61a6dc069b, type: 2}
   ButtonAudioClip: {fileID: 8300000, guid: 96fb222f5705e5346af4f19c67f3910a, type: 3}
   ButtonAudioVolume: 1
@@ -37274,9 +37276,9 @@ MonoBehaviour:
   ButtonDown: {fileID: 0}
   _buttonOn: {fileID: 0}
   MovingAudioClip: {fileID: 8300000, guid: 3643bf43a3e2a4a92bf6f99e81eb608f, type: 3}
-  MovingAudioVolume: 0.5
+  MovingAudioVolume: 1
   ButtonAudioClip: {fileID: 8300000, guid: 96fb222f5705e5346af4f19c67f3910a, type: 3}
-  ButtonAudioVolume: 0.5
+  ButtonAudioVolume: 1
 --- !u!4 &3328151899468750991
 Transform:
   m_ObjectHideFlags: 0
