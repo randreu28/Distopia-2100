@@ -2082,7 +2082,7 @@ MonoBehaviour:
   _areaAmplitudGain: 0.5
   _enterTransition: 1
   _enterTransitionSeconds: 2
-  _exitTransition: 1
+  _exitTransition: 0
   _exitTransitionSeconds: 2
   _justOnce: 0
   _entered: 0
@@ -13217,8 +13217,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 34.094864, y: 15.763176, z: 9.475131}
-  m_Center: {x: 21.501648, y: -6.4356804, z: 0.5605254}
+  m_Size: {x: 33.627968, y: 15.763176, z: 9.475131}
+  m_Center: {x: 21.735096, y: -6.4356804, z: 0.5605254}
 --- !u!1 &1058940263
 GameObject:
   m_ObjectHideFlags: 0
