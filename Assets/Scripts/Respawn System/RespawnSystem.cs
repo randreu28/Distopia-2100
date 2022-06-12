@@ -25,6 +25,9 @@ public class RespawnSystem : MonoBehaviour
     [SerializeField]
     NPC[] _enemies;
 
+    [SerializeField]
+    BuildingDestroyer _buildingDestroyer;
+
 
     private void Start()
     {
@@ -79,6 +82,7 @@ public class RespawnSystem : MonoBehaviour
             {
                 _enemies[i].Reset();
             }
+            _buildingDestroyer.Reset();
             _animator.SetBool(_animIDDie, false);
             _animator.SetBool(_animIDSeen, false);
             gameObject.GetComponent<PlayerController>().SetCanMove(true);

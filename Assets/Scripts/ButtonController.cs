@@ -22,7 +22,12 @@ public class ButtonController : MonoBehaviour
     private bool _pressed;
 
     [SerializeField]
+    private Material _defaultMaterial;
+
+    [SerializeField]
     private Material _pressedMaterial;
+
+
 
     private Renderer _renderer;
 
@@ -87,6 +92,12 @@ public class ButtonController : MonoBehaviour
         _renderer.material = _pressedMaterial;
         _player.actionEnd();
         yield return null;
+    }
+
+    public void Reset()
+    {
+        _renderer.material = _defaultMaterial;
+        _pressed = false;
     }
 
 }
