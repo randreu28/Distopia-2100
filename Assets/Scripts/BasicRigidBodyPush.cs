@@ -10,10 +10,22 @@ public class BasicRigidBodyPush : MonoBehaviour
 	[Range(5f, 50f)] public float strength = 11f;
 	private PullController _pullController;
 
+	[SerializeField]
+	private AudioClip _movingSound;
+
+	[SerializeField]
+	[Range(0, 1)]
+	private float _volume;
+
+	private AudioSource _audioSource;
+
 	private void Start()
     {
 		_hasAnimator = TryGetComponent(out _animator);
 		_pullController = GetComponent<PullController>();
+		_audioSource = GetComponent<AudioSource>();
+		_audioSource.clip = _movingSound;
+		_audioSource.volume = _volume;
 	}
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -38,7 +50,8 @@ public class BasicRigidBodyPush : MonoBehaviour
 		// Calculate push direction from move direction, horizontal motion only
 		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
 
-		
+		_audioSource.Play();
+
 		_pullController.Action = false;
 
 		Debug.Log("Pushing");
@@ -64,6 +77,7 @@ public class BasicRigidBodyPush : MonoBehaviour
 	{
 		//Debug.Log("Action End");
 		_canPush = false;
+		_audioSource.Stop();
 		if (_hasAnimator)
 		{
 			_animator.SetBool("Pushing", false);
