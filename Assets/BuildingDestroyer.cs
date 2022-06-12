@@ -150,6 +150,11 @@ public class BuildingDestroyer : MonoBehaviour
             {
                 _enemies[i].SetActive(true);
             }
+            for (int i = 0; i < _fakeWalls.Length; i++)
+            {
+                _fakeWalls[i].SetActive(false);
+            }
+            _realWall.SetActive(true);
             _buildingDestroyedCollider.SetActive(false);
         }
         _button.Reset();
